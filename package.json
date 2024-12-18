@@ -2,8 +2,8 @@
   "name": "ddcportfolio",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "homepage": "https://deepak-05dktopG.github.io/DDC-Portfolio",
+  "type": "module",
 
   "scripts": {
     "dev": "vite",

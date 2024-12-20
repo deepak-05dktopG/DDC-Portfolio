@@ -1,0 +1,13 @@
+.homepage1{
+    background: linear-gradient( #28548D, #2F2545);
+    height: 100vh;
+}
+.brandname>.name>span{
+    color: red;
+}
+.welcomecontent>.content{
+    color: rgb(114, 247, 114);
+}
+.visionintro>.slogan{
+    color: violet;
+}

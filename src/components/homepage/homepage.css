@@ -1,13 +1,293 @@
-.homepage1{
-    background: linear-gradient( #28548D, #2F2545);
+@import 'react-awesome-button/dist/styles.css';
+.homepage1 {
+  height: 100vh;
+}
+.brandname > .name > span {
+  color: red;
+}
+.brandname > .name {
+  font-family: "Kumar One", serif;
+  font-weight: 400;
+  font-size: 50px;
+  font-style: normal;
+}
+.brandname > .position {
+  font-family: "Tapestry", serif;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 2px;
+  word-spacing: 3px; 
+  font-style: normal;
+}
+.welcomecontent > .welcome {
+  font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: #D6D6D6;
+  font-style: normal;
+}
+.welcomecontent > .content {
+  font-family: "Federant",serif;
+  color: rgb(255, 255,   255);
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 3px;
+  word-spacing: 3px;  
+  font-style: normal;
+}
+.visionintro > .slogan {
+  font-family: "Gajraj One", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+  letter-spacing: 3px;
+  word-spacing: 3px; 
+  color: #e30fb2;
+  -webkit-text-stroke: 0.1px white; 
+}
+.visionintro > .slogancontent {
+  font-family: "Gajraj One", serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+  word-spacing: 3px; 
+  font-size: 25px;
+  font-style: normal;
+  color: white;
+  -webkit-text-stroke: 1px #e30fb2; 
+
+}
+.nextstep > .content {
+  font-family: "Prociono", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  color: white;
+}
+.awesome-button-wrapper  {
+  font-family: "Oxanium", serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.aws-btn{
+--button-default-height: 41px;
+--button-default-font-size: 16px;
+--button-default-border-radius: 9px;
+--button-horizontal-padding: 25px;
+--button-raise-level: 10px;
+--button-hover-pressure: 3;
+--transform-speed: 0.325s;
+--button-primary-color: #fbff29;
+--button-primary-color-dark: #a49113;
+--button-primary-color-light: #181616;
+--button-primary-color-hover: #fbff29;
+--button-primary-color-active: #fbff30;
+--button-primary-border: 1px solid #c2c440;
+} 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .homepage1 {
     height: 100vh;
-}
-.brandname>.name>span{
+  }
+  .brandname > .name > span {
     color: red;
-}
-.welcomecontent>.content{
-    color: rgb(114, 247, 114);
-}
-.visionintro>.slogan{
-    color: violet;
-}
+  }
+  .brandname > .name {
+    font-family: "Kumar One", serif;
+    font-weight: 400;
+    font-size: 45px;
+    font-style: normal;
+  }
+  .brandname > .position {
+    font-family: "Tapestry", serif;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 2px;
+    word-spacing: 3px; 
+    font-style: normal;
+  }
+  .welcomecontent > .welcome {
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #D6D6D6;
+    font-style: normal;
+  }
+  .welcomecontent > .content {
+    font-family: "Federant",serif;
+    color: rgb(255, 255,   255);
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;  
+  }
+  .visionintro > .slogan {
+    font-family: "Gajraj One", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+    letter-spacing: 3px;
+    word-spacing: 3px; 
+    color: #c3139a;
+    -webkit-text-stroke: 1px white; 
+  }
+  .visionintro > .slogancontent {
+    font-family: "Gajraj One", serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    word-spacing: 3px; 
+    font-size: 20px;
+    font-style: normal;
+    color: white;
+    -webkit-text-stroke: 1px #e30fb2; 
+  
+  }
+  .nextstep > .content {
+    font-family: "Prociono", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+  }
+  .awesome-button-wrapper  {
+    font-family: "Oxanium", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+  
+  .aws-btn{
+  --button-default-height: 41px;
+  --button-default-font-size: 16px;
+  --button-default-border-radius: 9px;
+  --button-horizontal-padding: 25px;
+  --button-raise-level: 10px;
+  --button-hover-pressure: 1;
+  --transform-speed: 0.325s;
+  --button-primary-color: #fbff29;
+  --button-primary-color-dark: #a49113;
+  --button-primary-color-light: #181616;
+  --button-primary-color-hover: #fbff29;
+  --button-primary-color-active: #fbff30;
+  --button-primary-border: 1px solid #c2c440;
+  } 
+    
+  
+  
+  }
+
+
+  /* Tablet responsiveness */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .homepage1 {
+      height: 100vh;
+      width: 100%;
+    }
+    .brandname > .name > span {
+      color: red;
+    }
+    .brandname > .name {
+      font-family: "Kumar One", serif;
+      font-weight: 400;
+      font-size: 45px;
+      font-style: normal;
+    }
+    .brandname > .position {
+      font-family: "Tapestry", serif;
+      font-weight: 600;
+      font-size: 25px;
+      letter-spacing: 2px;
+      word-spacing: 3px; 
+      font-style: normal;
+    }
+    .welcomecontent > .welcome {
+      font-family: "Audiowide", serif;
+      font-weight: 400;
+      font-size: 55px;
+      color: #D6D6D6;
+      font-style: normal;
+    }
+    .welcomecontent > .content {
+      font-family: "Federant",serif;
+      color: rgb(255, 255,   255);
+      font-weight: 400;
+      font-size: 20px;
+      letter-spacing: 2px;
+      word-spacing: 3px;  
+      font-style: normal;
+    }
+    .visionintro > .slogan {
+      font-family: "Gajraj One", serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 28px;
+      letter-spacing: 3px;
+      word-spacing: 3px; 
+      color: #e30fb2;
+      -webkit-text-stroke: 0.1px white; 
+    }
+    .visionintro > .slogancontent {
+      font-family: "Gajraj One", serif;
+      font-weight: 400;
+      letter-spacing: 3px;
+      word-spacing: 3px; 
+      font-size: 23 px;
+      font-style: normal;
+      color: white;
+      -webkit-text-stroke: 1px #e30fb2; 
+    
+    }
+    .nextstep > .content {
+      font-family: "Prociono", serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 20px;
+      color: white;
+    }
+    .awesome-button-wrapper  {
+      font-family: "Oxanium", serif;
+      font-weight: 400;
+      font-style: normal;
+      
+    }
+    
+    .aws-btn{
+    --button-default-height: 41px;
+    --button-default-font-size: 16px;
+    --button-default-border-radius: 9px;
+    --button-horizontal-padding: 25px;
+    --button-raise-level: 10px;
+    --button-hover-pressure: 1;
+    --transform-speed: 0.325s;
+    --button-primary-color: #fbff29;
+    --button-primary-color-dark: #a49113;
+    --button-primary-color-light: #181616;
+    --button-primary-color-hover: #fbff29;
+    --button-primary-color-active: #fbff30;
+    --button-primary-border: 1px solid #c2c440;
+    } 
+      
+    }

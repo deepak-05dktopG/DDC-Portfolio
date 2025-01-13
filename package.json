@@ -13,22 +13,46 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@foxeian/react-read-more": "^1.1.5",
+    "@radix-ui/react-slot": "^1.1.1",
+    "@react-spring/parallax": "^9.7.5",
+    "@types/canvas-confetti": "^1.9.0",
     "bootstrap": "^5.3.3",
+    "canvas-confetti": "^1.9.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.17.0",
+    "lucide-react": "^0.471.1",
+    "motion": "^11.17.0",
     "react": "^18.3.1",
+    "react-awesome-button": "^7.0.5",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.0.2"
+    "react-headroom": "^3.2.1",
+    "react-remove-scroll-bar": "^2.3.8",
+    "react-router-dom": "^7.0.2",
+    "scss": "^0.2.4",
+    "shadcn": "^2.1.8",
+    "simple-parallax-js": "^6.0.1",
+    "tabler-icons-react": "^1.56.0",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "typewriter-effect": "^2.21.0",
+    "vanta": "^0.5.24"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9.15.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "gh-pages": "^6.2.0",
     "globals": "^15.12.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
     "vite": "^6.0.1"
   }
 }

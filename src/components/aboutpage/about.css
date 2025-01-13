@@ -1,0 +1,519 @@
+.Hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/src/images/deepaklandscap.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--background-color);
+}
+.hi {
+  font-size: 80px;
+  display: inline-block;
+  animation: shake-animation 2.5s ease infinite;
+}
+@keyframes shake-animation {
+  0% {
+    transform: rotate(0deg); /* Start position */
+  }
+  5% {
+    transform: rotate(25deg); /* 5% of the way through the animation */
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(25deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(0deg); /* Rotate and move right */
+  }
+  55% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(0deg); /* Rotate and move left again */
+  }
+  100% {
+    transform: rotate(0deg); /* Reset to original position */
+  }
+}
+.Hero_text {
+  margin-left: 15%;
+  font-family: "Kameron", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 4rem;
+  color: var(--primary);
+}
+.button {
+  font-family: "Oxanium", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 25px;
+  color: var(--primary);
+  z-index: -1;
+}
+.Hero_Social_Medias {
+  font-family: "Oxanium", serif;
+  width: 30%;
+  display: flex;
+  margin-top: 30px;
+  gap: 20px;
+}
+.name {
+  color: #ffa500;
+  font-family: "Mrs Sheppards", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 5rem;
+}
+.roles {
+  color: #ff6500;
+  font-family: "jersey 10", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 6rem;
+  margin-left: 20px;
+  text-shadow: 2px 2px 4px orange;
+}
+.aws-btn {
+  --button-default-height: 46px;
+  --button-default-font-size: 15px;
+  --button-default-border-radius: 8px;
+  --button-horizontal-padding: 5px;
+  --button-raise-level: 10px;
+  --button-hover-pressure: 2;
+  --transform-speed: 0.185s;
+  --button-secondary-color: #fefc81;
+  --button-secondary-color-dark: #cbc802;
+  --button-secondary-color-light: none;
+  --button-secondary-color-hover: #fefb53;
+  --button-secondary-color-active: #fdfa1c;
+  --button-secondary-border: 2px solid #cbc802;
+  --button-danger-color: #263ad2;
+  --button-danger-color-dark: #020075;
+  --button-danger-color-light: ;
+  --button-danger-color-hover: #1612e0;
+  --button-danger-color-active: #0a0151;
+  --button-danger-border: 1px solid #0c1155;
+}
+.aboutme {
+  width: 100%;
+  height: 100vh;
+  padding-top: 10px;
+  color: var(--primary);
+  font-family: "Kameron", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.aboutme_title {
+  text-align: center;
+  font-family: "Zen Dots", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #c65c16;
+  text-shadow: 3px 3px 2px orange;
+}
+.aboutme_text {
+  margin: 50px 150px;
+}
+.aboutme_description > .name {
+  font-size: 40px;
+}
+.aboutme_image > img {
+  width: 200px;
+  border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
+}
+.profileimg {
+  border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
+  padding: 0px;
+  box-shadow: -6px 6px 12px -1px var(--primary);
+  -webkit-box-shadow: -6px 6px 12px -1px var(--primary);
+  -moz-box-shadow: -6px 6px 12px -1px var(--primary);
+}
+.aboutme_image {
+  float: left;
+  padding-right: 15px;
+  border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
+}
+.aboutme_description {
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+.skills_tools {
+  height: 100vh;
+}
+.skillboxes {
+  display: flex;
+  justify-content: space-evenly;
+  width: fit-content;
+  margin-top: 80px;
+}
+.scrollskillboxes {
+  overflow: scroll;
+}
+.box {
+  height: fit-content;
+  -webkit-box-shadow: var(--webkit-box-shadow);
+  -moz-box-shadow: var(--moz-box-shadow);
+  box-shadow: var(--box-shadow);
+  width: 400px;
+  margin: 20px;
+  border: 1px solid var(--box-shadow);
+  border-radius: 10px;
+  backdrop-filter: blur(1px);
+  background: linear-gradient(yellow, orange);
+}
+.box_title {
+  text-align: center;
+  font-family: "Silkscreen", serif;
+  font-weight: 400;
+  font-size: 25px;
+  font-style: normal;
+  text-shadow: 2px 2px 4px black;
+}
+.skillimg {
+  width: 50px;
+  background-color: #020075;
+}
+.skillbox_content {
+  padding: 10px;
+}
+
+.projects {
+  height: fit-content;
+  font-family: "Kameron", serif;
+  font-optical-sizing: auto;
+  padding: 10px;
+}
+.project_card {
+  -webkit-box-shadow: var(--webkit-box-shadow);
+  -moz-box-shadow: var(--moz-box-shadow);
+  box-shadow: var(--box-shadow);
+  max-width: 30%;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid var(--box-shadow);
+  backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 255, 0.2);
+  height: fit-content;
+}
+.project_img_corousel {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.carousel-item {
+  overflow: hidden;
+}
+.carousel-item > img {
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  object-fit: cover;
+}
+.project_heading {
+  padding: 0px 10px;
+}
+.project_heading_title {
+  font-family: "Trade Winds", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff6500;
+  font-size: 20px;
+}
+.project_heading_link {
+  background-color: #c65c16;
+  border-radius: 5px;
+  border: none;
+  font-family: "Oxanium", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: medium;
+  color: white;
+}
+.project_content {
+  padding: 0px 10px;
+}
+.project_tools {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  min-height: 80px;
+}
+.project_tools > span {
+  background-color: rgba(255, 255, 0, 0.5);
+  color: var(--primary);
+  border-radius: 5px;
+  padding: 0px 10px;
+  margin: 5px;
+  height: fit-content;
+}
+
+/* Extra Small Devices (Phones, 0px and up) */
+@media (max-width: 769px) {
+  .Hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/src/images/deepak.jpg");
+    background-position: left;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: var(--background-color);
+  }
+  .hi {
+    font-size: 80px;
+    display: inline-block;
+    animation: shake-animation 2.5s ease infinite;
+  }
+  @keyframes shake-animation {
+    0% {
+      transform: rotate(0deg); /* Start position */
+    }
+    5% {
+      transform: rotate(25deg); /* 5% of the way through the animation */
+    }
+    10% {
+      transform: rotate(0deg);
+    }
+    15% {
+      transform: rotate(25deg);
+    }
+    20% {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(0deg); /* Rotate and move right */
+    }
+    55% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(0deg); /* Rotate and move left again */
+    }
+    100% {
+      transform: rotate(0deg); /* Reset to original position */
+    }
+  }
+  .Hero_text {
+    margin-left: 5%;
+    font-family: "Kameron", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--primary);
+  }
+  .button {
+    font-family: "Oxanium", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--primary);
+    z-index: -1;
+  }
+  .Hero_Social_Medias {
+    font-family: "Oxanium", serif;
+    width: 30%;
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  .name {
+    color: #ffa500;
+    font-family: "Mrs Sheppards", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 5rem;
+  }
+  .roles {
+    color: #ff6500;
+    font-family: "jersey 10", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 6rem;
+    margin-left: 20px;
+    text-shadow: 2px 2px 4px orange;
+  }
+  .aws-btn {
+    --button-default-height: 46px;
+    --button-default-font-size: 15px;
+    --button-default-border-radius: 8px;
+    --button-horizontal-padding: 5px;
+    --button-raise-level: 10px;
+    --button-hover-pressure: 2;
+    --transform-speed: 0.185s;
+    --button-secondary-color: #fefc81;
+    --button-secondary-color-dark: #cbc802;
+    --button-secondary-color-light: none;
+    --button-secondary-color-hover: #fefb53;
+    --button-secondary-color-active: #fdfa1c;
+    --button-secondary-border: 2px solid #cbc802;
+    --button-danger-color: #263ad2;
+    --button-danger-color-dark: #020075;
+    --button-danger-color-light: ;
+    --button-danger-color-hover: #1612e0;
+    --button-danger-color-active: #0a0151;
+    --button-danger-border: 1px solid #0c1155;
+  }
+  .aboutme {
+    width: 100%;
+    height: 100vh;
+    padding-top: 5%;
+    color: var(--primary);
+    font-family: "Kameron", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .aboutme_title {
+    text-align: center;
+    font-family: "Zen Dots", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #c65c16;
+    text-shadow: 3px 3px 2px orange;
+  }
+  .aboutme_text {
+    margin: 50px 50px;
+  }
+  .aboutme_description > .name {
+    font-size: 40px;
+  }
+  .aboutme_image > img {
+    width: 200px;
+    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
+  }
+  .profileimg {
+    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
+    padding: 0px;
+    box-shadow: -6px 6px 12px -1px var(--primary);
+    -webkit-box-shadow: -6px 6px 12px -1px var(--primary);
+    -moz-box-shadow: -6px 6px 12px -1px var(--primary);
+  }
+  .aboutme_image {
+    float: left;
+    padding-right: 15px;
+    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
+  }
+  .aboutme_description {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+  .skills_tools {
+    height: 100vh;
+  }
+  .skillboxes {
+    display: flex;
+    justify-content: space-evenly;
+    width: fit-content;
+    margin-top: 80px;
+  }
+  .scrollskillboxes {
+    overflow: scroll;
+  }
+  .box {
+    -webkit-box-shadow: var(--webkit-box-shadow);
+    -moz-box-shadow: var(--moz-box-shadow);
+    box-shadow: var(--box-shadow);
+    width: 400px;
+    margin: 20px;
+    border: 1px solid var(--box-shadow);
+    border-radius: 10px;
+    backdrop-filter: blur(1px);
+    background: linear-gradient(yellow, orange);
+  }
+  .box_title {
+    text-align: center;
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-size: 25px;
+    font-style: normal;
+    text-shadow: 2px 2px 4px black;
+  }
+  .skillimg {
+    width: 50px;
+    background-color: #020075;
+  }
+  .skillbox_content {
+    padding: 10px;
+  }
+
+  .projects {
+    height: 100vh;
+    font-family: "Kameron", serif;
+    font-optical-sizing: auto;
+    padding: 10px;
+  }
+  .project_card {
+    -webkit-box-shadow: var(--webkit-box-shadow);
+    -moz-box-shadow: var(--moz-box-shadow);
+    box-shadow: var(--box-shadow);
+    max-width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--box-shadow);
+    backdrop-filter: blur(1px);
+    background-color: rgba(0, 0, 255, 0.2);
+    height: fit-content;
+  }
+  .project_img_corousel {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .carousel-item {
+    overflow: hidden;
+  }
+  .carousel-item > img {
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+    background-size: cover;
+  }
+  .project_heading {
+    padding: 0px 10px;
+  }
+  .project_heading_title {
+    font-family: "Trade Winds", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ff6500;
+    font-size: 20px;
+  }
+  .project_heading_link {
+    background-color: #c65c16;
+    border-radius: 5px;
+    border: none;
+    font-family: "Oxanium", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: medium;
+    color: white;
+  }
+  .project_content {
+    padding: 0px 10px;
+    font-size: medium;
+  }
+  .project_tools {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    min-height: 80px;
+  }
+  .project_tools > span {
+    background-color: rgba(255, 255, 0, 0.5);
+    color: var(--primary);
+    border-radius: 5px;
+    padding: 0px 10px;
+    margin: 5px;
+    height: fit-content;
+  }
+}
+
+
+
+

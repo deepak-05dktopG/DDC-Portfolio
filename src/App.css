@@ -1,0 +1,60 @@
+/* *{
+  filter:var(--filter-brightness);
+} */
+
+.progress-bar-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(to right, #f12711, #f5af19);
+  transform-origin: 0%;
+}
+:root {
+  --filter-brightness: brightness(95%);
+  --body-background-image: radial-gradient(#313131 0.8px, #000000 1.2px);
+  --title: rgb(0, 0, 0);
+  --primary: white;
+  --background-color: rgba(0, 0, 0, 0.602);
+  --filter: brightness(30%);
+}
+
+[dark-theme="dark"] {
+  --filter-brightness: brightness(95%);
+  --body-background-image: radial-gradient(#313131 0.8px, #000000 1.2px);
+  --title: rgb(0, 0, 0);
+  --primary: white;
+  --background-color: rgba(0, 0, 0, 0.602);
+  --filter: brightness(30%);
+  --webkit-box-shadow: 0px 0px 23px -14px rgba(255, 255, 255, 1);
+  --moz-box-shadow: 0px 0px 23px -14px rgba(255, 255, 255, 1);
+  --box-shadow: 0px 0px 23px -14px rgba(255, 255, 255, 1);
+}
+
+[dark-theme="light"] {
+  --filter-brightness: brightness(100%);
+  --body-background-image: radial-gradient(#c0c0c0 0.8px, #ffffff 1.2px);
+  --title: rgb(0, 0, 0);
+  --primary: rgb(0, 0, 0);
+  --background-color: rgba(255, 255, 255, 0.402);
+  --filter: brightness(100%);
+  --webkit-box-shadow: 0px 0px 23px -14px rgba(0, 0, 0, 1);
+  --moz-box-shadow: 0px 0px 23px -14px rgba(0, 0, 0, 1);
+  --box-shadow: 0px 0px 23px -14px rgba(0, 0, 0, 1);
+}
+
+body {
+  background-image: var(--body-background-image);
+  color: var(--primary);
+  background-size: 20px 20px;
+  background-attachment: fixed;
+  height: 100vh;
+  --primary: #d1caca;
+  z-index: -1;
+}
+/* body:hover{
+    background-color: #fefefe;
+    background-image: radial-gradient(#cac6c6 1.2px, #ffffff 1.2px);
+    background-size: 30px 30px;
+} */

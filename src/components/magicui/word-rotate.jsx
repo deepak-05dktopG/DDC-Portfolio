@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export default function WordRotate({
   words,
-  duration = 2500,
+  duration = 2000,
 
   framerProps = {
     initial: { opacity: 0, y: -50 },
@@ -29,11 +29,11 @@ export default function WordRotate({
   }, [words, duration]);
 
   return (
-    (<div className=" " style={{height:'fit-content'}}>
+    (<div className="" style={{height:'fit-content'}}>
       <AnimatePresence mode="wait">
-        <motion.h1 key={words[index]} className={cn(className)} {...framerProps}>
+        <motion.h4 key={words[index]}  className={cn(className)} {...framerProps}>
           {words[index]}
-        </motion.h1>
+        </motion.h4>
       </AnimatePresence>
     </div>)
   );

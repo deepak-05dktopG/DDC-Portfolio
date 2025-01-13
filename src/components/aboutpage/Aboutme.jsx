@@ -155,7 +155,7 @@ function Aboutme() {
               <span className=""><Download size={25} strokeWidth={2} color={'black'} /></span>
             </AwesomeButton></a></div>
           <div className="Hero_Social_Medias">
-            <a href="https://www.linkedin.com/in/deepak-05dktopg/"><AwesomeButton type="danger"><BrandLinkedin size={35} strokeWidth={2} color={'black'} />Linkedin</AwesomeButton></a>
+            <a href="https://www.linkedin.com/in/deepak-05dktopg/" className=""><AwesomeButton type="danger"><BrandLinkedin size={35} className="button" strokeWidth={2} color={'black'} />Linkedin</AwesomeButton></a>
             <a href="https://github.com/deepak-05dktopG/"> <AwesomeButton type="danger"> <BrandGithub size={35} strokeWidth={2} color={'black'} />Github </AwesomeButton></a>
             <a href="https://www.instagram.com/prime_dk_05/"> <AwesomeButton type="danger"><BrandInstagram size={35} strokeWidth={2} color={'black'} />Instgram</AwesomeButton></a>
           </div>
@@ -173,10 +173,11 @@ function Aboutme() {
         <div className="aboutme_text">
           <div className="aboutme_image"><img src={Deepak} className="profileimg" alt="" /></div>
           <p className="aboutme_description">Hello! I'm <span className="name"> Deepakkumar</span>, a freelance web developer specializing in creating modern, responsive, and user-friendly websites. Currently, I am in my pre-final year at <b className="text-secondary"> Nandha Engineering College</b> <span className="text-secondary"> (Autonomous)</span>, where I focus on
-            <span style={{ display: 'inline-block' }} className="fw-bold ps-3">
+            <span style={{ display: 'inline-block' }} className="word-rotate ps-2 ">
               <WordRotate
+              
                 words={['Freelancing.', 'Web Developement.', 'ChatBot Development.']}
-              /> </span> <br /> I have a growing expertise in React.js, which equips me to deliver cutting-edge web solutions tailored to business needs. My design philosophy emphasizes clean and minimalist aesthetics, ensuring every element serves a purpose.</p>
+              /> </span> <br /> <br /> I have a growing expertise in React.js, which equips me to deliver cutting-edge web solutions tailored to business needs. My design philosophy emphasizes clean and minimalist aesthetics, ensuring every element serves a purpose.</p>
         </div>
       </div>
 
@@ -218,7 +219,7 @@ function Aboutme() {
         <h1 className="aboutme_title text-center">Projects</h1>
 
 
-        <div className="d-flex mt-5 flex-wrap gap-5">
+        <div className="d-flex mt-5 justify-content-around flex-wrap">
           {projects.map((project) => (
             <div key={project.Id} className="project_card d-flex flex-column gap-2">
 

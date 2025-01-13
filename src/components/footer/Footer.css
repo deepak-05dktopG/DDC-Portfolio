@@ -5,7 +5,7 @@
   font-family: "Kameron", serif;
   font-weight: 400;
   font-style: normal;
-  background:  linear-gradient(90deg, #0c055b, #00aaff);
+  background: linear-gradient(90deg, #0c055b, #00aaff);
 }
 .footer_title {
   text-align: start;
@@ -15,17 +15,89 @@
   color: #c65c16;
   text-shadow: 3px 3px 2px rgb(43, 40, 34);
 }
-.footer_content{
-    padding: 20px 40px 0px 90px;
-    font-size: 1.4rem;
+.footer_content {
+  padding: 20px 40px 0px 90px;
+  font-size: 1.4rem;
 }
-.cta{
+.cta {
+  gap: 50px;
 }
-.cta>div{
+.cta > div {
+  background-color: #0a0909;
+  border-radius: 10px;
+  padding: 2px;
+  min-width: 50px;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .Footer {
+    height: fit-content;
+    padding: 20px;
+    color: var(--primary);
+    font-family: "Kameron", serif;
+    font-weight: 400;
+    font-style: normal;
+    background: linear-gradient(90deg, #0c055b, #00aaff);
+  }
+  .footer_title {
+    text-align: start;
+    font-family: "Zen Dots", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #c65c16;
+    text-shadow: 3px 3px 2px rgb(43, 40, 34);
+  }
+  .footer_content {
+    padding: 20px 10px 0px 10px;
+    font-size: 1rem;
+  }
+  .cta {
+    gap: 10px;
+
+    padding: 20px 0px 20px 0px;
+  }
+  .cta > div {
     background-color: #0a0909;
     border-radius: 10px;
     padding: 2px;
     min-width: 50px;
     color: white;
-    
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .Footer {
+    height: fit-content;
+    padding: 20px;
+    color: var(--primary);
+    font-family: "Kameron", serif;
+    font-weight: 400;
+    font-style: normal;
+    background: linear-gradient(90deg, #0c055b, #00aaff);
+  }
+  .footer_title {
+    text-align: start;
+    font-family: "Zen Dots", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #c65c16;
+    text-shadow: 3px 3px 2px rgb(43, 40, 34);
+  }
+  .footer_content {
+    padding: 20px 10px 0px 10px;
+    font-size: 1rem;
+  }
+  .cta {
+    gap: 10px;
+
+    padding: 20px 0px 20px 0px;
+  }
+  .cta > div {
+    background-color: #0a0909;
+    border-radius: 10px;
+    padding: 2px;
+    min-width: 50px;
+    color: white;
+  }
 }

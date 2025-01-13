@@ -1,94 +1,71 @@
-
-:root{
-    --nav-background-color: rgba(0, 0, 0, 0.53);
-    --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    --backdrop-filter: blur(6.8px);
-    --webkit-filter:blur(6.8px);
-    --primary:rgb(255, 255, 255);
-
+:root {
+  --nav-background-color: rgba(0, 0, 0, 0.53);
+  --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --backdrop-filter: blur(6.8px);
+  --webkit-filter: blur(6.8px);
+  --primary: rgb(255, 255, 255);
 }
-[dark-theme='dark']{
-    --nav-background-color: rgba(0, 0, 0, 0.53);
-    --box-shadow: 0 4px 30px rgba(255, 252, 252, 0.1);
-    --backdrop-filter: blur(6.8px);
-    --webkit-filter:blur(6.8px);
-    --primary:rgb(255, 255, 255);
-  
-
+[dark-theme="dark"] {
+  --nav-background-color: rgba(0, 0, 0, 0.53);
+  --box-shadow: 0 4px 30px rgba(255, 252, 252, 0.1);
+  --backdrop-filter: blur(6.8px);
+  --webkit-filter: blur(6.8px);
+  --primary: rgb(255, 255, 255);
 }
-[dark-theme='light']{
-    --nav-background-color: rgba(255, 255, 255, 0.8);
-    --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
-    --backdrop-filter:blur(6.8px);
-    --webkit-filter: blur(6.8px);
-    --primary:rgb(0, 0, 0);
+[dark-theme="light"] {
+  --nav-background-color: rgba(255, 255, 255, 0.8);
+  --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  --backdrop-filter: blur(6.8px);
+  --webkit-filter: blur(6.8px);
+  --primary: rgb(0, 0, 0);
 }
-nav{
-/* From https://css.glass */
-background: var(--nav-background-color);
-border-radius:0px 0px 10px 10px;
-box-shadow: var(--box-shadow);
-backdrop-filter:var(--backdrop-filter);
--webkit-backdrop-filter:var(--webkit-filter);
-z-index: 999;
+nav {
+  /* From https://css.glass */
+  background: var(--nav-background-color);
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--backdrop-filter);
+  -webkit-backdrop-filter: var(--webkit-filter);
+  z-index: 999;
 }
-nav>.ddc{
+nav > .ddc {
   font-family: "Kumar One", serif;
   font-weight: 400;
   font-style: normal;
 }
-nav>.navitem{
-    color: var(--primary);
-    font-family: "Kode Mono", serif;
+nav > .navitem {
+  color: var(--primary);
+  font-family: "Kode Mono", serif;
 }
-
-
-
-
 
 .checkbox {
-    opacity: 0;
-    position: absolute;
-  }
-  
-  .checkbox-label {
-    background-color: var(--primary);
-    width: 50px;
-    height: 26px;
-    border-radius: 50px;
-    position: relative;
-    padding: 5px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .fa-moon {color: #f1c40f;}
-  
-  .fa-sun {color: #f39c12;}
-  
-  .checkbox-label .ball {
-    background-color: var(--nav-background-color);
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    border-radius: 50%;
-    transition: transform 0.2s linear;
-  }
-  
-  .checkbox:checked + .checkbox-label .ball {
-    transform: translateX(24px);
-  }
-  
-  
-  
-
-
-@media only screen and (max-width: 480px) {
-
+  opacity: 0;
+  position: absolute;
 }
 
-  
+
+
+
+@media screen and (max-width: 600px) {
+  nav {
+    /* From https://css.glass */
+    background: var(--nav-background-color);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: var(--box-shadow);
+    backdrop-filter: var(--backdrop-filter);
+    -webkit-backdrop-filter: var(--webkit-filter);
+    z-index: 999;
+  }
+  nav > .ddc {
+    font-family: "Kumar One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  nav > .navitem {
+    font-size: 13px;
+    color: var(--primary);
+    font-family: "Kode Mono", serif;
+  }
+
+
+}

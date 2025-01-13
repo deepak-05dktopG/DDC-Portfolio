@@ -13,7 +13,6 @@ function Navbar() {
       fontWeight: isActive ? "bold" : "normal",
       fontSize: isActive ? "normal" : "normal",
       color: isActive ? "rgb(255, 74, 24)" : " ",
-      letterSpacing: isActive ? "2px" : "0px",
     };
   };
 
@@ -38,7 +37,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="d-flex  justify-content-around py-3 w-100">
+      <nav className="d-flex  justify-content-between align-items-center py-3 w-100">
         <NavLink style={navlink} className=" ddc text-danger text-decoration-none ps-3" to="/">DDC</NavLink>
         <NavLink style={navlink} className="navitem text-decoration-none" to="/about">Portfolio</NavLink>
         <NavLink style={navlink} className="navitem text-decoration-none" to="/service">Service</NavLink>

@@ -49,11 +49,19 @@
     <!-- cdn for from vanta js -->
 
     <title>Vite + React</title>
-    <script type="module" crossorigin src="/DDC-Portfolio/assets/index-DTg4A1-u.js"></script>
-    <link rel="stylesheet" crossorigin href="/DDC-Portfolio/assets/index-Bk7tCHaY.css">
+    <script type="module" crossorigin src="/DDC-Portfolio/assets/index-YTdqQsgA.js"></script>
+    <link rel="stylesheet" crossorigin href="/DDC-Portfolio/assets/index-CfGnf5JR.css">
   </head>
   <body>
     <div id="root"></div>
 
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
   </body>
 </html>

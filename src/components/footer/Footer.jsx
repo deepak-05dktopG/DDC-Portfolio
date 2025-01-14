@@ -2,7 +2,6 @@ import React from 'react'
 import "./Footer.css"
 import { Linkedin,Mail,Github,Instagram } from 'lucide-react';
 
-
 function Footer() {
     return (
         <div className='Footer d-flex flex-column justify-content-around'>

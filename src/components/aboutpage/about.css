@@ -146,6 +146,12 @@
 }
 .skills_tools {
   min-height: 100vh;
+  background-image: url('src/images/SkillBack1.avif');
+  background-repeat: no-repeat;
+  background-color: rgb(36, 36, 36);
+  background-size: cover;
+  object-fit: cover;
+  background-blend-mode:multiply;
 }
 .skillboxes {
   display: flex;
@@ -166,7 +172,7 @@
   border: 1px solid var(--box-shadow);
   border-radius: 10px;
   backdrop-filter: blur(1px);
-  background: linear-gradient(yellow, orange);
+  background: linear-gradient(rgb(156, 156, 129), rgba(0, 0, 0, 0)); /* From yellow to transparent black */
 }
 .box_title {
   text-align: center;
@@ -178,7 +184,6 @@
 }
 .skillimg {
   width: 50px;
-  background-color: #020075;
 }
 .skillbox_content {
   padding: 10px;
@@ -389,7 +394,13 @@
   }
   .aboutme_image > img {
     width: 100px;
+    transition: width 0.5s ease-in-out ;
     border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
+  }
+  .aboutme_image > img:hover {
+    width: 150px;
+    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
+    transition: width 0.5s ease-in-out ;
   }
   .profileimg {
     border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
@@ -408,7 +419,13 @@
     letter-spacing: 1px;
   }
   .skills_tools {
-    min-height: fit-content;  
+    min-height: fit-content;
+    background-image: url('src/images/SkillBack1.avif');
+    background-repeat: no-repeat;
+    background-color: rgb(36, 36, 36);
+    background-size: cover;
+    object-fit: cover;
+    background-blend-mode:multiply;  
   }
   .skillboxes {
     display: flex;
@@ -429,7 +446,7 @@
     border: 1px solid var(--box-shadow);
     border-radius: 10px;
     backdrop-filter: blur(1px);
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(rgb(156, 156, 129), rgba(0, 0, 0, 0)); /* From yellow to transparent black */
   }
   .box_title {
     text-align: center;
@@ -441,7 +458,6 @@
   }
   .skillimg {
     width: 50px;
-    background-color: #020075;
   }
   .skillbox_content {
     padding: 10px;
@@ -695,7 +711,7 @@
     border: 1px solid var(--box-shadow);
     border-radius: 10px;
     backdrop-filter: blur(1px);
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(rgb(156, 156, 129), rgba(0, 0, 0, 0)); /* From yellow to transparent black */
   }
   .box_title {
     text-align: center;
@@ -707,7 +723,12 @@
   }
   .skillimg {
     width: 50px;
-    background-color: #020075;
+    background-image: url('src/images/SkillBack1.avif');
+    background-repeat: no-repeat;
+    background-color: rgb(36, 36, 36);
+    background-size: cover;
+    object-fit: cover;
+    background-blend-mode:multiply;
   }
   .skillbox_content {
     padding: 10px;
@@ -934,6 +955,12 @@
   }
   .skills_tools {
     min-height: 100vh;
+    background-image: url('src/images/SkillBack1.avif');
+    background-repeat: no-repeat;
+    background-color: rgb(36, 36, 36);
+    background-size: cover;
+    object-fit: cover;
+    background-blend-mode:multiply;
   }
   .skillboxes {
     display: flex;
@@ -954,7 +981,8 @@
     border: 1px solid var(--box-shadow);
     border-radius: 10px;
     backdrop-filter: blur(1px);
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(rgb(156, 156, 129), rgba(0, 0, 0, 0)); /* From yellow to transparent black */
+ 
   }
   .box_title {
     text-align: center;
@@ -966,7 +994,6 @@
   }
   .skillimg {
     width: 50px;
-    background-color: #020075;
   }
   .skillbox_content {
     padding: 10px;
@@ -1197,6 +1224,12 @@
   }
   .skills_tools {
     min-height: 100vh;
+    background-image: url('src/images/SkillBack1.avif');
+    background-repeat: no-repeat;
+    background-color: rgb(36, 36, 36);
+    background-size: cover;
+    object-fit: cover;
+    background-blend-mode:multiply;
   }
   .skillboxes {
     display: flex;
@@ -1217,7 +1250,7 @@
     border: 1px solid var(--box-shadow);
     border-radius: 10px;
     backdrop-filter: blur(1px);
-    background: linear-gradient(yellow, orange);
+    background: linear-gradient(rgb(156, 156, 129), rgba(0, 0, 0, 0)); /* From yellow to transparent black */
   }
   .box_title {
     text-align: center;
@@ -1229,7 +1262,6 @@
   }
   .skillimg {
     width: 50px;
-    background-color: #020075;
   }
   .skillbox_content {
     padding: 10px;

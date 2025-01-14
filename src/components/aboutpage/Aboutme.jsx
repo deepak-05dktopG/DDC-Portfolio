@@ -38,39 +38,38 @@ function Aboutme() {
     {
       Id: 1,
       heading: 'Frontend', skills: [
-        { Id: 1, image: "#", tooltip: "this is html", percentage: 98 },
-        { Id: 2, image: "#", tooltip: "this is css", percentage: 95 },
-        { Id: 3, image: "#", tooltip: "this is javascript", percentage: 90 }]
+        { Id: 1, image: "src/images/HTML.png", tooltip: "this is html", percentage: 98 },
+        { Id: 2, image: "src/images/CSS.png", tooltip: "this is css", percentage: 95 },
+        { Id: 3, image: "src/images/JS.png", tooltip: "this is javascript", percentage: 90 }]
     },
     {
       Id: 2,
       heading: 'Frameworks & Libraries', skills: [
-        { Id: 1, image: "#", tooltip: "this is Reactjs", percentage: 85 },
-        { Id: 2, image: "#", tooltip: "this is Bootstrap", percentage: 90 },
-        { Id: 3, image: "#", tooltip: "this is Framermotion", percentage: 85 },
-        { Id: 4, image: "#", tooltip: "this is Gsap", percentage: 50 }]
+        { Id: 1, image: "src/images/Reactjs.png", tooltip: "this is Reactjs", percentage: 85 },
+        { Id: 2, image: "src/images/Bootstrap.png", tooltip: "this is Bootstrap", percentage: 90 },
+        { Id: 3, image: "src/images/FramerMotion.png", tooltip: "this is Framermotion", percentage: 85 },
+        { Id: 4, image: "src/images/Gsap.png", tooltip: "this is Gsap", percentage: 50 }]
     },
     {
       Id: 3,
       heading: 'Tools', skills: [
-        { Id: 1, image: "#", tooltip: "this is Figma", percentage: 85 },
-        { Id: 2, image: "#", tooltip: "this is Git", percentage: 90 },
-        { Id: 3, image: "#", tooltip: "this is Github", percentage: 90 },
+        { Id: 1, image: "src/images/Figma.png", tooltip: "this is Figma", percentage: 85 },
+        { Id: 2, image: "src/images/Git.png", tooltip: "this is Git", percentage: 70 },
       ]
     },
     {
       Id: 4,
       heading: 'Backend', skills: [
-        { Id: 1, image: "#", tooltip: "this is Nodejs", percentage: 85 },
-        { Id: 2, image: "#", tooltip: "this is Expressjs", percentage: 90 },
-        { Id: 3, image: "#", tooltip: "this is Python", percentage: 0 },
-        { Id: 4, image: "#", tooltip: "this is Java", percentage: 0 }]
+        { Id: 1, image: "src/images/NodeJs.jpeg", tooltip: "this is Nodejs", percentage: 65 },
+        { Id: 2, image: "src/images/ExpressJs.jpeg", tooltip: "this is Expressjs", percentage: 60 },
+        { Id: 3, image: "src/images/Python.png", tooltip: "this is Python", percentage: 0 },
+        { Id: 4, image: "src/images/Java.png", tooltip: "this is Java", percentage: 0 }]
     },
     {
       Id: 5,
       heading: 'DataBase', skills: [
-        { Id: 1, image: "#", tooltip: "this is SQL", percentage: 0 },
-        { Id: 2, image: "#", tooltip: "this is MongoDB", percentage: 10 },
+        { Id: 1, image: "src/images/Sql.png", tooltip: "this is SQL", percentage: 0 },
+        { Id: 2, image: "src/images/MongoDB.jpeg", tooltip: "this is MongoDB", percentage: 10 },
       ]
     },
 
@@ -151,7 +150,7 @@ function Aboutme() {
 
           <div className="button">
 
-           <a href="src/images/DeepakkumarResume.pdf" download> <AwesomeButton type="secondary" className="mt-2">Resume
+           <a href="src/images/DeepakkumarResume.pdf" download  target="_blank"> <AwesomeButton type="secondary" className="mt-2">Resume
               <span className=""><Download size={25} strokeWidth={2} color={'black'} /></span>
             </AwesomeButton></a></div>
           <div className="Hero_Social_Medias">
@@ -287,6 +286,7 @@ function Aboutme() {
         </span>
         <BorderBeam size={250} duration={12} delay={1} />
       </div> */}
+      <Footer/>
     </>
 
   );

@@ -18,9 +18,28 @@ import WordRotate from "@/components/magicui/word-rotate";
 
 
 // import images
+import skillbackground from "/src/images/SkillBack1.avif"
 import Deepak from '/src/images/deepak.jpg'
 import DeepakLandscape from '/src/images/deepaklandscap.jpg'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import HTML from "/src/images/HTML.png";
+import CSS from "/src/images/CSS.png";
+import JS from  "/src/images/JS.png"
+
+import Reactlogo from "/src/images/Reactjs.png"
+import Bootstraplogo from "/src/images/Bootstrap.png"
+import  FramerMotionlogo from "/src/images/FramerMotion.png"
+import GsapLogo from "/src/images/Gsap.png"
+
+import Figmalogo from "/src/images/Figma.png"
+import Gitlogo from "/src/images/Git.png"
+
+import NodeLogo from "/src/images/NodeJs.jpeg"
+import Expresslogo from "/src/images/ExpressJs.jpeg"
+import Pythonlogo from "/src/images/Python.png"
+import javalogo from "/src/images/Java.png"
+import sqllogo from "/src/images/Sql.png"
+import mongodblogo from "/src/images/MongoDB.jpeg"
 function Aboutme() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -38,38 +57,38 @@ function Aboutme() {
     {
       Id: 1,
       heading: 'Frontend', skills: [
-        { Id: 1, image: "src/images/HTML.png", tooltip: "this is html", percentage: 98 },
-        { Id: 2, image: "src/images/CSS.png", tooltip: "this is css", percentage: 95 },
-        { Id: 3, image: "src/images/JS.png", tooltip: "this is javascript", percentage: 90 }]
+        { Id: 1, image: `${HTML}`, tooltip: "this is html", percentage: 98 },
+        { Id: 2, image:`${CSS}` , tooltip: "this is css", percentage: 95 },
+        { Id: 3, image:`${JS}`, tooltip: "this is javascript", percentage: 90 }]
     },
     {
       Id: 2,
       heading: 'Frameworks & Libraries', skills: [
-        { Id: 1, image: "src/images/Reactjs.png", tooltip: "this is Reactjs", percentage: 85 },
-        { Id: 2, image: "src/images/Bootstrap.png", tooltip: "this is Bootstrap", percentage: 90 },
-        { Id: 3, image: "src/images/FramerMotion.png", tooltip: "this is Framermotion", percentage: 85 },
-        { Id: 4, image: "src/images/Gsap.png", tooltip: "this is Gsap", percentage: 50 }]
+        { Id: 1, image:`${Reactlogo}` , tooltip: "this is Reactjs", percentage: 85 },
+        { Id: 2, image: `${Bootstraplogo}`, tooltip: "this is Bootstrap", percentage: 90 },
+        { Id: 3, image: `${FramerMotionlogo}`, tooltip: "this is Framermotion", percentage: 85 },
+        { Id: 4, image: `${GsapLogo}`, tooltip: "this is Gsap", percentage: 50 }]
     },
     {
       Id: 3,
       heading: 'Tools', skills: [
-        { Id: 1, image: "src/images/Figma.png", tooltip: "this is Figma", percentage: 85 },
-        { Id: 2, image: "src/images/Git.png", tooltip: "this is Git", percentage: 70 },
+        { Id: 1, image: `${Figmalogo}`, tooltip: "this is Figma", percentage: 85 },
+        { Id: 2, image: `${Gitlogo}`, tooltip: "this is Git", percentage: 70 },
       ]
     },
     {
       Id: 4,
       heading: 'Backend', skills: [
-        { Id: 1, image: "src/images/NodeJs.jpeg", tooltip: "this is Nodejs", percentage: 65 },
-        { Id: 2, image: "src/images/ExpressJs.jpeg", tooltip: "this is Expressjs", percentage: 60 },
-        { Id: 3, image: "src/images/Python.png", tooltip: "this is Python", percentage: 0 },
-        { Id: 4, image: "src/images/Java.png", tooltip: "this is Java", percentage: 0 }]
+        { Id: 1, image: `${NodeLogo}`, tooltip: "this is Nodejs", percentage: 65 },
+        { Id: 2, image: `${Expresslogo}`, tooltip: "this is Expressjs", percentage: 60 },
+        { Id: 3, image: `${Pythonlogo}`, tooltip: "this is Python", percentage: 0 },
+        { Id: 4, image: `${javalogo}`, tooltip: "this is Java", percentage: 0 }]
     },
     {
       Id: 5,
       heading: 'DataBase', skills: [
-        { Id: 1, image: "src/images/Sql.png", tooltip: "this is SQL", percentage: 0 },
-        { Id: 2, image: "src/images/MongoDB.jpeg", tooltip: "this is MongoDB", percentage: 10 },
+        { Id: 1, image: `${sqllogo}`, tooltip: "this is SQL", percentage: 0 },
+        { Id: 2, image: `${mongodblogo}`, tooltip: "this is MongoDB", percentage: 10 },
       ]
     },
 
@@ -80,7 +99,7 @@ function Aboutme() {
   const projects = [
     {
       Id: 1,
-      projectimg1: ["src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg"],
+      projectimg1: ["https://img.freepik.com/free-photo/impressed-young-businessman-wearing-glasses-holding-points-with-pen-laptop-isolated-pink-wall_141793-75058.jpg?uid=R180572852&ga=GA1.1.336640347.1726217014&semt=ais_tags_boosted", "src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg"],
       projecttitle: "portfolio",
       projectlink: "https://deepakdigitalcraft.tech/",
       projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
@@ -88,7 +107,7 @@ function Aboutme() {
     },
     {
       Id: 2,
-      projectimg1: ["src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg"],
+      projectimg1: [`${Deepak}`, "src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg"],
       projecttitle: "portfolio",
       projectlink: "https://deepakdigitalcraft.tech/",
       projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
@@ -96,7 +115,7 @@ function Aboutme() {
     },
     {
       Id: 3,
-      projectimg1: ["src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg"],
+      projectimg1: [`${Deepak}`, "src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg"],
       projecttitle: "portfolio",
       projectlink: "https://deepakdigitalcraft.tech/",
       projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
@@ -104,7 +123,7 @@ function Aboutme() {
     },
     {
       Id: 4,
-      projectimg1: ["src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg"],
+      projectimg1: [`${Deepak}`, "src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg"],
       projecttitle: "portfolio",
       projectlink: "https://deepakdigitalcraft.tech/",
       projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
@@ -183,7 +202,7 @@ function Aboutme() {
 
 
 
-      <div className="skills_tools">
+      <div className="skills_tools" style={{backgroundImage:`${skillbackground}`}}>
         <h1 className="aboutme_title pt-5">Skills & Tools</h1>
 
         <div className="scrollskillboxes">

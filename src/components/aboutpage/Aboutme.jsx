@@ -151,7 +151,7 @@ function Aboutme() {
 
           <div className="button">
 
-           <a href="src/images/internresume (2).pdf" download="internresume (2).pdf"> <AwesomeButton type="secondary" className="mt-2">Resume
+           <a href="src/images/DeepakkumarResume.pdf" download> <AwesomeButton type="secondary" className="mt-2">Resume
               <span className=""><Download size={25} strokeWidth={2} color={'black'} /></span>
             </AwesomeButton></a></div>
           <div className="Hero_Social_Medias">

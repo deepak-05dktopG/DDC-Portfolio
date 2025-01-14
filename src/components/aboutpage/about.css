@@ -1,6 +1,6 @@
 .Hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("/src/images/deepaklandscap.jpg");
   background-size: cover;
   background-blend-mode: multiply;
@@ -103,7 +103,7 @@
 }
 .aboutme {
   width: 100%;
-  height: fit-content;
+  min-height: fit-content;
   padding-top: 10px;
   color: var(--primary);
   font-family: "Kameron", serif;
@@ -145,7 +145,7 @@
   letter-spacing: 2px;
 }
 .skills_tools {
-  height: 100vh;
+  min-height: 100vh;
 }
 .skillboxes {
   display: flex;
@@ -254,7 +254,7 @@
 }
 
 /* responsive design for mobile */
-@media screen and  ( max-width: 600px) {
+@media screen and ( max-width: 600px) {
   .Hero {
     width: 100%;
     height: 100dvh;
@@ -300,6 +300,7 @@
   }
   .Hero_text {
     margin-left: 5%;
+    margin-bottom: 40%;
     font-family: "Kameron", serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -362,8 +363,8 @@
   }
   .aboutme {
     width: 100%;
-    height: 100vh;
-    padding-top: 10px;
+    height: fit-content;
+    padding: 10px;
     color: var(--primary);
     font-family: "Kameron", serif;
     font-weight: 400;
@@ -381,7 +382,7 @@
     margin: 50px 20px;
   }
   .aboutme_description > .name {
-    font-size: 14px;
+    font-size: 25px;
   }
   .word-rotate {
     font-size: 2px;
@@ -403,11 +404,11 @@
     border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
   }
   .aboutme_description {
-    font-size: 15px;
+    font-size: 18px;
     letter-spacing: 1px;
   }
   .skills_tools {
-    height: 100vh;
+    min-height: fit-content;  
   }
   .skillboxes {
     display: flex;
@@ -502,6 +503,7 @@
   }
   .project_content {
     padding: 0px 10px;
+    font-size: 17px;
   }
   .project_tools {
     background-color: rgba(0, 0, 0, 0.5);
@@ -522,7 +524,7 @@
 @media screen and (orientation: landscape) {
   .Hero {
     width: 100%;
-    height: 100dvh;
+    height: fit-content;
     background-image: url("/src/images/deepaklandscap.jpg");
     background-size: cover;
     background-blend-mode: multiply;
@@ -627,7 +629,7 @@
   }
   .aboutme {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 10px;
     color: var(--primary);
     font-family: "Kameron", serif;
@@ -672,7 +674,7 @@
     letter-spacing: 1px;
   }
   .skills_tools {
-    height: fit-content;
+    min-height: fit-content;
   }
   .skillboxes {
     display: flex;
@@ -712,7 +714,7 @@
   }
 
   .projects {
-    height: fit-content;
+    min-height: fit-content;
     font-family: "Kameron", serif;
     font-optical-sizing: auto;
     padding: 10px;
@@ -786,7 +788,7 @@
 @media screen and (min-width: 901px) {
   .Hero {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("/src/images/deepaklandscap.jpg");
     background-size: cover;
     background-blend-mode: multiply;
@@ -889,7 +891,7 @@
   }
   .aboutme {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 10px;
     color: var(--primary);
     font-family: "Kameron", serif;
@@ -931,7 +933,7 @@
     letter-spacing: 2px;
   }
   .skills_tools {
-    height: 100vh;
+    min-height: 100vh;
   }
   .skillboxes {
     display: flex;
@@ -971,7 +973,7 @@
   }
   
   .projects {
-    height: fit-content;
+    min-height: fit-content;
     font-family: "Kameron", serif;
     font-optical-sizing: auto;
     padding: 10px;
@@ -1045,10 +1047,10 @@
 @media screen and (min-width: 601px) and (max-width: 900px) {
   .Hero {
     width: 100%;
-    height: 100dvh;
-    background-image: url("/src/images/deepaklandscap.jpg");
-    object-fit: cover;
+    min-height: 100dvh;
+    background-image: url("/src/images/deepak.jpg");
     background-size: cover;
+    background-position: center;
     background-blend-mode: multiply;
     background-color: var(--background-color);
   }
@@ -1151,7 +1153,7 @@
   }
   .aboutme {
     width: 100%;
-    height: 100vh;
+    min-height: fit-content;
     padding-top: 10px;
     color: var(--primary);
     font-family: "Kameron", serif;
@@ -1170,7 +1172,7 @@
     margin: 50px 60px;
   }
   .aboutme_description > .name {
-    font-size: 34px;
+    font-size: 37px;
   }
 
   .aboutme_image > img {
@@ -1194,7 +1196,7 @@
     letter-spacing: 1px;
   }
   .skills_tools {
-    height: 100vh;
+    min-height: 100vh;
   }
   .skillboxes {
     display: flex;
@@ -1234,7 +1236,7 @@
   }
 
   .projects {
-    height: fit-content;
+    min-height: fit-content;
     font-family: "Kameron", serif;
     font-optical-sizing: auto;
     padding: 10px;
@@ -1251,7 +1253,6 @@
     background-color: rgba(0, 0, 255, 0.2);
     height: fit-content;
     margin-top: 10px ;
-
   }
   .project_img_corousel {
     border-radius: 10px;
@@ -1301,7 +1302,7 @@
     border-radius: 5px;
     padding: 0px 10px;
     margin: 5px;
-    height: fit-content;
+    min-height: fit-content;
   }
 }
 

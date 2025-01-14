@@ -1,5 +1,5 @@
 .Footer {
-  height: 50dvh;
+  min-height: 50dvh;
   padding: 20px;
   color: var(--primary);
   font-family: "Kameron", serif;
@@ -32,7 +32,7 @@
 
 @media screen and (max-width: 600px) {
   .Footer {
-    height: fit-content;
+    min-height: fit-content;
     padding: 20px;
     color: var(--primary);
     font-family: "Kameron", serif;
@@ -66,9 +66,9 @@
   }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) {  
   .Footer {
-    height: fit-content;
+    min-height: fit-content;
     padding: 20px;
     color: var(--primary);
     font-family: "Kameron", serif;

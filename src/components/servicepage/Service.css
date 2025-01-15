@@ -1,0 +1,372 @@
+.services {
+  font-family: "Kameron", serif;
+}
+
+.whatido {
+  margin-top: 50px;
+  min-height: 80dvh;
+}
+.whatido > .heading {
+  text-align: start;
+  font-family: "Zen Dots", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #c65c16;
+  text-shadow: 3px 3px 2px orange;
+}
+.whatido > .first {
+  margin-top: 50px;
+}
+.whatido > .first > .content {
+  padding: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 35px;
+  width: 50%;
+}
+.serviceimage > img {
+  height: 350px;
+  width: 100%;
+}
+.div {
+  padding: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(135, 83, 130, 0.5),
+    rgba(121, 95, 121, 0.5)
+  );
+}
+.servicelist > .div > .heading {
+  text-align: start;
+  font-family: "Zen Dots", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #c65c16;
+  text-shadow: 3px 3px 2px orange;
+}
+.subservices {
+  margin: 20px;
+  max-width: 30%;
+  min-height: 300px;
+  border-radius: 5px;
+  background: linear-gradient(
+    45deg,
+    rgba(214, 50, 48, 0.8),
+    rgba(235, 69, 17, 0.6),
+    rgba(255, 209, 102, 0.4)
+  );
+}
+.subservice {
+  padding: 10px;
+  font-family: "Irish Grover", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.subservicecontent {
+  padding: 5px 20px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .services {
+    font-family: "Kameron", serif;
+  }
+
+  .whatido {
+    margin-top: 50px;
+    min-height: 80dvh;
+  }
+  .whatido > .heading {
+    text-align: start;
+    font-family: "Zen Dots", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #c65c16;
+    text-shadow: 3px 3px 2px orange;
+  }
+  .whatido > .first {
+    margin-top: 50px;
+    justify-content: center;
+    gap: 10px;
+  }
+  .whatido > .first > .content {
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 25px;
+    width: 100%;
+  }
+  .serviceimage > img {
+    height: fit-content;
+    width: 100%;
+  }
+  .div {
+    padding: 10px;
+    background: linear-gradient(
+      to bottom,
+      rgba(135, 83, 130, 0.5),
+      rgba(121, 95, 121, 0.5)
+    );
+  }
+  .servicelist > .div > .heading {
+    text-align: start;
+    font-family: "Zen Dots", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #c65c16;
+    text-shadow: 3px 3px 2px orange;
+  }
+  .specificdomain {
+    justify-content: center;
+  }
+  .subservices {
+    margin: 5px;
+    max-width: 100%;
+    min-height: 250px;
+    border-radius: 5px;
+    background: linear-gradient(
+      45deg,
+      rgba(214, 50, 48, 0.8),
+      rgba(235, 69, 17, 0.6),
+      rgba(255, 209, 102, 0.4)
+    );
+  }
+  .subservice {
+    padding: 10px;
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .subservicecontent {
+    padding: 5px 20px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .services {
+    font-family: "Kameron", serif;
+  }
+
+  .whatido {
+    margin-top: 20px;
+    min-height: 80dvh;
+  }
+  .whatido > .heading {
+    text-align: start;
+    font-family: "Zen Dots", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #c65c16;
+    text-shadow: 3px 3px 2px orange;
+  }
+  .whatido > .first {
+    margin-top: 20px;
+  }
+  .whatido > .first > .content {
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 20px;
+    width: 100%;
+  }
+  .serviceimage > img {
+    height: fit-content;
+    width: 50%;
+  }
+  .div {
+    padding: 10px;
+    background: linear-gradient(
+      to bottom,
+      rgba(135, 83, 130, 0.5),
+      rgba(121, 95, 121, 0.5)
+    );
+  }
+  .servicelist > .div > .heading {
+    text-align: start;
+    font-family: "Zen Dots", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #c65c16;
+    text-shadow: 3px 3px 2px orange;
+  }
+  .subservices {
+    margin: 20px;
+    max-width: 100%;
+    min-height: 300px;
+    border-radius: 5px;
+    background: linear-gradient(
+      45deg,
+      rgba(214, 50, 48, 0.8),
+      rgba(235, 69, 17, 0.6),
+      rgba(255, 209, 102, 0.4)
+    );
+  }
+  .subservice {
+    padding: 10px;
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .subservicecontent {
+    padding: 5px 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+  }
+}
+
+@media screen and (min-width: 901px) {
+    .services {
+  font-family: "Kameron", serif;
+}
+
+.whatido {
+  margin-top: 50px;
+  min-height: 80dvh;
+}
+.whatido > .heading {
+  text-align: start;
+  font-family: "Zen Dots", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #c65c16;
+  text-shadow: 3px 3px 2px orange;
+}
+.whatido > .first {
+  margin-top: 50px;
+}
+.whatido > .first > .content {
+  padding: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 35px;
+  width: 50%;
+}
+.serviceimage > img {
+  height: 350px;
+  width: 100%;
+}
+.div {
+  padding: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(135, 83, 130, 0.5),
+    rgba(121, 95, 121, 0.5)
+  );
+}
+.servicelist > .div > .heading {
+  text-align: start;
+  font-family: "Zen Dots", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #c65c16;
+  text-shadow: 3px 3px 2px orange;
+}
+.subservices {
+  margin: 20px;
+  min-height: 300px;
+  border-radius: 5px;
+  background: linear-gradient(
+    45deg,
+    rgba(214, 50, 48, 0.8),
+    rgba(235, 69, 17, 0.6),
+    rgba(255, 209, 102, 0.4)
+  );
+}
+.subservice {
+  padding: 10px;
+  font-family: "Irish Grover", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.subservicecontent {
+  padding: 5px 20px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .services {
+    font-family: "Kameron", serif;
+  }
+
+  .whatido {
+    margin-top: 20px;
+    min-height: fit-content;
+    padding-bottom: 10px;
+  }
+  .whatido > .heading {
+    text-align: start;
+    font-family: "Zen Dots", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #c65c16;
+    text-shadow: 3px 3px 2px orange;
+  }
+  .whatido > .first {
+    margin-top: 20px;
+  }
+  .whatido > .first > .content {
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 25px;
+    width: 50%;
+  }
+  .serviceimage > img {
+    height: 200px;
+    width: fit-content;
+  }
+  .div {
+    padding: 10px;
+    background: linear-gradient(
+      to bottom,
+      rgba(135, 83, 130, 0.5),
+      rgba(121, 95, 121, 0.5)
+    );
+  }
+  .servicelist > .div > .heading {
+    text-align: start;
+    font-family: "Zen Dots", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #c65c16;
+    text-shadow: 3px 3px 2px orange;
+  }
+  .subservices {
+    margin: 10px;
+    max-width: 30%;
+    min-height: 250px;
+    border-radius: 5px;
+    background: linear-gradient(
+      45deg,
+      rgba(214, 50, 48, 0.8),
+      rgba(235, 69, 17, 0.6),
+      rgba(255, 209, 102, 0.4)
+    );
+  }
+  .subservice {
+    padding: 10px;
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .subservicecontent {
+    padding: 5px 20px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+  }
+}

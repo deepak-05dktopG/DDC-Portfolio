@@ -146,7 +146,6 @@
 }
 .skills_tools {
   min-height: 100vh;
-  background-image: url('/src/images/SkillBack1.avif');
   background-repeat: no-repeat;
   background-color: rgb(36, 36, 36);
   background-size: cover;
@@ -184,6 +183,7 @@
 }
 .skillimg {
   width: 50px;
+  background-color: white;
 }
 .skillbox_content {
   padding: 10px;
@@ -420,7 +420,6 @@
   }
   .skills_tools {
     min-height: fit-content;
-    background-image: url('src/images/SkillBack1.avif');
     background-repeat: no-repeat;
     background-color: rgb(36, 36, 36);
     background-size: cover;
@@ -955,7 +954,6 @@
   }
   .skills_tools {
     min-height: 100vh;
-    background-image: url('src/images/SkillBack1.avif');
     background-repeat: no-repeat;
     background-color: rgb(36, 36, 36);
     background-size: cover;
@@ -1224,7 +1222,6 @@
   }
   .skills_tools {
     min-height: 100vh;
-    background-image: url('src/images/SkillBack1.avif');
     background-repeat: no-repeat;
     background-color: rgb(36, 36, 36);
     background-size: cover;

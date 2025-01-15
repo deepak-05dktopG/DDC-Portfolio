@@ -10,9 +10,12 @@ import ReadMoreArea from '@foxeian/react-read-more';
 import { motion, useScroll, useSpring } from "framer-motion";
 import SimpleParallax from "simple-parallax-js";
 import Headroom from "react-headroom";
-import { BorderBeam } from "@/components/magicui/border-beam";
+import { BorderBeam } from "@/components/magicui/border-beam.jsx";
 import ScrollProgress from "@/components/magicui/scroll-progress";
 import WordRotate from "@/components/magicui/word-rotate";
+
+// import ShineBorder from "@/components/magicui/shine-border.jsx";
+
 // import TextReveal from '@/components/ui/text-reveal';
 
 
@@ -24,11 +27,11 @@ import DeepakLandscape from '/src/images/deepaklandscap.jpg'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import HTML from "/src/images/HTML.png";
 import CSS from "/src/images/CSS.png";
-import JS from  "/src/images/JS.png"
+import JS from "/src/images/JS.png"
 
 import Reactlogo from "/src/images/Reactjs.png"
 import Bootstraplogo from "/src/images/Bootstrap.png"
-import  FramerMotionlogo from "/src/images/FramerMotion.png"
+import FramerMotionlogo from "/src/images/FramerMotion.png"
 import GsapLogo from "/src/images/Gsap.png"
 
 import Figmalogo from "/src/images/Figma.png"
@@ -58,13 +61,13 @@ function Aboutme() {
       Id: 1,
       heading: 'Frontend', skills: [
         { Id: 1, image: `${HTML}`, tooltip: "this is html", percentage: 98 },
-        { Id: 2, image:`${CSS}` , tooltip: "this is css", percentage: 95 },
-        { Id: 3, image:`${JS}`, tooltip: "this is javascript", percentage: 90 }]
+        { Id: 2, image: `${CSS}`, tooltip: "this is css", percentage: 95 },
+        { Id: 3, image: `${JS}`, tooltip: "this is javascript", percentage: 90 }]
     },
     {
       Id: 2,
       heading: 'Frameworks & Libraries', skills: [
-        { Id: 1, image:`${Reactlogo}` , tooltip: "this is Reactjs", percentage: 85 },
+        { Id: 1, image: `${Reactlogo}`, tooltip: "this is Reactjs", percentage: 85 },
         { Id: 2, image: `${Bootstraplogo}`, tooltip: "this is Bootstrap", percentage: 90 },
         { Id: 3, image: `${FramerMotionlogo}`, tooltip: "this is Framermotion", percentage: 85 },
         { Id: 4, image: `${GsapLogo}`, tooltip: "this is Gsap", percentage: 50 }]
@@ -99,7 +102,7 @@ function Aboutme() {
   const projects = [
     {
       Id: 1,
-      projectimg1: ["https://img.freepik.com/free-photo/impressed-young-businessman-wearing-glasses-holding-points-with-pen-laptop-isolated-pink-wall_141793-75058.jpg?uid=R180572852&ga=GA1.1.336640347.1726217014&semt=ais_tags_boosted", "src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg"],
+      projectimg1: [`${skillbackground}`, `${skillbackground}`, `${skillbackground}`, `${skillbackground}`],
       projecttitle: "portfolio",
       projectlink: "https://deepakdigitalcraft.tech/",
       projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
@@ -107,7 +110,7 @@ function Aboutme() {
     },
     {
       Id: 2,
-      projectimg1: [`${Deepak}`, "src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg"],
+      projectimg1: [`${skillbackground}`, `${skillbackground}`, `${skillbackground}`, `${skillbackground}`],
       projecttitle: "portfolio",
       projectlink: "https://deepakdigitalcraft.tech/",
       projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
@@ -115,7 +118,7 @@ function Aboutme() {
     },
     {
       Id: 3,
-      projectimg1: [`${Deepak}`, "src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg"],
+      projectimg1: [`${skillbackground}`, `${skillbackground}`, `${skillbackground}`, `${skillbackground}`],
       projecttitle: "portfolio",
       projectlink: "https://deepakdigitalcraft.tech/",
       projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
@@ -123,7 +126,7 @@ function Aboutme() {
     },
     {
       Id: 4,
-      projectimg1: [`${Deepak}`, "src/images/deepak.jpg", "src/images/deepak.jpg", "src/images/deepak.jpg"],
+      projectimg1: [`${skillbackground}`, `${skillbackground}`, `${skillbackground}`, `${skillbackground}`],
       projecttitle: "portfolio",
       projectlink: "https://deepakdigitalcraft.tech/",
       projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
@@ -169,7 +172,7 @@ function Aboutme() {
 
           <div className="button">
 
-           <a href="src/images/DeepakkumarResume.pdf" download  target="_blank"> <AwesomeButton type="secondary" className="mt-2">Resume
+            <a href="src/images/DeepakkumarResume.pdf" download target="_blank"> <AwesomeButton type="secondary" className="mt-2">Resume
               <span className=""><Download size={25} strokeWidth={2} color={'black'} /></span>
             </AwesomeButton></a></div>
           <div className="Hero_Social_Medias">
@@ -182,7 +185,16 @@ function Aboutme() {
 
 
 
-      </div >
+      </div>
+
+      {/* <ShineBorder
+        className="relative flex h-[500px] w-25 flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
+        color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+      >
+        <span className="pointer-events-none bg-white whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+          Shine Border
+        </span>
+      </ShineBorder> */}
 
 
       <div className="aboutme">
@@ -193,7 +205,7 @@ function Aboutme() {
           <p className="aboutme_description">Hello! I'm <span className="name"> Deepakkumar</span>, a freelance web developer specializing in creating modern, responsive, and user-friendly websites. Currently, I am in my pre-final year at <b className="text-secondary"> Nandha Engineering College</b> <span className="text-secondary"> (Autonomous)</span>, where I focus on
             <span style={{ display: 'inline-block' }} className="word-rotate ps-2 ">
               <WordRotate
-              
+
                 words={['Freelancing.', 'Web Developement.', 'ChatBot Development.']}
               /> </span> <br /> <br /> I have a growing expertise in React.js, which equips me to deliver cutting-edge web solutions tailored to business needs. My design philosophy emphasizes clean and minimalist aesthetics, ensuring every element serves a purpose.</p>
         </div>
@@ -202,7 +214,7 @@ function Aboutme() {
 
 
 
-      <div className="skills_tools" style={{backgroundImage:`${skillbackground}`}}>
+      <div className="skills_tools" style={{ backgroundImage: `url(${skillbackground})` }}>
         <h1 className="aboutme_title pt-5">Skills & Tools</h1>
 
         <div className="scrollskillboxes">
@@ -227,8 +239,6 @@ function Aboutme() {
           </div>
 
         </div>
-
-
 
       </div>
 
@@ -305,7 +315,7 @@ function Aboutme() {
         </span>
         <BorderBeam size={250} duration={12} delay={1} />
       </div> */}
-      <Footer/>
+      <Footer />
     </>
 
   );

@@ -108,7 +108,7 @@
 
 
 /* Mobile Responsive */
-@media (max-width: 480px) {
+@media (max-width: 680px) {
   .homepage1 {
     height: 100vh;
   }

@@ -1,0 +1,156 @@
+.contactintro {
+  background-image: url("/src/images/contactintro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 92vh;
+  align-content: center;
+  color: black;
+  text-align: center;
+  font-family: "Courgette", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  line-height: 90px;
+}
+
+.form {
+  height: 100vh;
+}
+.linksforcontact {
+  padding: 30px;
+  font-family: "Pragati Narrow", serif;
+  letter-spacing: 1px;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--primary);
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+  .contactintro {
+    background-image: url("/src/images/contactintro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    align-content: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: "Courgette", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 35px;
+  }
+
+  .form {
+    height: 100vh;
+  }
+  .linksforcontact {
+    padding: 10px;
+    font-family: "Pragati Narrow", serif;
+    letter-spacing: 1px;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--primary);
+    justify-content: start;
+  }
+}
+
+@media screen and (orientation: landscape) {
+    .contactintro {
+        background-image: url("/src/images/contactintro.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 92vh;
+        align-content: center;
+        color: black;
+        text-align: center;
+        font-family: "Courgette", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.5rem;
+        line-height: 50px;
+      }
+      
+      .form {
+        height: 100vh;
+      }
+      .linksforcontact {
+        padding: 30px;
+        font-family: "Pragati Narrow", serif;
+        letter-spacing: 1px;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--primary);
+        justify-content: space-around;
+      }
+      
+}
+
+@media screen and (min-width: 901px) {
+    .contactintro {
+        background-image: url("/src/images/contactintro.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 92vh;
+        align-content: center;
+        color: black;
+        text-align: center;
+        font-family: "Courgette", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3rem;
+        line-height: 90px;
+      }
+      
+      .form {
+        height: 100vh;
+      }
+      .linksforcontact {
+        padding: 30px;
+        font-family: "Pragati Narrow", serif;
+        letter-spacing: 1px;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--primary);
+        justify-content: space-around;
+      }
+      
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .contactintro {
+        background-image: url("/src/images/contactintro.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 92vh;
+        align-content: center;
+        color: black;
+        text-align: center;
+        font-family: "Courgette", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+        line-height: 70px;
+      }
+      
+      .form {
+        height: 100vh;
+      }
+      .linksforcontact {
+        padding: 30px;
+        font-family: "Pragati Narrow", serif;
+        letter-spacing: 1px;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--primary);
+        justify-content: space-around;
+      }
+      
+}

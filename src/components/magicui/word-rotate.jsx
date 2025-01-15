@@ -31,9 +31,9 @@ export default function WordRotate({
   return (
     (<div className="" style={{height:'fit-content'}}>
       <AnimatePresence mode="wait">
-        <motion.h4 key={words[index]}  className={cn(className)} {...framerProps}>
+        <motion.div key={words[index]}  className={cn(className)} {...framerProps}>
           {words[index]}
-        </motion.h4>
+        </motion.div>
       </AnimatePresence>
     </div>)
   );

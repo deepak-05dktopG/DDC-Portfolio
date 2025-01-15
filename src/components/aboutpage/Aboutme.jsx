@@ -17,8 +17,8 @@ import WordRotate from "@/components/magicui/word-rotate";
 // import ShineBorder from "@/components/magicui/shine-border.jsx";
 
 // import TextReveal from '@/components/ui/text-reveal';
-
-
+import 'keen-slider/keen-slider.min.css'
+import { useKeenSlider } from 'keen-slider/react'
 
 // import images
 import skillbackground from "/src/images/SkillBack1.avif"
@@ -102,7 +102,7 @@ function Aboutme() {
   const projects = [
     {
       Id: 1,
-      projectimg1: [`${skillbackground}`, `${skillbackground}`, `${skillbackground}`, `${skillbackground}`],
+      projectimg1: [`${skillbackground}`, `${Deepak}`, `${skillbackground}`, `${skillbackground}`],
       projecttitle: "portfolio",
       projectlink: "https://deepakdigitalcraft.tech/",
       projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
@@ -134,6 +134,43 @@ function Aboutme() {
     }
 
   ]
+
+
+  const [sliderRef] = useKeenSlider(
+    {
+      loop: true,
+    },
+    [
+      (slider) => {
+        let timeout
+        let mouseOver = false
+        function clearNextTimeout() {
+          clearTimeout(timeout)
+        }
+        function nextTimeout() {
+          clearTimeout(timeout)
+          if (mouseOver) return
+          timeout = setTimeout(() => {
+            slider.next()
+          }, 2000)
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true
+            clearNextTimeout()
+          })
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false
+            nextTimeout()
+          })
+          nextTimeout()
+        })
+        slider.on("dragStarted", clearNextTimeout)
+        slider.on("animationEnded", nextTimeout)
+        slider.on("updated", nextTimeout)
+      },
+    ]
+  )
 
 
 
@@ -214,6 +251,8 @@ function Aboutme() {
 
 
 
+
+
       <div className="skills_tools" style={{ backgroundImage: `url(${skillbackground})` }}>
         <h1 className="aboutme_title pt-5">Skills & Tools</h1>
 
@@ -229,7 +268,7 @@ function Aboutme() {
                   <div key={skills.Id} className="skillbox_content container d-flex align-items-center gap-2 ">
                     <img src={skills.image} className="skillimg" alt="tech" />
                     <div className="progress bg-secondary w-100 border" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                      <div className={`progress-bar text-dark fw-bold  progress-bar-striped  ${skills.percentage < 100 ? 'progress-bar-animated' : ''}`} style={{ width: `${skills.percentage}%`, backgroundColor: `${skills.percentage > 70 ? 'green' : skills.percentage > 40 ? 'yellow' : 'red'}` }}>{skills.percentage}%</div>
+                      <div className={`progress-bar fw-bold   progress-bar-striped  ${skills.percentage < 100 ? 'progress-bar-animated text-dark' : ''}`} style={{ width: `${skills.percentage}%`, backgroundColor: `${skills.percentage > 70 ? 'green' : skills.percentage > 40 ? 'orange' : 'red'}` }}>{skills.percentage}%</div>
                     </div>
                   </div>
                 ))}
@@ -243,36 +282,23 @@ function Aboutme() {
       </div>
 
 
-      <div className="projects ">
+      <div className="projects mt-lg-4 mt-5">
         <h1 className="aboutme_title text-center">Projects</h1>
 
 
-        <div className="d-flex mt-5 justify-content-around flex-wrap">
+        <div className="specificproject rounded d-flex mt-lg-5 justify-content-around flex-wrap">
           {projects.map((project) => (
             <div key={project.Id} className="project_card d-flex flex-column gap-2">
 
 
               <div className="project_img_corousel text-center">
 
-                <div id={`carouselExampleInterval${project.Id}`} class="carousel slide" data-bs-ride="true">
-                  <div class="carousel-inner">
-
-                    {project.projectimg1.map((projectimage, index) => (
-                      <>
-                        <div className="carousel-item active" data-bs-interval="3000">
-                          <img src={projectimage} class="d-block" alt={`Slide ${index + 1}`} />
-                        </div>
-                      </>
-                    ))}
-                  </div>
-                  <button key={project.Id} class="carousel-control-prev" type="button" data-bs-target={`#carouselExampleInterval${project.Id}`} data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button key={project.Id} class="carousel-control-next" type="button" data-bs-target={`#carouselExampleInterval${project.Id}`} data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
+                <div key={project.Id} ref={sliderRef} className="carousel-inner keen-slider d-flex justyfy-content-center align-items-center">
+                  {project.projectimg1.map((images, index) => (
+                    <div key={index} className=" keen-slider__slide  bg-white  text-dark text-center">
+                      <img src={images}  alt="" />
+                    </div>
+                  ))}
                 </div>
 
 

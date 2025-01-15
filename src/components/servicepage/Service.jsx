@@ -6,13 +6,23 @@ import './Service.css'
 import Headroom from "react-headroom";
 import Serviceimage from "/src/images/FreelanceService.jpg"
 import { Id } from 'tabler-icons-react'
+import { motion, useScroll, useSpring } from "framer-motion";
 
 function Service() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 200,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+
+
 
   const services = [
     {
       Id: 1,
-      domain: "WebDevelopment",
+      domain: "Web Development",
       categories: [
         { Id: 1, title: "Portfolio", content: "i am deepak i am doing web development " },
         { Id: 2, title: "Portfolio", content: "i am deepak i am doing web development " }
@@ -70,7 +80,6 @@ function Service() {
             <div className='specificdomain d-flex flex-wrap'>
 
               {services.categories.map(categories => (
-
                 <div key={categories.Id} className="subservices">
                   <h1 className="subservice">{categories.title}</h1>
                   <div className="subservicecontent">{categories.content}</div>

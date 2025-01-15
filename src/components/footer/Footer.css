@@ -16,6 +16,7 @@
   text-shadow: 3px 3px 2px rgb(43, 40, 34);
 }
 .footer_content {
+  text-align: center;
   padding: 20px 40px 0px 90px;
   font-size: 1.4rem;
 }

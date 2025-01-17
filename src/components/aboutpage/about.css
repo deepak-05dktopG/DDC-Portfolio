@@ -1,9 +1,11 @@
 .Hero {
   width: 100%;
-  background-image: url("/src/images/deepaklandscap.jpg");
   background-size: cover;
-  background-blend-mode: multiply;
-  background-color: var(--background-color);
+  text-shadow: 
+  -1px -1px 0 white,
+  1px -1px 0 white,
+  -1px 1px 0 white,
+  1px 1px 0 white; /* Creates the border effect */
 }
 .hi {
   font-size: 80px;
@@ -121,7 +123,7 @@
   margin: 50px 150px;
   text-align: justify;
 }
-.aboutme_description{
+.aboutme_description {
   text-align: justify;
 }
 .aboutme_description > .name {
@@ -150,14 +152,15 @@
 .skills_tools {
   min-height: 100vh;
   background-repeat: no-repeat;
-  background-color: rgb(36, 36, 36);
   background-size: cover;
   object-fit: cover;
-  background-blend-mode:multiply;
+  background-color: rgb(36, 36, 36);
+  background-blend-mode: multiply;
 }
 .skillboxes {
   display: flex;
   justify-content: space-evenly;
+
   width: fit-content;
   margin-top: 80px;
 }
@@ -165,16 +168,11 @@
   overflow: scroll;
 }
 .box {
-  height: fit-content;
-  -webkit-box-shadow: var(--webkit-box-shadow);
-  -moz-box-shadow: var(--moz-box-shadow);
-  box-shadow: var(--box-shadow);
-  width: 400px;
-  margin: 20px;
-  border: 1px solid var(--box-shadow);
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
   backdrop-filter: blur(1px);
-  background: linear-gradient(rgb(156, 156, 129), rgba(0, 0, 0, 0)); /* From yellow to transparent black */
+  -webkit-backdrop-filter: blur(1px);
+  border: 3px solid rgb(230, 9, 9);
 }
 .box_title {
   text-align: center;
@@ -252,25 +250,30 @@
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   min-height: 80px;
+  border: 1px solid rgb(128, 128, 128);
 }
 .project_tools > span {
-  background-color: rgba(255, 255, 0, 0.698);
-  color: var(--primary);
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.34);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(0, 0, 0, 1);
+  color: white;
   border-radius: 5px;
+  border: 1px solid rgb(130, 129, 129);
   padding: 0px 10px;
   margin: 5px;
   height: fit-content;
 }
 
 /* responsive design for mobile */
-@media screen and ( max-width: 600px) {
+@media screen and (max-width: 600px) {
   .Hero {
     width: 100%;
-    min-height: 90dvh;
-    background-image: url("/src/images/deepak.jpg");
+    min-height: 100dvh;
     background-size: cover;
-    background-blend-mode: multiply;
-    background-color: var(--background-color);
   }
   .hi {
     font-size: 40px;
@@ -390,21 +393,22 @@
   .aboutme_text {
     margin: 50px 20px;
   }
+
   .aboutme_description > .name {
     font-size: 25px;
   }
   .word-rotate {
-    font-size: 2px;
+    font-size: 18px;
   }
   .aboutme_image > img {
     width: 100px;
-    transition: width 0.5s ease-in-out ;
+    transition: width 0.5s ease-in-out;
     border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
   }
   .aboutme_image > img:hover {
     width: 150px;
     border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
-    transition: width 0.5s ease-in-out ;
+    transition: width 0.5s ease-in-out;
   }
   .profileimg {
     border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
@@ -428,7 +432,8 @@
     background-color: rgb(36, 36, 36);
     background-size: cover;
     object-fit: cover;
-    background-blend-mode:multiply;  
+    background-position: center;
+    background-blend-mode: multiply;
   }
   .skillboxes {
     display: flex;
@@ -441,15 +446,10 @@
   }
   .box {
     height: fit-content;
-    -webkit-box-shadow: var(--webkit-box-shadow);
-    -moz-box-shadow: var(--moz-box-shadow);
-    box-shadow: var(--box-shadow);
-    max-width: 300px;
+    min-width: 300px;
     margin: 10px;
     border: 1px solid var(--box-shadow);
     border-radius: 10px;
-    backdrop-filter: blur(1px);
-    background: linear-gradient(rgb(156, 156, 129), rgba(0, 0, 0, 0)); /* From yellow to transparent black */
   }
   .box_title {
     text-align: center;
@@ -469,7 +469,6 @@
   .projects {
     height: 100vh;
     font-family: "Kameron", serif;
-    font-optical-sizing: auto;
     padding: 10px;
   }
   .project_card {
@@ -484,7 +483,6 @@
     background-color: rgba(0, 0, 255, 0.2);
     height: fit-content;
     margin-top: 10px;
-
   }
   .project_img_corousel {
     border-radius: 10px;
@@ -529,15 +527,8 @@
     border-radius: 10px;
     min-height: 80px;
   }
-  .project_tools > span {
-    background-color: rgba(255, 255, 0, 0.5);
-    color: var(--primary);
-    border-radius: 5px;
-    padding: 0px 10px;
-    margin: 5px;
-    height: fit-content;
-  }
-  .specificproject{
+
+  .specificproject {
     height: 90vh;
     overflow: scroll;
     scrollbar-width: none;
@@ -549,10 +540,7 @@
   .Hero {
     width: 100%;
     height: fit-content;
-    background-image: url("/src/images/deepaklandscap.jpg");
     background-size: cover;
-    background-blend-mode: multiply;
-    background-color: var(--background-color);
   }
   .hi {
     font-size: 40px;
@@ -675,7 +663,7 @@
     font-size: 14px;
   }
   .word-rotate {
-    font-size: 2px;
+    font-size: 25px;
   }
   .aboutme_image > img {
     width: 100px;
@@ -711,15 +699,10 @@
   }
   .box {
     height: fit-content;
-    -webkit-box-shadow: var(--webkit-box-shadow);
-    -moz-box-shadow: var(--moz-box-shadow);
-    box-shadow: var(--box-shadow);
     max-width: 300px;
     margin: 10px;
     border: 1px solid var(--box-shadow);
     border-radius: 10px;
-    backdrop-filter: blur(1px);
-    background: linear-gradient(rgb(156, 156, 129), rgba(0, 0, 0, 0)); /* From yellow to transparent black */
   }
   .box_title {
     text-align: center;
@@ -731,12 +714,12 @@
   }
   .skillimg {
     width: 50px;
-    background-image: url('src/images/SkillBack1.avif');
+    background-image: url("src/images/SkillBack1.avif");
     background-repeat: no-repeat;
     background-color: rgb(36, 36, 36);
     background-size: cover;
     object-fit: cover;
-    background-blend-mode:multiply;
+    background-blend-mode: multiply;
   }
   .skillbox_content {
     padding: 10px;
@@ -759,7 +742,7 @@
     border: 1px solid var(--box-shadow);
     backdrop-filter: blur(1px);
     background-color: rgba(0, 0, 255, 0.2);
-    height: fit-content;  
+    height: fit-content;
   }
   .project_img_corousel {
     border-radius: 10px;
@@ -803,25 +786,14 @@
     border-radius: 10px;
     min-height: 80px;
   }
-  .project_tools > span {
-    background-color: rgba(255, 255, 0, 0.5);
-    color: var(--primary);
-    border-radius: 5px;
-    padding: 0px 10px;
-    margin: 5px;
-    height: fit-content;
-  }
 }
 
 /* Styles for desktop devices */
 @media screen and (min-width: 901px) {
   .Hero {
     width: 100%;
-    min-height: 95vh;
-    background-image: url("/src/images/deepaklandscap.jpg");
+    min-height: 100dvh;
     background-size: cover;
-    background-blend-mode: multiply;
-    background-color: var(--background-color);
   }
   .hi {
     font-size: 80px;
@@ -844,7 +816,7 @@
     20% {
       transform: rotate(0deg);
     }
-  
+
     50% {
       transform: rotate(0deg); /* Rotate and move right */
     }
@@ -938,6 +910,9 @@
   .aboutme_text {
     margin: 50px 150px;
   }
+  .aboutme_description > span {
+    font-size: 38px;
+  }
   .aboutme_description > .name {
     font-size: 40px;
   }
@@ -964,10 +939,10 @@
   .skills_tools {
     min-height: 100vh;
     background-repeat: no-repeat;
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(64, 64, 64);
     background-size: cover;
     object-fit: cover;
-    background-blend-mode:multiply;
+    background-blend-mode: multiply;
   }
   .skillboxes {
     display: flex;
@@ -980,16 +955,10 @@
   }
   .box {
     height: fit-content;
-    -webkit-box-shadow: var(--webkit-box-shadow);
-    -moz-box-shadow: var(--moz-box-shadow);
-    box-shadow: var(--box-shadow);
     width: 600px;
     margin: 20px;
     border: 1px solid var(--box-shadow);
     border-radius: 10px;
-    backdrop-filter: blur(1px);
-    background: linear-gradient(rgb(156, 156, 129), rgba(0, 0, 0, 0)); /* From yellow to transparent black */
- 
   }
   .box_title {
     text-align: center;
@@ -1005,7 +974,7 @@
   .skillbox_content {
     padding: 10px;
   }
-  
+
   .projects {
     min-height: fit-content;
     font-family: "Kameron", serif;
@@ -1066,26 +1035,15 @@
     border-radius: 10px;
     min-height: 80px;
   }
-  .project_tools > span {
-    background-color: rgba(255, 255, 0, 0.5);
-    color: var(--primary);
-    border-radius: 5px;
-    padding: 0px 10px;
-    margin: 5px;
-    height: fit-content;
-  }
 }
 
 /* Styles for tablets */
 @media screen and (min-width: 601px) and (max-width: 900px) {
   .Hero {
     width: 100%;
-    min-height: 95dvh;
-    background-image: url("/src/images/deepak.jpg");
+    min-height: 100dvh;
     background-size: cover;
     background-position: center;
-    background-blend-mode: multiply;
-    background-color: var(--background-color);
   }
   .hi {
     font-size: 40px;
@@ -1207,7 +1165,9 @@
   .aboutme_description > .name {
     font-size: 37px;
   }
-
+  .word-rotate {
+    font-size: 25px;
+  }
   .aboutme_image > img {
     width: 150px;
     border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
@@ -1234,7 +1194,7 @@
     background-color: rgb(36, 36, 36);
     background-size: cover;
     object-fit: cover;
-    background-blend-mode:multiply;
+    background-blend-mode: multiply;
   }
   .skillboxes {
     display: flex;
@@ -1247,15 +1207,11 @@
   }
   .box {
     height: fit-content;
-    -webkit-box-shadow: var(--webkit-box-shadow);
-    -moz-box-shadow: var(--moz-box-shadow);
-    box-shadow: var(--box-shadow);
+
     max-width: 300px;
     margin: 10px;
     border: 1px solid var(--box-shadow);
     border-radius: 10px;
-    backdrop-filter: blur(1px);
-    background: linear-gradient(rgb(156, 156, 129), rgba(0, 0, 0, 0)); /* From yellow to transparent black */
   }
   .box_title {
     text-align: center;
@@ -1289,7 +1245,7 @@
     backdrop-filter: blur(1px);
     background-color: rgba(0, 0, 255, 0.2);
     height: fit-content;
-    margin-top: 10px ;
+    margin-top: 10px;
   }
   .project_img_corousel {
     border-radius: 10px;
@@ -1333,14 +1289,4 @@
     border-radius: 10px;
     min-height: 80px;
   }
-  .project_tools > span {
-    background-color: rgba(255, 255, 0, 0.5);
-    color: var(--primary);
-    border-radius: 5px;
-    padding: 0px 10px;
-    margin: 5px;
-    min-height: fit-content;
-  }
 }
-
-

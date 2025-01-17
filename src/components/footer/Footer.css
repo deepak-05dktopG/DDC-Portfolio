@@ -30,6 +30,12 @@
   min-width: 50px;
   color: white;
 }
+.cta>div>a{
+  color: rgb(180, 180, 180);
+}
+.scrolltop{
+  color: var(--primary);
+}
 
 @media screen and (max-width: 600px) {
   .Footer {
@@ -55,11 +61,10 @@
   }
   .cta {
     gap: 10px;
-
-    padding: 20px 0px 20px 0px;
+    padding: 10px 0px 20px 0px;
   }
   .cta > div {
-    background-color: #0a0909;
+    background-color: #000000;
     border-radius: 10px;
     padding: 2px;
     min-width: 50px;

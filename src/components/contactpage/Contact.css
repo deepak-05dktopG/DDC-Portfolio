@@ -1,5 +1,5 @@
 .contactintro {
-  background-image: url("/src/images/contactintro.jpg");
+  background-image: url("/src/images/Contactimage.avif");
   background-repeat: no-repeat;
   background-size: cover;
   height: 92vh;
@@ -11,11 +11,51 @@
   font-style: normal;
   font-size: 3rem;
   line-height: 90px;
+  background-color: rgb(124, 124, 124);
+  background-blend-mode: multiply;
 }
 
-.form {
-  height: 100vh;
+form {
+  min-height: 80vh;
+  padding: 70px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 0px 0px 57px -2px rgba(181,0,238,0.61) inset;
+  -webkit-box-shadow: 0px 0px 57px -2px rgba(181,0,238,0.61) inset;
+  -moz-box-shadow: 0px 0px 57px -2px rgba(181,0,238,0.61) inset;
 }
+.form-control::placeholder {
+  color: var(--primary);
+  opacity: 50%;
+}
+.btn{
+  font-family: "Oxanium", serif;
+  font-optical-sizing: auto;
+  color: var(--primary);
+  font-weight: 600;
+}
+.form-control{
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 6px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgb(164, 162, 162);
+  color: var(--primary);
+  }
+.Enquirytitle {
+  font-family: "Zen Dots", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #c65c16;
+  text-shadow: 3px 3px 2px orange;
+}
+
+.submit {
+  width: 100%;
+}
+
 .linksforcontact {
   padding: 30px;
   font-family: "Pragati Narrow", serif;
@@ -29,11 +69,13 @@
 
 @media screen and (max-width: 600px) {
   .contactintro {
-    background-image: url("/src/images/contactintro.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgb(129, 129, 129);
+    background-blend-mode: multiply;    
     background-position: center;
-    height: 85vh;
+    height: fit-content;
+    padding: 50px 0px;
+    background-position: center;
+    background-size:contain;
     align-content: center;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -41,11 +83,12 @@
     font-weight: 400;
     font-style: normal;
     font-size: 1.5rem;
-    line-height: 35px;
+    line-height: 45px;
   }
 
   .form {
     height: 100vh;
+    justify-content: 
   }
   .linksforcontact {
     padding: 10px;
@@ -60,97 +103,117 @@
 }
 
 @media screen and (orientation: landscape) {
-    .contactintro {
-        background-image: url("/src/images/contactintro.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 92vh;
-        align-content: center;
-        color: black;
-        text-align: center;
-        font-family: "Courgette", serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 1.5rem;
-        line-height: 50px;
-      }
-      
-      .form {
-        height: 100vh;
-      }
-      .linksforcontact {
-        padding: 30px;
-        font-family: "Pragati Narrow", serif;
-        letter-spacing: 1px;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-size: 20px;
-        color: var(--primary);
-        justify-content: space-around;
-      }
-      
+  .contactintro {
+    height: 92vh;
+    align-content: center;
+    color: black;
+    text-align: center;
+    font-family: "Courgette", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 50px;
+  }
+
+  .form {
+    height: 100vh;
+  }
+  .linksforcontact {
+    padding: 30px;
+    font-family: "Pragati Narrow", serif;
+    letter-spacing: 1px;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--primary);
+    justify-content: space-around;
+  }
 }
 
 @media screen and (min-width: 901px) {
-    .contactintro {
-        background-image: url("/src/images/contactintro.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 92vh;
-        align-content: center;
-        color: black;
-        text-align: center;
-        font-family: "Courgette", serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 3rem;
-        line-height: 90px;
-      }
-      
-      .form {
-        height: 100vh;
-      }
-      .linksforcontact {
-        padding: 30px;
-        font-family: "Pragati Narrow", serif;
-        letter-spacing: 1px;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-size: 20px;
-        color: var(--primary);
-        justify-content: space-around;
-      }
-      
+  .contactintro {
+    height: 92vh;
+    align-content: center;
+    color: black;
+    text-align: center;
+    font-family: "Courgette", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 90px;
+  }
+  .Enquirytitle {
+    font-family: "Zen Dots", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #c65c16;
+    text-shadow: 3px 3px 2px orange;
+  }
+  form {
+    height: 100vh;
+    padding: 70px 500px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .input{
+  }
+  .linksforcontact {
+    padding: 30px;
+    font-family: "Pragati Narrow", serif;
+    letter-spacing: 1px;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--primary);
+    justify-content: space-around;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
-    .contactintro {
-        background-image: url("/src/images/contactintro.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 92vh;
-        align-content: center;
-        color: black;
-        text-align: center;
-        font-family: "Courgette", serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 2rem;
-        line-height: 70px;
-      }
-      
-      .form {
-        height: 100vh;
-      }
-      .linksforcontact {
-        padding: 30px;
-        font-family: "Pragati Narrow", serif;
-        letter-spacing: 1px;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-size: 20px;
-        color: var(--primary);
-        justify-content: space-around;
-      }
-      
+  .contactintro {
+    height: 92vh;
+    align-content: center;
+    color: black;
+    text-align: center;
+    font-family: "Courgette", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 70px;
+  }
+
+  .form {
+    height: 100vh;
+  }
+  .linksforcontact {
+    padding: 30px;
+    font-family: "Pragati Narrow", serif;
+    letter-spacing: 1px;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--primary);
+    justify-content: space-around;
+  }
+  form {
+    min-height: 100vh;
+    max-height:fit-content;
+    padding: 70px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-between;
+  }
+  .Enquirytitle {
+    font-family: "Zen Dots", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #c65c16;
+    text-shadow: 3px 3px 2px orange;
+  }
+
+  .submit {
+    width: 100%;
+  }
 }

@@ -21,7 +21,7 @@ import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
 
 // import images
-import skillbackground from "/src/images/SkillBack1.avif"
+import skillbackground from "/src/images/SkillBack1.png"
 import Deepak from '/src/images/deepak.jpg'
 import DeepakLandscape from '/src/images/deepaklandscap.jpg'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
@@ -36,6 +36,7 @@ import GsapLogo from "/src/images/Gsap.png"
 
 import Figmalogo from "/src/images/Figma.png"
 import Gitlogo from "/src/images/Git.png"
+import RINGS from 'vanta/dist/vanta.rings.min';
 
 import NodeLogo from "/src/images/NodeJs.jpeg"
 import Expresslogo from "/src/images/ExpressJs.jpeg"
@@ -173,6 +174,22 @@ function Aboutme() {
   )
 
 
+  useEffect(() => {
+    RINGS({
+      el: "#vanta-clouds",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 'tranparent',
+      color: 0xd60680,
+    })
+  }, [])
+
+
 
 
   return (
@@ -180,15 +197,10 @@ function Aboutme() {
 
 
       <motion.div className="z-2 progress-bar" style={{ scaleX }} ></motion.div>
-
-      <Headroom>
+      <Headroom className="" >
         <Navbar />
       </Headroom>
-
-
-
-
-      <div div className="Hero d-flex flex-column justify-content-center">
+      <div id="vanta-clouds"  className="Hero d-flex flex-column justify-content-center">
         <div className="Hero_text">
           <div>Hey, there <span className="hi">👋</span></div>
           <div>I’m <span className="name"> Deepakkumar</span></div>
@@ -213,9 +225,9 @@ function Aboutme() {
               <span className=""><Download size={25} strokeWidth={2} color={'black'} /></span>
             </AwesomeButton></a></div>
           <div className="Hero_Social_Medias">
-            <a href="https://www.linkedin.com/in/deepak-05dktopg/" className=""><AwesomeButton type="danger"><BrandLinkedin size={35} className="button" strokeWidth={2} color={'black'} />Linkedin</AwesomeButton></a>
-            <a href="https://github.com/deepak-05dktopG/"> <AwesomeButton type="danger"> <BrandGithub size={35} strokeWidth={2} color={'black'} />Github </AwesomeButton></a>
-            <a href="https://www.instagram.com/prime_dk_05/"> <AwesomeButton type="danger"><BrandInstagram size={35} strokeWidth={2} color={'black'} />Instgram</AwesomeButton></a>
+            <a href="https://www.linkedin.com/in/deepak-05dktopg/" className=""><AwesomeButton type="danger"><BrandLinkedin size={35} className="button" strokeWidth={2} color={'black'} /> <span className="text-white"> Linkedin </span></AwesomeButton></a>
+            <a href="https://github.com/deepak-05dktopG/"> <AwesomeButton type="danger"> <BrandGithub size={35} strokeWidth={2} color={'black'} /> <span className="text-white">Github </span> </AwesomeButton></a>
+            <a href="https://www.instagram.com/prime_dk_05/"> <AwesomeButton type="danger"><BrandInstagram size={35} strokeWidth={2} color={'black'} /> <span className="text-white">Instgram</span> </AwesomeButton></a>
           </div>
 
         </div>
@@ -223,7 +235,6 @@ function Aboutme() {
 
 
       </div>
-
       {/* <ShineBorder
         className="relative flex h-[500px] w-25 flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
         color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
@@ -291,12 +302,12 @@ function Aboutme() {
             <div key={project.Id} className="project_card d-flex flex-column gap-2">
 
 
-              <div className="project_img_corousel text-center">
+              <div className="project_img_corousel  text-center">
 
                 <div key={project.Id} ref={sliderRef} className="carousel-inner keen-slider d-flex justyfy-content-center align-items-center">
                   {project.projectimg1.map((images, index) => (
-                    <div key={index} className=" keen-slider__slide  bg-white  text-dark text-center">
-                      <img src={images}  alt="" />
+                    <div key={index} className=" keen-slider__slide  bg-dark rounded-3  text-dark text-center">
+                      <img src={images} alt="" />
                     </div>
                   ))}
                 </div>

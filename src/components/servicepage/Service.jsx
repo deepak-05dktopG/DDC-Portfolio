@@ -7,7 +7,7 @@ import Headroom from "react-headroom";
 import Serviceimage from "/src/images/FreelanceService.jpg"
 import { Id } from 'tabler-icons-react'
 import { motion, useScroll, useSpring } from "framer-motion";
-
+import ParallaxText from './VelocityScroll'
 function Service() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -59,16 +59,11 @@ function Service() {
         </div>
       </div>
 
+      <section className='w-100 pb-3 fw-bold'>
+        <ParallaxText baseVelocity={-3}>Website and ChatBot Development </ParallaxText>
+        <ParallaxText baseVelocity={3}>Website and ChatBot Development </ParallaxText>
+      </section>
 
-      <marquee className="bg-secondary" behavior="scroll" direction="left">
-        <div className="d-flex gap-5">
-          <h1>Web Development</h1>
-          <h1>ChatBot Development</h1>
-          <h1> Designing</h1>
-          <h1>Bussiness Card</h1>
-          <h1>Logo</h1>
-        </div>
-      </marquee>
 
 
 

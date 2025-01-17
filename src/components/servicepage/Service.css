@@ -20,8 +20,6 @@
 .whatido > .first > .content {
   padding: 10px;
   font-size: 20px;
-  letter-spacing: 1px;
-  word-spacing: 2px;
   line-height: 35px;
   width: 50%;
   text-align: justify;
@@ -67,9 +65,24 @@
 .subservicecontent {
   padding: 5px 20px;
   font-size: 20px;
-  letter-spacing: 1px;
-  word-spacing: 2px;
   text-align: justify;
+}
+.parallax {
+  overflow: hidden;
+  letter-spacing: 1px;
+  line-height: 70px;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.parallax .scroller {
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 
@@ -98,8 +111,6 @@
   .whatido > .first > .content {
     padding: 10px;
     font-size: 18px;
-    letter-spacing: 1px;
-    word-spacing: 1px;
     line-height: 25px;
     width: 100%;
   }
@@ -151,9 +162,26 @@
   .subservicecontent {
     padding: 5px 20px;
     font-size: 18px;
-    letter-spacing: 1px;
-    word-spacing: 1px;
+
   }
+  .parallax {
+    overflow: hidden;
+    letter-spacing: 1px;
+    line-height: 40px;
+    margin: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .parallax .scroller {
+    text-transform: uppercase;
+    font-size: 34px;
+    display: flex;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
 }
 
 @media screen and (orientation: landscape) {
@@ -181,9 +209,6 @@
   .whatido > .first > .content {
     padding: 10px;
     font-size: 15px;
-    letter-spacing: 1px;
-    word-spacing: 1px;
-    line-height: 20px;
     width: 50%;
   }
   .serviceimage > img {
@@ -227,8 +252,7 @@
   .subservicecontent {
     padding: 5px 20px;
     font-size: 20px;
-    letter-spacing: 1px;
-    word-spacing: 2px;
+
   }
 }
 
@@ -255,8 +279,6 @@
 .whatido > .first > .content {
   padding: 10px;
   font-size: 20px;
-  letter-spacing: 1px;
-  word-spacing: 2px;
   line-height: 35px;
   width: 50%;
 }
@@ -300,8 +322,7 @@
 .subservicecontent {
   padding: 5px 20px;
   font-size: 20px;
-  letter-spacing: 1px;
-  word-spacing: 2px;
+
 }
 .specificdomain{
   justify-content: center;
@@ -332,9 +353,6 @@
   .whatido > .first > .content {
     padding: 10px;
     font-size: 15px;
-    letter-spacing: 1px;
-    word-spacing: 1px;
-    line-height: 25px;
     width: 50%;
   }
   .serviceimage > img {
@@ -378,8 +396,6 @@
   .subservicecontent {
     padding: 5px 20px;
     font-size: 15px;
-    letter-spacing: 1px;
-    word-spacing: 2px;
   }
   .specificdomain{
     justify-content: center;

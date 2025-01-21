@@ -357,6 +357,18 @@
     color: var(--primary);
     z-index: -1;
   }
+  .offcanvas{
+    max-width:90%;
+    margin: 100px 20px 50px 0px;
+  }
+  .offcanvas-body{
+    background-image: url('/src/images/myresume.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+
   .Hero_Social_Medias {
     font-family: "Oxanium", serif;
     width: 100%;
@@ -621,6 +633,17 @@
     color: var(--primary);
     z-index: -1;
   }
+  .offcanvas{
+    max-width:90%;
+    margin: 70px 40px 10px 50px;
+  }
+  .offcanvas-body{
+    background-image: url('/src/images/myresume.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
   .Hero_Social_Medias {
     font-family: "Oxanium", serif;
     width: 100%;
@@ -1120,6 +1143,17 @@
     color: var(--primary);
     z-index: -1;
   }
+  .offcanvas{
+    max-width:95%;
+    margin: 70px 15px 10px 50px;
+  }
+  .offcanvas-body{
+    background-image: url('/src/images/myresume.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
   .Hero_Social_Medias {
     font-family: "Oxanium", serif;
     width: 100%;

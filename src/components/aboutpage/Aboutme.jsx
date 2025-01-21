@@ -44,6 +44,9 @@ import Pythonlogo from "/src/images/Python.png"
 import javalogo from "/src/images/Java.png"
 import sqllogo from "/src/images/Sql.png"
 import mongodblogo from "/src/images/MongoDB.jpeg"
+import myresume from "/src/images/DeepakResume.docx"
+import myresumepdf from "/src/images/DeepakResume.pdf"
+
 function Aboutme() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -233,6 +236,8 @@ function Aboutme() {
             </AwesomeButton>
           </div>
 
+         
+
 
           <div className="offcanvas  offcanvas-end w-100 " tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
 
@@ -240,8 +245,12 @@ function Aboutme() {
             </div>
 
             <div className="d-flex p-2 gap-2 bg-dark justify-content-end">
-           <button className="btn btn-outline-danger" type="button" data-bs-dismiss="offcanvas" >Close</button>
-             <button  className="btn  btn-outline-success"> <a href="./src/images/internresume.docx" download  className=" text-white" style={{padding:'10px',textDecoration:'none'}}> Download </a></button>
+              <button className="btn btn-outline-danger text-white" type="button" data-bs-dismiss="offcanvas" >Close</button>
+              <button className="btn btn-outline-success text-white ">
+              <Download size={25} strokeWidth={2} color={'white'} />
+                 <a href={myresume} download className=" text-white border border-0 " style={{ padding: '10px', textDecoration: 'none' }}> docs.x </a>
+                   <span classname='fs-2 fw-bold'>|</span> 
+                   <a href={myresumepdf} download className=" border  border-0  border-success text-white" style={{ padding: '10px', textDecoration: 'none' }}> .pdf </a></button>
             </div>
           </div>
 

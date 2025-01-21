@@ -11,5 +11,5 @@ export default defineConfig({
     },
   },
   base: 'DDC-Portfolio', // Replace with your GitHub repository name
- 
+  assetsInclude: ['**/*.docx','**/*.pdf'],
 })

@@ -11,7 +11,7 @@
   font-style: normal;
   font-size: 3rem;
   line-height: 90px;
-  background-color: rgb(124, 124, 124);
+  background-color: var(--background-color);
   background-blend-mode: multiply;
 }
 
@@ -69,7 +69,7 @@ form {
 
 @media screen and (max-width: 600px) {
   .contactintro {
-    background-color: rgb(129, 129, 129);
+    background-color: var(--background-color);
     background-blend-mode: multiply;    
     background-position: center;
     height: fit-content;

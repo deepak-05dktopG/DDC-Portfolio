@@ -26,7 +26,7 @@ nav {
   box-shadow: var(--box-shadow);
   backdrop-filter: var(--backdrop-filter);
   -webkit-backdrop-filter: var(--webkit-filter);
-  z-index: 999;
+  z-index: 10;
 }
 nav > .ddc {
   font-family: "Kumar One", serif;
@@ -54,7 +54,7 @@ nav > .navitem {
     box-shadow: var(--box-shadow);
     backdrop-filter: var(--backdrop-filter);
     -webkit-backdrop-filter: var(--webkit-filter);
-    z-index: 999;
+    z-index: 10;
   }
   nav > .ddc {
     font-family: "Kumar One", serif;

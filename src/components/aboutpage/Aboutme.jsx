@@ -182,9 +182,9 @@ function Aboutme() {
       gyroControls: false,
       minHeight: 200.00,
       minWidth: 200.00,
-      scale: 1.00,
+      scale: .00,
       scaleMobile: 1.00,
-      backgroundColor: 'tranparent',
+      backgroundColor: '',
       color: 0xd60680,
     })
   }, [])
@@ -197,10 +197,11 @@ function Aboutme() {
 
 
       <motion.div className="z-2 progress-bar" style={{ scaleX }} ></motion.div>
+
       <Headroom className="" >
         <Navbar />
       </Headroom>
-      <div id="vanta-clouds"  className="Hero d-flex flex-column justify-content-center">
+      <div id="vanta-clouds" className="Hero d-flex flex-column justify-content-center">
         <div className="Hero_text">
           <div>Hey, there <span className="hi">👋</span></div>
           <div>I’m <span className="name"> Deepakkumar</span></div>
@@ -219,11 +220,35 @@ function Aboutme() {
 
 
 
-          <div className="button">
+          {/* <div className="button">
 
             <a href="src/images/DeepakkumarResume.pdf" download target="_blank"> <AwesomeButton type="secondary" className="mt-2">Resume
               <span className=""><Download size={25} strokeWidth={2} color={'black'} /></span>
-            </AwesomeButton></a></div>
+            </AwesomeButton></a>
+          </div> */}
+
+          <div className="button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+            <AwesomeButton type="secondary" className="mt-2">Resume
+              <span className=""><Download size={25} strokeWidth={2} color={'black'} /></span>
+            </AwesomeButton>
+          </div>
+
+
+          <div className="offcanvas  offcanvas-end w-100 " tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+
+            <div class="offcanvas-body">
+            </div>
+
+            <div className="d-flex p-2 gap-2 bg-dark justify-content-end">
+           <button className="btn btn-outline-danger" type="button" data-bs-dismiss="offcanvas" >Close</button>
+             <button  className="btn  btn-outline-success"> <a href="./src/images/internresume.docx" download  className=" text-white" style={{padding:'10px',textDecoration:'none'}}> Download </a></button>
+            </div>
+          </div>
+
+
+
+
+
           <div className="Hero_Social_Medias">
             <a href="https://www.linkedin.com/in/deepak-05dktopg/" className=""><AwesomeButton type="danger"><BrandLinkedin size={35} className="button" strokeWidth={2} color={'black'} /> <span className="text-white"> Linkedin </span></AwesomeButton></a>
             <a href="https://github.com/deepak-05dktopG/"> <AwesomeButton type="danger"> <BrandGithub size={35} strokeWidth={2} color={'black'} /> <span className="text-white">Github </span> </AwesomeButton></a>
@@ -304,9 +329,9 @@ function Aboutme() {
 
               <div className="project_img_corousel  text-center">
 
-                <div key={project.Id} ref={sliderRef} className="carousel-inner keen-slider d-flex justyfy-content-center align-items-center">
+                <div key={project.Id} ref={sliderRef} className="carousel-inner keen-slider d-flex justyfy-content-center align-items-center rounded">
                   {project.projectimg1.map((images, index) => (
-                    <div key={index} className=" keen-slider__slide  bg-dark rounded-3  text-dark text-center">
+                    <div key={index} className=" keen-slider__slide  bg-dark rounded  text-dark text-center">
                       <img src={images} alt="" />
                     </div>
                   ))}

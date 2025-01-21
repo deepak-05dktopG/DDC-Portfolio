@@ -15,7 +15,7 @@ function Footer() {
     return (
 
         <>
-            <div onClick={scrollToTop} className='scrolltop text-end p-2'>    <ChevronsUp size={40} /></div>
+            <div onClick={scrollToTop} className='scrolltop text-secondary text-end p-2'>    <ChevronsUp size={40} /></div>
             <div className='Footer d-flex flex-column justify-content-around'>
                 <h2 className="footer_title">Let’s Work Together!  </h2>
                 <div className="footer_content">Whether you're a small business, startup, or individual looking to build a website, I’m excited to collaborate and create something amazing. Together, we can craft a web presence that stands out and delivers results. <Link to="/contact" >Contact</Link>  </div>

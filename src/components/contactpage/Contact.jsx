@@ -37,7 +37,7 @@ function Contact() {
     alert('Form submitted successfully!'); // Show alert message
 
 
-};
+  };
 
 
 
@@ -48,20 +48,22 @@ function Contact() {
         <Navbar />
       </Headroom>
 
-      <div className="contactintro">
-        "Let's build something incredible together." <br />
+      <div className='bg-white'>
+        <div className="contactintro">
+          "Let's build something incredible together." <br />
 
-        "Looking for a Freelancer for your project? Let's talk!" <br />
+          "Looking for a Freelancer for your project? Let's talk!" <br />
 
-        "Need help with         <div style={{ display: 'inline-block' }} className="lookingfor px-3 ">
-          <WordRotate
-            words={['Freelancer', 'Web Developer', 'ChatBot Developer', 'Designer',]}
-          /> </div>? I'm your guy." <br />
+          "Need help with         <div style={{ display: 'inline-block' }} className="lookingfor px-3 ">
+            <WordRotate
+              words={['Freelancer', 'Web Developer', 'ChatBot Developer', 'Designer',]}
+            /> </div>? I'm your guy." <br />
 
-        "I'm open to freelance projects for startups and growing businesses."
+          "I'm open to freelance projects for startups and growing businesses."
+        </div>
       </div>
 
-      <form  id='formm' className='needs-validation' action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <form id='formm' className='needs-validation' action="https://api.web3forms.com/submit" method="POST" novalidate>
         <input type="hidden" name="access_key" value="bf09f79e-4888-4ddb-af54-5b31e0dc1fe4" />
         <h1 className='Enquirytitle'>Enquiry</h1>
 
@@ -107,10 +109,10 @@ function Contact() {
           <label for="floatingTextarea2">Message</label>
         </div>
 
-        <input type="hidden" name="redirect" value="#" id='redirect-url'/>
-        
-        <div onClick={confettibtn1} className='submit d-flex justify-content-center'>
-          <button  type="submit" className='btn btn-primary'>Submit Form</button>
+        <input type="hidden" name="redirect" value="#" id='redirect-url' />
+
+        <div  className='submit d-flex justify-content-center'>
+          <button type="submit" className='btn btn-primary'>Submit Form</button>
         </div>
 
       </form>

@@ -1,11 +1,9 @@
 .Hero {
+  z-index: 0;
   width: 100%;
   background-size: cover;
-  text-shadow: 
-  -1px -1px 0 white,
-  1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white; /* Creates the border effect */
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white; /* Creates the border effect */
 }
 .hi {
   font-size: 80px;
@@ -57,6 +55,16 @@
   font-size: 25px;
   color: var(--primary);
   z-index: -1;
+}
+.offcanvas{
+  max-width:80%;
+  margin: 70px 130px 10px 50px;
+}
+.offcanvas-body{
+  background-image: url('/src/images/myresume.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .Hero_Social_Medias {
   font-family: "Oxanium", serif;
@@ -166,14 +174,36 @@
 }
 .scrollskillboxes {
   overflow: scroll;
+  
+}
+@keyframes gradientAnimation {
+  0% {
+    border-image-source: linear-gradient(to bottom right, #ff512f, #dd2476);
+  }
+  20% {
+  }
+  40% {
+    border-image-source: linear-gradient(to bottom right, #ffd3a5, #fd6585);
+  }
+  60% {
+    border-image-source: linear-gradient(to bottom right, #12c2e9, #f64f59);
+  }
+  80% {
+    border-image-source: linear-gradient(to bottom right, #7f7fd5, #91eae4);
+  }
+  100% {
+    border-image-source: linear-gradient(to bottom right, #ff512f, #dd2476);
+  }
 }
 .box {
-  background: rgba(255, 255, 255, 0.22);
-  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
-  border: 3px solid rgb(230, 9, 9);
+  border: 1px solid;
+  border-image-slice: 1;
+  animation: gradientAnimation 1s linear infinite;
 }
+
 .box_title {
   text-align: center;
   font-family: "Silkscreen", serif;
@@ -448,8 +478,6 @@
     height: fit-content;
     min-width: 300px;
     margin: 10px;
-    border: 1px solid var(--box-shadow);
-    border-radius: 10px;
   }
   .box_title {
     text-align: center;
@@ -701,8 +729,6 @@
     height: fit-content;
     max-width: 300px;
     margin: 10px;
-    border: 1px solid var(--box-shadow);
-    border-radius: 10px;
   }
   .box_title {
     text-align: center;
@@ -939,7 +965,7 @@
   .skills_tools {
     min-height: 100vh;
     background-repeat: no-repeat;
-    background-color: rgb(64, 64, 64);
+    background-color: var(--background-color);
     background-size: cover;
     object-fit: cover;
     background-blend-mode: multiply;
@@ -957,8 +983,6 @@
     height: fit-content;
     width: 600px;
     margin: 20px;
-    border: 1px solid var(--box-shadow);
-    border-radius: 10px;
   }
   .box_title {
     text-align: center;
@@ -1210,8 +1234,6 @@
 
     max-width: 300px;
     margin: 10px;
-    border: 1px solid var(--box-shadow);
-    border-radius: 10px;
   }
   .box_title {
     text-align: center;

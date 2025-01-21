@@ -1,4 +1,4 @@
-"use client";
+"use client";;
 import { cn } from "@/lib/utils";
 
 /**
@@ -11,11 +11,11 @@ import { cn } from "@/lib/utils";
  * @param className defines the class name to be applied to the component
  * @param children contains react node elements.
  */
-function ShineBorder({
+export default function ShineBorder({
   borderRadius = 8,
-  borderWidth = 5,
+  borderWidth = 1,
   duration = 14,
-  color = "blue",
+  color = 'red',
   className,
   children
 }) {
@@ -40,9 +40,8 @@ function ShineBorder({
             "--background-radial-gradient": `radial-gradient(transparent,transparent, ${color instanceof Array ? color.join(",") : color},transparent,transparent)`
           }
         }
-        className={`pointer-events-none before:bg-shine-size before:absolute before:inset-0 before:size-full before:rounded-[--border-radius] before:p-[--border-width] before:will-change-[background-position] before:content-[""] before:![-webkit-mask-composite:xor] before:![mask-composite:exclude] before:[background-image:--background-radial-gradient] before:[background-size:300%_300%] before:[mask:--mask-linear-gradient] motion-safe:before:animate-shine border text-white`}>Deepak</div>
+        className={`pointer-events-none before:bg-shine-size before:absolute before:inset-0 before:size-full before:rounded-[--border-radius] before:p-[--border-width] before:will-change-[background-position] before:content-[""] before:![-webkit-mask-composite:xor] before:![mask-composite:exclude] before:[background-image:--background-radial-gradient] before:[background-size:300%_300%] before:[mask:--mask-linear-gradient] motion-safe:before:animate-shine`}></div>
       {children}
     </div>)
   );
 }
-export default ShineBorder;

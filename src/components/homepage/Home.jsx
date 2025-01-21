@@ -24,7 +24,7 @@ const Home = () => {
       el: "#vanta-clouds",
       mouseControls: true,
       touchControls: true,
-      gyroControls: false,
+      gyroControls: true,
       minHeight: 200.00,
       minWidth: 200.00,
       scale: 1.00,
@@ -100,7 +100,7 @@ const Home = () => {
 
           <div className="awesome-button-wrapper " onClick={callconfettiandexplore}>
             
-            <AwesomeButton className="mt-2">Explore More</AwesomeButton>
+            <AwesomeButton className="mt-2 w-50">Explore More</AwesomeButton>
           </div>
         </div>
 

@@ -1,6 +1,7 @@
 @import 'react-awesome-button/dist/styles.css';
 .homepage1 {
-  height: 100vh;
+  min-height: 100vh;
+  max-height: fit-content;
 }
 .brandname > .name > span {
   color: red;
@@ -110,7 +111,8 @@
 /* Mobile Responsive */
 @media (max-width: 680px) {
   .homepage1 {
-    height: 100vh;
+    min-height: 100vh;
+    max-height: fit-content;
   }
   .brandname > .name > span {
     color: red;
@@ -203,7 +205,8 @@
   /* Tablet responsiveness */
   @media (min-width: 481px) and (max-width: 767px) {
     .homepage1 {
-      height: 100vh;
+      min-height: 100vh;
+      max-height: fit-content;
       width: 100%;
     }
     .brandname > .name > span {

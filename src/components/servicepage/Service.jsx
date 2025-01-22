@@ -54,7 +54,7 @@ function Service() {
         <div className='first d-flex flex-wrap-reverse  align-items-center'>
           <div className="content">I offer professional web development services to individuals and businesses looking to establish or enhance their online presence. Whether you need a sleek portfolio, an engaging business website, or seamless web applications, I’m here to help bring your vision to life.</div>
           <div className="serviceimage ">
-            <img src={Serviceimage} className='bg-danger  ' alt="image" />
+            <img src={Serviceimage} className='bg-danger' alt="Service" loading="lazy"/>
           </div>
         </div>
       </div>

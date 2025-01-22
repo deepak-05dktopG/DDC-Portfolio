@@ -25,7 +25,8 @@ function Footer() {
                     <div><a href='https://github.com/deepak-05dktopG/'><Github style={{ width: "fit-content", height: "50px" }} /></a></div>
                     <div><a href='https://www.instagram.com/prime_dk_05/'><Instagram style={{ width: "fit-content", height: "50px" }} /></a></div>
                 </div>
-                <center className="copyrights">Copyrights</center>
+                <center className="copyrights">© 2025 DDC Tech. All rights reserved.
+                </center>
             </div>
         </>
 

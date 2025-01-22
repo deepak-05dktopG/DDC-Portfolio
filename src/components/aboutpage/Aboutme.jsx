@@ -283,7 +283,7 @@ function Aboutme() {
         <h1 className="aboutme_title">About Me</h1>
 
         <div className="aboutme_text">
-          <div className="aboutme_image"><img src={Deepak} className="profileimg" alt="" /></div>
+          <div className="aboutme_image"><img src={Deepak} className="profileimg" alt="Profile" loading="lazy" /></div>
           <p className="aboutme_description">Hello! I'm <span className="name"> Deepakkumar</span>, a freelance web developer specializing in creating modern, responsive, and user-friendly websites. Currently, I am in my pre-final year at <b className="text-secondary"> Nandha Engineering College</b> <span className="text-secondary"> (Autonomous)</span>, where I focus on
             <span style={{ display: 'inline-block' }} className="word-rotate ps-2 ">
               <WordRotate
@@ -311,7 +311,7 @@ function Aboutme() {
                 <div className="box_title text-center">{skill.heading}</div>
                 {skill.skills.map((skills) => (
                   <div key={skills.Id} className="skillbox_content container d-flex align-items-center gap-2 ">
-                    <img src={skills.image} className="skillimg" alt="tech" />
+                    <img src={skills.image} className="skillimg" alt="tech" loading="lazy" />
                     <div className="progress bg-secondary w-100 border" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                       <div className={`progress-bar fw-bold   progress-bar-striped  ${skills.percentage < 100 ? 'progress-bar-animated text-dark' : ''}`} style={{ width: `${skills.percentage}%`, backgroundColor: `${skills.percentage > 70 ? 'green' : skills.percentage > 40 ? 'orange' : 'red'}` }}>{skills.percentage}%</div>
                     </div>
@@ -341,7 +341,7 @@ function Aboutme() {
                 <div key={project.Id} ref={sliderRef} className="carousel-inner keen-slider d-flex justyfy-content-center align-items-center rounded">
                   {project.projectimg1.map((images, index) => (
                     <div key={index} className=" keen-slider__slide  bg-dark rounded  text-dark text-center">
-                      <img src={images} alt="" />
+                      <img src={images} alt="Project images" loading="lazy"/>
                     </div>
                   ))}
                 </div>

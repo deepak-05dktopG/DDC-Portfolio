@@ -68,10 +68,10 @@ function Contact() {
         <h1 className='Enquirytitle'>Enquiry</h1>
 
         <div className="input">
-          <input type="text" name='FirstName:' className="form-control" placeholder="First name" required />
+          <input type="text" name='FullName:' className="form-control" placeholder="Full name" required />
         </div>
         <div className="input">
-          <input type="text" name='LastName: ' className="form-control " placeholder="Last name" />
+          <input type="number" name='Phone: ' className="form-control " placeholder="Mobile number with country code" />
         </div>
         <div className="input">
           <input type="email" name='Email:' className="form-control" placeholder="Email" aria-label="First name" required />
@@ -112,7 +112,7 @@ function Contact() {
         <input type="hidden" name="redirect" value="#" id='redirect-url' />
 
         <div  className='submit d-flex justify-content-center'>
-          <button type="submit" className='btn btn-primary'>Submit Form</button>
+          <button type="submit" className='btn btn-outline-success'>Submit Form</button>
         </div>
 
       </form>

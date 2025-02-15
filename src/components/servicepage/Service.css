@@ -29,12 +29,35 @@
   width: 100%;
 }
 .div {
-  padding: 10px;
-  background: linear-gradient(
-    to bottom,
-    rgba(135, 83, 130, 0.5),
-    rgba(121, 95, 121, 0.5)
-  );
+    /* Basic dimensions and centering */
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  
+    /* Dark mode colors and gradient */
+    background: #121212; /* Fallback for browsers that don't support gradients */
+    background: linear-gradient(
+      135deg,
+      #121212 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      #121212 50%,
+      #121212 75%,
+      #1a1a1a 75%,
+      #1a1a1a
+    );
+    background-size: 40px 40px;
+  
+    /* Animation */
+    animation: move 4s linear infinite;
+}
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
 }
 .servicelist > .div > .heading {
   text-align: start;
@@ -43,6 +66,7 @@
   font-style: normal;
   color: #c65c16;
   text-shadow: 3px 3px 2px orange;
+  
 }
 .subservices {
   margin: 20px;
@@ -55,17 +79,24 @@
     rgba(235, 69, 17, 0.6),
     rgba(255, 209, 102, 0.4)
   );
+  box-shadow: 0px 21px 24px -17px rgba(59,59,59,0.75) inset;
+-webkit-box-shadow: 0px 21px 24px -17px rgba(59,59,59,0.75) inset;
+-moz-box-shadow: 0px 21px 24px -17px rgba(59,59,59,0.75) inset;
 }
 .subservice {
   padding: 10px;
   font-family: "Irish Grover", serif;
   font-weight: 400;
   font-style: normal;
+  box-shadow: 0px 21px 24px -17px rgba(59,59,59,0.75) inset;
+-webkit-box-shadow: 0px 21px 24px -17px rgba(59,59,59,0.75) inset;
+-moz-box-shadow: 0px 21px 24px -17px rgba(59,59,59,0.75) inset;
 }
 .subservicecontent {
   padding: 5px 20px;
   font-size: 20px;
   text-align: justify;
+  
 }
 .parallax {
   overflow: hidden;
@@ -118,15 +149,7 @@
     height: fit-content;
     width: 100%;
   }
-  .div {
-    max-height: fit-content;
-    padding: 10px;
-    background: linear-gradient(
-      to bottom,
-      rgba(135, 83, 130, 0.5),
-      rgba(121, 95, 121, 0.5)
-    );
-  }
+
   .servicelist > .div > .heading {
     text-align: start;
     font-family: "Zen Dots", serif;
@@ -215,14 +238,7 @@
     height: 160px;
     width: 100%;
   }
-  .div {
-    padding: 10px;
-    background: linear-gradient(
-      to bottom,
-      rgba(135, 83, 130, 0.5),
-      rgba(121, 95, 121, 0.5)
-    );
-  }
+
   .servicelist > .div > .heading {
     text-align: start;
     font-family: "Zen Dots", serif;
@@ -286,14 +302,7 @@
   height: 350px;
   width: 100%;
 }
-.div {
-  padding: 10px;
-  background: linear-gradient(
-    to bottom,
-    rgba(135, 83, 130, 0.5),
-    rgba(121, 95, 121, 0.5)
-  );
-}
+
 .servicelist > .div > .heading {
   text-align: start;
   font-family: "Zen Dots", serif;
@@ -359,14 +368,7 @@
     height: 200px;
     width: fit-content;
   }
-  .div {
-    padding: 10px;
-    background: linear-gradient(
-      to bottom,
-      rgba(135, 83, 130, 0.5),
-      rgba(121, 95, 121, 0.5)
-    );
-  }
+
   .servicelist > .div > .heading {
     text-align: start;
     font-family: "Zen Dots", serif;

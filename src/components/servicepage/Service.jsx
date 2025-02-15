@@ -70,7 +70,7 @@ function Service() {
       <div className="servicelist d-flex flex-column gap-5  container">
 
         {services.map((services) => (
-          <div className='div rounded'>
+          <div className='div  rounded'>
             <h1 key={services.Id} className='heading '>{services.domain}</h1>
             <div className='specificdomain d-flex flex-wrap'>
 

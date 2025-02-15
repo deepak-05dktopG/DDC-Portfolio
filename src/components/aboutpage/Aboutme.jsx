@@ -6,6 +6,7 @@ import Typewriter from 'typewriter-effect';
 import { AwesomeButton } from "react-awesome-button";
 import { Download, BrandLinkedin, BrandGithub, BrandInstagram } from 'tabler-icons-react';
 import './about.css';
+import '/src/App.css'
 import ReadMoreArea from '@foxeian/react-read-more';
 import { motion, useScroll, useSpring } from "framer-motion";
 import SimpleParallax from "simple-parallax-js";
@@ -36,7 +37,7 @@ import GsapLogo from "/src/images/Gsap.png"
 
 import Figmalogo from "/src/images/Figma.png"
 import Gitlogo from "/src/images/Git.png"
-import RINGS from 'vanta/dist/vanta.rings.min';
+import RINGS from 'vanta/dist/vanta.birds.min';
 
 import NodeLogo from "/src/images/NodeJs.jpeg"
 import Expresslogo from "/src/images/ExpressJs.jpeg"
@@ -175,8 +176,6 @@ function Aboutme() {
       },
     ]
   )
-
-
   useEffect(() => {
     RINGS({
       el: "#vanta-clouds",
@@ -185,12 +184,23 @@ function Aboutme() {
       gyroControls: false,
       minHeight: 200.00,
       minWidth: 200.00,
-      scale: .00,
+      scale: 1.00,
       scaleMobile: 1.00,
       backgroundColor: '',
-      color: 0xd60680,
+      color1: 0xe3c51d,
+      color2: 0xea4f41,
+      colorMode: "lerp",
+      birdSize: 2.20,
+      wingSpan: 26.00,
+      speedLimit: 7.00,
+      separation: 96.00,
+      alignment: 24.00,
+      cohesion: 81.00,
+      quantity: 4.00
     })
   }, [])
+
+
 
 
 

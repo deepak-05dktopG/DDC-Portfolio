@@ -14,29 +14,29 @@ import { motion, useScroll, useSpring } from "framer-motion";
 function App() {
   const [loader, setLoader] = useState(true)
 
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     setloader(false)
-  //   }, 5000);
-  // }, [])
-
   useEffect(() => {
-    const handleLoad = () => {
-      // Start the interval only after the window has loaded
-      const intervalId = setInterval(() => {
-        setLoader(false);
-        clearInterval(intervalId); // Clear the interval after setting loader to false
-      }, 5000);
-    };
+    setInterval(() => {
+      setLoader(false)
+    }, 5000);
+  }, [])
 
-    // Add event listener for window load
-    window.addEventListener('load', handleLoad);
+  // useEffect(() => {
+  //   const handleLoad = () => {
+  //     // Start the interval only after the window has loaded
+  //     const intervalId = setInterval(() => {
+  //       setLoader(false);
+  //       clearInterval(intervalId); // Clear the interval after setting loader to false
+  //     }, 5000);
+  //   };
 
-    // Cleanup function to remove the event listener
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
-  }, []);
+  //   // Add event listener for window load
+  //   window.addEventListener('load', handleLoad);
+
+  //   // Cleanup function to remove the event listener
+  //   return () => {
+  //     window.removeEventListener('load', handleLoad);
+  //   };
+  // }, []);
 
   function ScrollToTop() {
     const location = useLocation();

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 // Router
 import { BrowserRouter as Router, Routes, Route, useLocation, } from "react-router-dom";
 // components import
+import SplashCursor from "./components/magicui/Splashcurser";
 import Footer from "./components/footer/Footer";
 import Home from "./components/homepage/Home";
 import Aboutme from "./components/aboutpage/Aboutme";
@@ -59,6 +60,8 @@ function App() {
 
   return (
     <div className="Body">
+
+      <SplashCursor />
 
       {loader ?
 

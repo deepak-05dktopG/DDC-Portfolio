@@ -214,7 +214,7 @@ function Aboutme() {
       <Headroom className="" >
         <Navbar />
       </Headroom>
-      <div id="vanta-clouds" className="Hero d-flex flex-column justify-content-center">
+      <div id="vanta-" className="Hero d-flex flex-column justify-content-center">
         <div className="Hero_text">
           <div>Hey, there <span className="hi">👋</span></div>
           <div>I’m <span className="name"> Deepakkumar</span></div>

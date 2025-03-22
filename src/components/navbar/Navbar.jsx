@@ -3,11 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import './navbar.css'
 
 function Navbar() {
-  const [themeimage, setthemeimage] = useState(() => {
-    const savedthemeimage = localStorage.getItem('themeimage');
-    return savedthemeimage ? savedthemeimage : '🔆';
-  });
-
+  const [themeimage, setthemeimage] = useState("🔆");
+  const themeicon=localStorage.getItem('themeimage');
   const navlink = ({ isActive }) => {
     return {
       fontWeight: isActive ? "bold" : "normal",
@@ -42,7 +39,7 @@ function Navbar() {
         <NavLink style={navlink} className="navitem text-decoration-none" to="/">Portfolio</NavLink>
         <NavLink style={navlink} className="navitem text-decoration-none" to="/service">Service</NavLink>
         <NavLink style={navlink} className="navitem text-decoration-none" to="/contact">Contact</NavLink>
-        <div className="text-white text-decoration-none pe-3" > <span style={{cursor:'pointer'}} className="fs-5" onClick={switchtheme}>{themeimage}</span> </div>
+        <div className="text-white   text-decoration-none " > <span style={{cursor:'pointer'}} className="fs-5 p-3" onClick={switchtheme}>{themeicon}</span> </div>
 
 
 

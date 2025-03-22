@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 // Router
 import { BrowserRouter as Router, Routes, Route, useLocation, } from "react-router-dom";
 // components import
@@ -10,16 +10,62 @@ import Aboutme from "./components/aboutpage/Aboutme";
 import Service from "./components/servicepage/Service";
 import Contact from "./components/contactpage/Contact";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { Linkedin, Mail, Github, Instagram, ChevronsUp } from 'lucide-react';
 
 
 function App() {
   const [loader, setLoader] = useState(true)
+  const divRef = useRef(null);
 
+  const toggleVisibility = () => {
+    if (divRef.current) {
+        // Check if the div is currently hidden
+        if (divRef.current.style.display === 'none') {
+            divRef.current.style.display = 'block'; // Show the div
+        } else {
+            divRef.current.style.display = 'none'; // Hide the div
+        }
+    }
+};
+  //go to top of the page
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Show button if scrolled more than halfway
+      if (scrollPosition > 500) {
+        divRef.current.style.display = 'block'; // Show the div
+
+      } else {
+        divRef.current.style.display = 'none'; // Hide the div
+
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+
+  //intro welcome loading
   useEffect(() => {
     setInterval(() => {
       setLoader(false)
     }, 500);
-  }, [1])
+  }, [])
 
   // useEffect(() => {
   //   const handleLoad = () => {
@@ -49,6 +95,7 @@ function App() {
     return null;
   }
 
+
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 200,
@@ -58,8 +105,21 @@ function App() {
 
 
 
+
+
   return (
     <div className="Body">
+      <div className="d-flex align-items-end justify-content-end  position-fixed  w-100 h-100  ">
+        <div
+          ref={divRef} onClick={scrollToTop}
+          className="scrolltop  z-3 text-secondary text-end "
+
+          style={{ cursor: 'pointer', height: "fit-Content" }}
+        >
+          <ChevronsUp size={40} />
+        </div>
+      </div>
+
 
       <SplashCursor />
 

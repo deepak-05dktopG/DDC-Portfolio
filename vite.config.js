@@ -10,6 +10,6 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: 'DDC-Portfolio', // Replace with your GitHub repository name
+  base: '/', // Replace with your GitHub repository name
   assetsInclude: ['**/*.docx','**/*.pdf'],
 })

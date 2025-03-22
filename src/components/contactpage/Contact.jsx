@@ -109,7 +109,7 @@ function Contact() {
           <label for="floatingTextarea2">Message</label>
         </div>
 
-        <input type="hidden" name="redirect" value="#" id='redirect-url' />
+        <input type="hidden" name="" value="#" id='redirect-url' />
 
         <div  className='submit d-flex justify-content-center'>
           <button type="submit" className='btn btn-outline-success'>Submit Form</button>

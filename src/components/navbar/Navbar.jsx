@@ -38,8 +38,8 @@ function Navbar() {
   return (
     <>
       <nav className="d-flex  justify-content-between align-items-center py-3 w-100">
-        <NavLink style={navlink} className=" ddc text-danger text-decoration-none ps-3" to="/">DDC</NavLink>
-        <NavLink style={navlink} className="navitem text-decoration-none" to="/about">Portfolio</NavLink>
+        <NavLink style={navlink} className=" ddc text-danger text-decoration-none ps-3" to="/about">DDC</NavLink>
+        <NavLink style={navlink} className="navitem text-decoration-none" to="/">Portfolio</NavLink>
         <NavLink style={navlink} className="navitem text-decoration-none" to="/service">Service</NavLink>
         <NavLink style={navlink} className="navitem text-decoration-none" to="/contact">Contact</NavLink>
         <div className="text-white text-decoration-none pe-3" > <span style={{cursor:'pointer'}} className="fs-5" onClick={switchtheme}>{themeimage}</span> </div>

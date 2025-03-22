@@ -15,7 +15,7 @@ const Home = () => {
 
   const handleexploremore = () => {
     setTimeout(() => {
-      navigate('/about')
+      navigate('/')
     }, 1500)
   }
   // useeffect for vanta.js wave effect

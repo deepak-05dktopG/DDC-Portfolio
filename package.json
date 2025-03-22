@@ -2,7 +2,7 @@
   "name": "ddcportfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://deepak-05dktopG.github.io/DDC-Portfolio",
+  "homepage": "https://deepakdigitalcraft.tech",
   "type": "module",
   "scripts": {
     "dev": "vite",

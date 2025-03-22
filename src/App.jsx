@@ -18,8 +18,8 @@ function App() {
   useEffect(() => {
     setInterval(() => {
       setLoader(false)
-    }, 5000);
-  }, [])
+    }, 500);
+  }, [1])
 
   // useEffect(() => {
   //   const handleLoad = () => {
@@ -107,8 +107,8 @@ function App() {
           <Router basename="/DDC-Portfolio">
             <ScrollToTop />
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<Aboutme />} />
+              <Route path="/about" element={<Home />} />
+              <Route path="/" element={<Aboutme />} />
               <Route path="/service" element={<Service />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>

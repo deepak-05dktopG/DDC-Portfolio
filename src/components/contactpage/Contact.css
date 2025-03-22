@@ -21,7 +21,7 @@ form {
   padding: 70px 50px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap:25px;
   box-shadow: 0px 0px 57px -2px rgba(181,0,238,0.61) inset;
   -webkit-box-shadow: 0px 0px 57px -2px rgba(181,0,238,0.61) inset;
   -moz-box-shadow: 0px 0px 57px -2px rgba(181,0,238,0.61) inset;

@@ -148,10 +148,9 @@
 }
 .aboutme_image > img {
   width: 200px;
-  border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
+  border-radius: 59% 41% 27% 73% / 50% 69% 31% 50% ;
 }
 .profileimg {
-  border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
   padding: 0px;
   box-shadow: -6px 6px 12px -1px var(--primary);
   -webkit-box-shadow: -6px 6px 12px -1px var(--primary);
@@ -160,7 +159,6 @@
 .aboutme_image {
   float: left;
   padding-right: 15px;
-  border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
 }
 .aboutme_description {
   font-size: 30px;
@@ -457,11 +455,9 @@
   .aboutme_image > img {
     width: 100px;
     transition: width 0.5s ease-in-out;
-    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
   }
   .aboutme_image > img:hover {
     width: 150px;
-    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
     transition: width 0.5s ease-in-out;
   }
   .profileimg {
@@ -474,7 +470,7 @@
   .aboutme_image {
     float: left;
     padding-right: 15px;
-    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
+    border-radius: 10px;
   }
   .aboutme_description {
     font-size: 18px;
@@ -730,7 +726,6 @@
   }
   .aboutme_image > img {
     width: 100px;
-    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
   }
   .profileimg {
     border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
@@ -742,7 +737,6 @@
   .aboutme_image {
     float: left;
     padding-right: 15px;
-    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
   }
   .aboutme_description {
     font-size: 15px;
@@ -979,10 +973,8 @@
   }
   .aboutme_image > img {
     width: 200px;
-    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
   }
   .profileimg {
-    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
     padding: 0px;
     box-shadow: -6px 6px 12px -1px var(--primary);
     -webkit-box-shadow: -6px 6px 12px -1px var(--primary);
@@ -991,7 +983,6 @@
   .aboutme_image {
     float: left;
     padding-right: 15px;
-    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
   }
   .aboutme_description {
     font-size: 30px;
@@ -1240,7 +1231,6 @@
   }
   .aboutme_image > img {
     width: 150px;
-    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
   }
   .profileimg {
     border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
@@ -1252,7 +1242,6 @@
   .aboutme_image {
     float: left;
     padding-right: 15px;
-    border-radius: 67% 33% 60% 40% / 49% 26% 74% 51%;
   }
   .aboutme_description {
     font-size: 25px;

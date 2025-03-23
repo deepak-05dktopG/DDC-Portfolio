@@ -23,7 +23,7 @@ import { useKeenSlider } from 'keen-slider/react'
 
 // import images
 import skillbackground from "/src/images/SkillBack1.png"
-import Deepak from '/src/images/deepak.jpg'
+import Deepak from '/src/images/Profile pHoto.jpg'
 import DeepakLandscape from '/src/images/deepaklandscap.jpg'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import HTML from "/src/images/HTML.png";
@@ -47,6 +47,26 @@ import sqllogo from "/src/images/Sql.png"
 import mongodblogo from "/src/images/MongoDB.jpeg"
 import myresume from "/src/images/DeepakResume.docx"
 import myresumepdf from "/src/images/DeepakResume.pdf"
+//weatherProjectImages
+import weatherimg1 from "/src/images/weatherproject/img1.png"
+import weatherimg2 from "/src/images/weatherproject/img2.png"
+import weatherimg3 from "/src/images/weatherproject/img3.png"
+import weatherimg4 from "/src/images/weatherproject/img4.png"
+//movieProjectImages
+import movieimg1 from "/src/images/movieproject/img1.png"
+import movieimg2 from "/src/images/movieproject/img2.png"
+import movieimg3 from "/src/images/movieproject/img3.png"
+import movieimg4 from "/src/images/movieproject/img4.png"
+//Ecommerceprojectimages
+import ecommerceimg1 from "/src/images/Ecommerceproject/img1.png"
+import ecommerceimg2 from "/src/images/Ecommerceproject/img2.png"
+import ecommerceimg3 from "/src/images/Ecommerceproject/img3.png"
+import ecommerceimg4 from "/src/images/Ecommerceproject/img4.png"
+//PortfolioprojectImages
+import portfolioimg1 from "/src/images/PortfolioProject/img1.png"
+import portfolioimg2 from "/src/images/PortfolioProject/img2.png"
+import portfolioimg3 from "/src/images/PortfolioProject/img3.png"
+import portfolioimg4 from "/src/images/PortfolioProject/img4.png"
 
 function Aboutme() {
   const { scrollYProgress } = useScroll();
@@ -96,7 +116,7 @@ function Aboutme() {
       Id: 5,
       heading: 'DataBase', skills: [
         { Id: 1, image: `${sqllogo}`, tooltip: "this is SQL", percentage: 0 },
-        { Id: 2, image: `${mongodblogo}`, tooltip: "this is MongoDB", percentage: 10 },
+        { Id: 2, image: `${mongodblogo}`, tooltip: "this is MongoDB", percentage: 80 },
       ]
     },
 
@@ -107,35 +127,35 @@ function Aboutme() {
   const projects = [
     {
       Id: 1,
-      projectimg1: [`${skillbackground}`, `${Deepak}`, `${skillbackground}`, `${skillbackground}`],
-      projecttitle: "portfolio",
-      projectlink: "https://deepakdigitalcraft.tech/",
-      projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
-      projecttech: ["React", "Node", "MongoDB", "framer motion", "Bootstrap5"],
+      projectimg1: [`${weatherimg1}`, `${weatherimg2}`, `${weatherimg3}`, `${weatherimg4}`],
+      projecttitle: "Weather App",
+      projectlink: "https://ddcweather.netlify.app/",
+      projectcontent: "A Weather Application using the OpenWeather API, which provides real-time weather updates for any location. The app displays key details like temperature, wind speed, and the current time of your selected area. To make it even more engaging, I’ve integrated real-time weather animations in the background that adapt to the current weather conditions!",
+      projecttech: ["React", "API Integration", "Bootstrap5","Vanta Js","OpenWeatherAPI"],
     },
     {
       Id: 2,
-      projectimg1: [`${skillbackground}`, `${skillbackground}`, `${skillbackground}`, `${skillbackground}`],
-      projecttitle: "portfolio",
-      projectlink: "https://deepakdigitalcraft.tech/",
-      projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
-      projecttech: ["React", "Node", "MongoDB", "framer motion", "Bootstrap5"],
+      projectimg1: [`${movieimg1}`, `${movieimg2}`, `${movieimg3}`, `${movieimg4}`],
+      projecttitle: "MovieWeb",
+      projectlink: "https://ddcmovies.netlify.app",
+      projectcontent: "Dive into a cinematic journey where you can easily browse through a wide selection of movies. Choose your favorite films, explore their ratings, and learn about their genre to help guide your future viewing preferences. Whether you’re looking for your next movie night pick or exploring new genres, this platform makes it easier than ever to discover your next favorite film.",
+      projecttech: ["React", "BrowserRoute", "API Integration", "Bootstrap5","Animation On Scroll"],
     },
     {
       Id: 3,
-      projectimg1: [`${skillbackground}`, `${skillbackground}`, `${skillbackground}`, `${skillbackground}`],
-      projecttitle: "portfolio",
-      projectlink: "https://deepakdigitalcraft.tech/",
-      projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
-      projecttech: ["React", "Node", "MongoDB", "framer motion", "Bootstrap5"],
+      projectimg1: [`${ecommerceimg1}`, `${ecommerceimg2}`, `${ecommerceimg3}`, `${ecommerceimg4}`],
+      projecttitle: "EcommerceFrontend",
+      projectlink: "https://deepak-05dktopg.github.io/host-ecommerce/#home",
+      projectcontent: "The e-commerce frontend i developed is a responsive and visually appealing platform designed for seamless online shopping. It features intuitive navigation, detailed product displays, and secure checkout integration to enhance user experience. Built using modern web technologies, it ensures fast, interactive performance across devices. With user accounts, payment gateways, and review systems, it fosters convenience and trust for customers.",
+      projecttech: ["HTML", "CSS", "JavaScript", "Bootstrap5","FlexBox","Hover","Animation"],
     },
     {
       Id: 4,
-      projectimg1: [`${skillbackground}`, `${skillbackground}`, `${skillbackground}`, `${skillbackground}`],
-      projecttitle: "portfolio",
+      projectimg1: [`${portfolioimg2}`, `${portfolioimg1}`, `${portfolioimg3}`, `${portfolioimg4}`],
+      projecttitle: "Portfolio",
       projectlink: "https://deepakdigitalcraft.tech/",
-      projectcontent: "Deepak so many contents one of the most importna perisn the world almsot comme  int he wpr dwhinlihe happy and wealthy",
-      projecttech: ["React", "Node", "MongoDB", "framer motion", "Bootstrap5"],
+      projectcontent: "The portfolio project i created is a modern, visually striking website that showcases your skills and achievements. It incorporates various external libraries to enhance functionality and design, providing an interactive user experience. The site features a clean layout, smooth animations, and responsive design, ensuring accessibility across devices. This project effectively highlights your expertise while demonstrating your ability to integrate cutting-edge web technologies.",
+      projecttech: ["React", "FramerMotion", "Magic UI", "GSAP", "Bootstrap5","SplashCurser"],
     }
 
   ]
@@ -214,13 +234,13 @@ function Aboutme() {
       <Headroom className="" >
         <Navbar />
       </Headroom>
-      <div id="vanta-" className="Hero d-flex flex-column justify-content-center">
+      <div id="vanta-clouds" className="Hero d-flex flex-column justify-content-center">
         <div className="Hero_text">
           <div>Hey, there <span className="hi">👋</span></div>
           <div>I’m <span className="name"> Deepakkumar</span></div>
           <div className="d-flex align-items-center" >a <span className="roles"> <Typewriter
             options={{
-              strings: ['Freelancer', 'Web Developer', 'Designer',],
+              strings: ['AI Enthusiast','Freelancer', 'Web Developer', 'Designer'],
               autoStart: true,
               loop: true,
             }}
@@ -298,8 +318,8 @@ function Aboutme() {
             <span style={{ display: 'inline-block' }} className="word-rotate ps-2 ">
               <WordRotate
 
-                words={['Freelancing.', 'Web Developement.', 'ChatBot Development.']}
-              /> </span> <br /> <br /> I have a growing expertise in React.js, which equips me to deliver cutting-edge web solutions tailored to business needs. My design philosophy emphasizes clean and minimalist aesthetics, ensuring every element serves a purpose.</p>
+                words={['Freelancing.', 'Web Developement.', 'ChatBot Development.',"AI."]}
+              /> </span> <br /> <br /> I have a growing expertise in MERN, which equips me to deliver cutting-edge web solutions tailored to business needs. My design philosophy emphasizes clean and minimalist aesthetics, ensuring every element serves a purpose.</p>
         </div>
       </div>
 
@@ -318,7 +338,7 @@ function Aboutme() {
             {skill.map((skill) => (
 
               <div key={skill.Id} className="box">
-                <div className="box_title text-center">{skill.heading}</div>
+                <div className="box_title text-white text-center">{skill.heading}</div>
                 {skill.skills.map((skills) => (
                   <div key={skills.Id} className="skillbox_content container d-flex align-items-center gap-2 ">
                     <img src={skills.image} className="skillimg" alt="tech" loading="lazy" />

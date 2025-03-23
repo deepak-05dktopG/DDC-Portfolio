@@ -9,9 +9,9 @@ function Footer() {
     return (
 
         <>
-            <div className='Footer d-flex flex-column justify-content-around'>
+            <div className='Footer position-absolute d-flex flex-column justify-content-around'>
                 <h2 className="footer_title">Let’s Work Together!  </h2>
-                <div className="footer_content">Whether you're a small business, startup, or individual looking to build a website, I’m excited to collaborate and create something amazing. Together, we can craft a web presence that stands out and delivers results. <Link to="/contact" >Contact</Link>  </div>
+                <div className="footer_content">Whether you're a small business, startup, or individual looking to build a website, I’m excited to collaborate and create something amazing. Together, we can craft a web presence that stands out and delivers results. <Link to="/contact" className='z-3' >Contact</Link>  </div>
                 <div className="cta d-flex justify-content-center ">
                     <div><a href='https://www.linkedin.com/in/deepak-05dktopg/'><Linkedin style={{ width: "fit-content", height: "50px" }} /></a></div>
                     <div><a href="mailto:forwebdeepak@gmail.com?subject=Hello From Portfolio"><Mail style={{ width: "fit-content", height: "50px" }} /></a></div>

@@ -35,16 +35,16 @@
     padding: 10px;
   
     /* Dark mode colors and gradient */
-    background: #121212; /* Fallback for browsers that don't support gradients */
+    background: #000000; /* Fallback for browsers that don't support gradients */
     background: linear-gradient(
       135deg,
-      #121212 25%,
-      #1a1a1a 25%,
-      #1a1a1a 50%,
-      #121212 50%,
-      #121212 75%,
-      #1a1a1a 75%,
-      #1a1a1a
+      #0f2dee 25%,
+      #0a0de3 25%,
+      #0459c1 50%,
+      #173ae9 50%,
+      #035ec7 75%,
+      #0466bc 75%,
+      #055aed
     );
     background-size: 40px 40px;
   
@@ -75,9 +75,9 @@
   border-radius: 5px;
   background: linear-gradient(
     45deg,
-    rgba(214, 50, 48, 0.8),
-    rgba(235, 69, 17, 0.6),
-    rgba(255, 209, 102, 0.4)
+    rgba(238, 14, 10, 0.8),
+    rgba(246, 6, 6, 0.6),
+    rgba(255, 24, 3, 0.4)
   );
   box-shadow: 0px 21px 24px -17px rgba(59,59,59,0.75) inset;
 -webkit-box-shadow: 0px 21px 24px -17px rgba(59,59,59,0.75) inset;
@@ -161,19 +161,21 @@
   .specificdomain {
     justify-content: center;
     overflow: scroll;
-    max-height:100vh;
+    max-height:fit-content;
     scrollbar-width:none;
   }
+
   .subservices {
     margin: 5px;
     max-width: 100%;
     min-height: 250px;
     border-radius: 5px;
+  
     background: linear-gradient(
       45deg,
-      rgba(214, 50, 48, 0.8),
-      rgba(235, 69, 17, 0.6),
-      rgba(255, 209, 102, 0.4)
+      rgba(237, 15, 11, 0.8),
+      rgba(216, 11, 4, 0.6),
+      rgba(255, 38, 0, 0.4)
     );
   }
   .subservice {
@@ -254,9 +256,9 @@
     border-radius: 5px;
     background: linear-gradient(
       45deg,
-      rgba(214, 50, 48, 0.8),
-      rgba(235, 69, 17, 0.6),
-      rgba(255, 209, 102, 0.4)
+      rgba(237, 15, 11, 0.8),
+      rgba(216, 11, 4, 0.6),
+      rgba(255, 38, 0, 0.4)
     );
   }
   .subservice {
@@ -314,12 +316,14 @@
 .subservices {
   margin: 20px;
   min-height: 300px;
+  max-width: 40%;
+
   border-radius: 5px;
   background: linear-gradient(
     45deg,
-    rgba(214, 50, 48, 0.8),
-    rgba(235, 69, 17, 0.6),
-    rgba(255, 209, 102, 0.4)
+    rgba(237, 15, 11, 0.8),
+    rgba(216, 11, 4, 0.6),
+    rgba(255, 38, 0, 0.4)
   );
 }
 .subservice {
@@ -384,9 +388,9 @@
     border-radius: 5px;
     background: linear-gradient(
       45deg,
-      rgba(214, 50, 48, 0.8),
-      rgba(235, 69, 17, 0.6),
-      rgba(255, 209, 102, 0.4)
+      rgba(237, 15, 11, 0.8),
+      rgba(216, 11, 4, 0.6),
+      rgba(255, 38, 0, 0.4)
     );
   }
   .subservice {

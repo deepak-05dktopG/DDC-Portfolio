@@ -109,10 +109,10 @@ function App() {
 
   return (
     <div className="Body">
-      <div className="d-flex align-items-end justify-content-end  position-fixed  w-100 h-100  ">
+      <div style={{position:"absolute",bottom:"0",right:"0"}} className="d-flex  z-2 align-items-end justify-content-end  position-fixed    ">
         <div
           ref={divRef} onClick={scrollToTop}
-          className="scrolltop  z-3 text-secondary text-end "
+          className="scrolltop  z-1 text-secondary text-end "
 
           style={{ cursor: 'pointer', height: "fit-Content" }}
         >
@@ -164,7 +164,7 @@ function App() {
         : <div>
 
           <motion.div className="z-2 progress-bar-top" style={{ scaleX }} ></motion.div>
-          <Router basename="/DDC-Portfolio">
+          <Router>
             <ScrollToTop />
             <Routes>
               <Route path="/about" element={<Home />} />

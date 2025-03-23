@@ -289,9 +289,9 @@ function Aboutme() {
 
 
           <div className="Hero_Social_Medias">
-            <a href="https://www.linkedin.com/in/deepak-05dktopg/" className=""><AwesomeButton type="danger"><BrandLinkedin size={35} className="button" strokeWidth={2} color={'black'} /> <span className="text-white"> Linkedin </span></AwesomeButton></a>
-            <a href="https://github.com/deepak-05dktopG/"> <AwesomeButton type="danger"> <BrandGithub size={35} strokeWidth={2} color={'black'} /> <span className="text-white">Github </span> </AwesomeButton></a>
-            <a href="https://www.instagram.com/prime_dk_05/"> <AwesomeButton type="danger"><BrandInstagram size={35} strokeWidth={2} color={'black'} /> <span className="text-white">Instgram</span> </AwesomeButton></a>
+            <a href="#aboutme" className=""><AwesomeButton type="danger"> <span className="text-white">AboutMe ▶</span></AwesomeButton></a>
+            <a href="#skills"> <AwesomeButton type="danger"><span className="text-white">Skills ▶</span> </AwesomeButton></a>
+            <a href="#projects"> <AwesomeButton type="danger">  <span className="text-white">Projects ▶</span> </AwesomeButton></a>
           </div>
 
         </div>
@@ -309,7 +309,7 @@ function Aboutme() {
       </ShineBorder> */}
 
 
-      <div className="aboutme">
+      <div id="aboutme" className="aboutme">
         <h1 className="aboutme_title">About Me</h1>
 
         <div className="aboutme_text">
@@ -328,7 +328,7 @@ function Aboutme() {
 
 
 
-      <div className="skills_tools" style={{ backgroundImage: `url(${skillbackground})` }}>
+      <div id="skills" className="skills_tools" style={{ backgroundImage: `url(${skillbackground})` }}>
         <h1 className="aboutme_title pt-5">Skills & Tools</h1>
 
         <div className="scrollskillboxes">
@@ -357,7 +357,7 @@ function Aboutme() {
       </div>
 
 
-      <div className="projects mt-lg-4 mt-5">
+      <div id="projects" className="projects mt-lg-4 mt-5">
         <h1 className="aboutme_title text-center">Projects</h1>
 
 

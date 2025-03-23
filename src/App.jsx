@@ -109,10 +109,10 @@ function App() {
 
   return (
     <div className="Body">
-      <div style={{position:"absolute",bottom:"0",right:"0"}} className="d-flex  z-2 align-items-end justify-content-end  position-fixed    ">
+      <div style={{position:"absolute",bottom:"0",right:"0"}} className="d-flex bg-primary rounded-5 z-2 align-items-end justify-content-end  position-fixed    ">
         <div
           ref={divRef} onClick={scrollToTop}
-          className="scrolltop  z-1 text-secondary text-end "
+          className="scrolltop  z-1 text-white text-end "
 
           style={{ cursor: 'pointer', height: "fit-Content" }}
         >

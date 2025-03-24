@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState, useRef, useEffect } from "react";
 // Router
-import { HashRouter as Router, Routes, Route, useLocation, } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, } from "react-router-dom";
 // components import
 import SplashCursor from "./components/magicui/Splashcurser";
 import Footer from "./components/footer/Footer";
@@ -17,16 +17,16 @@ function App() {
   const [loader, setLoader] = useState(true)
   const divRef = useRef(null);
 
-  const toggleVisibility = () => {
-    if (divRef.current) {
-        // Check if the div is currently hidden
-        if (divRef.current.style.display === 'none') {
-            divRef.current.style.display = 'block'; // Show the div
-        } else {
-            divRef.current.style.display = 'none'; // Hide the div
-        }
-    }
-};
+//   const toggleVisibility = () => {
+//     if (divRef.current) {
+//         // Check if the div is currently hidden
+//         if (divRef.current.style.display === 'none') {
+//             divRef.current.style.display = 'block'; // Show the div
+//         } else {
+//             divRef.current.style.display = 'none'; // Hide the div
+//         }
+//     }
+// };
   //go to top of the page
   useEffect(() => {
     const handleScroll = () => {
@@ -35,12 +35,13 @@ function App() {
       const documentHeight = document.documentElement.scrollHeight;
 
       // Show button if scrolled more than halfway
-      if (scrollPosition > 500) {
-        divRef.current.style.display = 'block'; // Show the div
+      if (scrollPosition < 500) {
+        divRef.current.style.display = 'none';
+        divRef.current.style.opacity="0%";
 
       } else {
-        divRef.current.style.display = 'none'; // Hide the div
-
+        divRef.current.style.display = 'block'; // Hide the div
+        divRef.current.style.opacity="70%";
       }
     };
 
@@ -64,7 +65,7 @@ function App() {
   useEffect(() => {
     setInterval(() => {
       setLoader(false)
-    }, 500);
+    }, );
   }, [])
 
   // useEffect(() => {
@@ -109,9 +110,9 @@ function App() {
 
   return (
     <div className="Body">
-      <div style={{position:"absolute",bottom:"0",right:"0"}} className="d-flex bg-primary rounded-5 z-2 align-items-end justify-content-end  position-fixed    ">
+      <div ref={divRef} style={{position:"absolute",bottom:"0",right:"0",opacity:"0"}} className="d-flex bg-primary rounded-5 z-2 align-items-end justify-content-end  position-fixed    ">
         <div
-          ref={divRef} onClick={scrollToTop}
+           onClick={scrollToTop}
           className="scrolltop  z-1 text-white text-end "
 
           style={{ cursor: 'pointer', height: "fit-Content" }}

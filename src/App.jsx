@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState, useRef, useEffect } from "react";
 // Router
-import { BrowserRouter as Router, Routes, Route, useLocation, } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useLocation, } from "react-router-dom";
 // components import
 import SplashCursor from "./components/magicui/Splashcurser";
 import Footer from "./components/footer/Footer";

@@ -49,7 +49,7 @@ function Contact() {
       </Headroom>
 
       <div className='bg-white'>
-        <div className="contactintro">
+        <div data-aos="zoom-out" className="contactintro">
           "Let's build something incredible together." <br />
 
           "Looking for a Freelancer for your project? Let's talk!" <br />
@@ -65,18 +65,18 @@ function Contact() {
 
       <form id='formm' className='needs-validation' action="https://api.web3forms.com/submit" method="POST" novalidate>
         <input type="hidden" name="access_key" value="bf09f79e-4888-4ddb-af54-5b31e0dc1fe4" />
-        <h1 className='Enquirytitle'>Enquiry</h1>
+        <h1 data-aos="fade-right" className='Enquirytitle'>Enquiry</h1>
 
-        <div className="input">
+        <div data-aos="fade-right" data-aos-delay="100" className="input">
           <input type="text" name='FullName:' className="form-control" placeholder="Full name" required />
         </div>
-        <div className="input">
+        <div data-aos="fade-right" data-aos-delay="100" className="input">
           <input type="number" name='Phone: ' className="form-control " placeholder="Mobile number with country code" />
         </div>
-        <div className="input">
+        <div data-aos="fade-right" data-aos-delay="100" className="input">
           <input type="email" name='Email:' className="form-control" placeholder="Email" aria-label="First name" required />
         </div>
-        <div className="input">
+        <div data-aos="fade-right" data-aos-delay="100" className="input">
           <input className="form-control" name='Country:' list="countrylist" id="exampleDataList" placeholder="Country" required />
           <datalist id="countrylist">
             <option value="India" />
@@ -104,25 +104,25 @@ function Contact() {
           </datalist>
 
         </div>
-        <div class="form-floating">
+        <div data-aos="fade-right" data-aos-delay="100" class="form-floating">
           <textarea className="form-control" name='Message:' placeholder="Leave a comment here" id="floatingTextarea2" style={{ minHeight: '100px', maxHeight: 'fit-content' }} required></textarea>
           <label for="floatingTextarea2">Message</label>
         </div>
 
         <input type="hidden" name="" value="#" id='redirect-url' />
 
-        <div  className='submit d-flex justify-content-center'>
+        <div data-aos="zoom-in" data-aos-delay="300"  className='submit d-flex justify-content-center'>
           <button type="submit" className='btn btn-outline-success'>Submit Form</button>
         </div>
 
       </form>
 
 
-      <div className="linksforcontact d-flex  flex-wrap-reverse align-items-center">
-        <div className="address m-2">   <span> Erode <br /> Tamilnadu <br />India <br />638 314</span></div>
+      <div  className="linksforcontact d-flex  flex-wrap-reverse align-items-center">
+        <div data-aos="fade-right" className="address m-2">   <span> Erode <br /> Tamilnadu <br />India <br />638 314</span></div>
         <div className="message">
-          <div className="email m-2"> <a href="mailto:forwebdeepak@gmail.com?subject=From Portfolio&body=Hi Deepakkumar,"> <img src={AnimateEmail} width={50} alt="" /> forwebdeepak@gmail.com </a></div>
-          <div className="call m-2"> <a href="https://wa.me/+919025454148?text=Hello Deepak i got this number from your portfolio" target="_blank"> <img src={AnimateWhatsapp} width={50} alt="" /> +91 9025454148   </a></div>
+          <div data-aos="zoom-in" className="email m-2"> <a href="mailto:forwebdeepak@gmail.com?subject=From Portfolio&body=Hi Deepakkumar,"> <img src={AnimateEmail} data-aos="flip-right" width={50} alt="" /> forwebdeepak@gmail.com </a></div>
+          <div data-aos="zoom-in" className="call m-2"> <a href="https://wa.me/+919025454148?text=Hello Deepak i got this number from your portfolio" target="_blank"> <img src={AnimateWhatsapp} data-aos="flip-right" data-aos-delay="200" width={50} alt="" /> +91 9025454148   </a></div>
         </div>
       </div>
 

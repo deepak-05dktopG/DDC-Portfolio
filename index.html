@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/images/deepak.jpg" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/src/images/Profile pHoto.jpg"
+      sizes="32x32"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>DDC Tech</title>
@@ -11,16 +16,9 @@
       content="Learn how to optimize your website for SEO with best practices in HTML structure, performance, and content strategy."
     />
 
-
-
-
-
-
-
-
-
-
-    
+    <!-- AOS Link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <!-- BootstrapLink -->
     <script
@@ -76,6 +74,10 @@
       const tooltipList = [...tooltipTriggerList].map(
         (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
       );
+    </script>
+
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>

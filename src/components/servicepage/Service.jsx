@@ -64,26 +64,26 @@ function Service() {
       </Headroom>
 
       <div className="container whatido">
-        <h1 className='heading'>What I Do</h1>
+        <h1 data-aos="fade-right" className='heading'>What I Do</h1>
         <div className='first d-flex flex-wrap-reverse  align-items-center'>
-          <div className="content">I offer professional web development services to individuals and businesses looking to establish or enhance their online presence. Whether you need a sleek portfolio, an engaging business website, or seamless web applications, I’m here to help bring your vision to life.
+          <div data-aos="zoom-in" className="content">I offer professional web development services to individuals and businesses looking to establish or enhance their online presence. Whether you need a sleek portfolio, an engaging business website, or seamless web applications, I’m here to help bring your vision to life.
             <br />
-            <div className='d-flex flex-column'>
+            <div data-aos="fade-left" data-aos-delay="200" className='d-flex flex-column'>
               <a className='z-2' href="#1">Web Development</a>
               <a className='z-2' href="#2">ChatBot Development</a>
               <a className='z-2' href="#3">Graphic Design</a>
             </div>
 
           </div>
-          <div className="serviceimage ">
+          <div data-aos="zoom-out" className="serviceimage ">
             <img src={Serviceimage} className='bg-danger' alt="Service" loading="lazy" />
           </div>
         </div>
 
       </div>
-      
 
-      <section className='w-100 pb-3 fw-bold'>
+
+      <section data-aos="fade-down" className='w-100 pb-3 fw-bold'>
         <ParallaxText baseVelocity={-3}>Website and ChatBot Development </ParallaxText>
         <ParallaxText baseVelocity={3}>Website and ChatBot Development </ParallaxText>
       </section>
@@ -91,23 +91,52 @@ function Service() {
 
 
 
-      <div className="servicelist d-flex flex-column gap-5  container">
+      <div  className="servicelist d-flex flex-column gap-5  container">
 
         {services.map((services) => (
-          <div className='div  rounded'>
-            <h1 key={services.Id} id={services.Id}
-             className='heading '>{services.domain}</h1>
+          <div data-aos="fade-down-right" className='div  rounded'>
+            <h1 data-aos="fade-left" key={services.Id} id={services.Id}
+              className='heading '>{services.domain}</h1>
             <div className='specificdomain d-flex flex-wrap'>
 
               {services.categories.map(categories => (
-                <div key={categories.Id} className="subservices">
-                  <h1 className="subservice">{categories.title}</h1>
-                  <div className="subservicecontent">{categories.content}</div>
-                </div>
+                <>
+
+                  {/* <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Accordion Item #1
+                        </button>
+                      </h2>
+
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                  </div> */}
+
+
+
+
+                  <div data-aos="zoom-in" key={categories.Id} id="accordionExample" className="accordion subservices ">
+                    <div class="accordion-item ">
+                      <h2 class="accordion-header w-100">
+                        <button className="h1 accordion-button subservice" type='button' data-bs-toggle="collapse" data-bs-target={`#collapseOne${categories.Id + services.Id}`} aria-expanded="true" aria-controls="collapseOne">{categories.title}</button>
+                      </h2>
+
+                      <div id={`collapseOne${categories.Id +services.Id}`} class="accordion-collapse  collapse " data-bs-parent="#accordionExample">
+                        <div className="subservicecontent accordion-body">{categories.content}</div>
+                      </div>
+                    </div>
+                  </div>
+                </>
               ))}
 
 
-            </div>
+            </div >
           </div>
         ))}
 

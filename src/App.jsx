@@ -90,7 +90,7 @@ function App() {
   useEffect(() => {
     setInterval(() => {
       setLoader(false)
-    }, );
+    }, 5500);
   }, [])
 
   // useEffect(() => {

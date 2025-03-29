@@ -76,29 +76,29 @@ const Home = () => {
 
         {/* Brandname and position */}
         <div className="brandname text-white text-center ">
-          <div className="name m-0">  <span>D</span>eepak <span>D</span>igital <span>C</span>raft</div>
-          <div className="position">Freelancer</div>
+          <div data-aos="zoom-out" data-aos-duration="3000" className="name m-0">  <span data-aos="">D</span>eepak <span>D</span>igital <span>C</span>raft</div>
+          <div className="position" data-aos="fade-right" data-aos-duration="2000">Freelancer</div>
         </div>
         {/* welcome and content */}
         <div className="welcomecontent text-center text-white ">
-          <div className="welcome pb-2">Welcome!</div>
-          <div className="content ">I help businesses and individuals bring their ideas to life with design, development, writing, etc. Whether you need a sleek website, captivating content, or innovative solutions, you've come to the right place.</div>
+          <div className="welcome pb-2" data-aos="zoom-in" data-aos-duration="2000">Welcome!</div>
+          <div className="content " data-aos="fade-up" data-aos-duration="2000">I help businesses and individuals bring their ideas to life with design, development, writing, etc. Whether you need a sleek website, captivating content, or innovative solutions, you've come to the right place.</div>
         </div>
 
         {/* vision and expertise */}
 
         <div className="visionintro text-center ">
-          <div className="slogan ">Your Vision, My Expertise</div>
-          <div className="slogancontent ">Together, we can create something extraordinary.</div>
+          <div className="slogan " data-aos="zoom-in" data-aos-duration="2000">Your Vision, My Expertise</div>
+          <div className="slogancontent " data-aos="zoom-in" data-aos-duration="3000">Together, we can create something extraordinary.</div>
         </div>
 
         {/* next step */}
 
         <div onMouseMove={confettibtn1} className="nextstep text-center ">
-          <div className="content">Ready to take the next step? Explore more and see how I can help.</div>
+          <div className="content" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="3000">Ready to take the next step? Explore more and see how I can help.</div>
           {/* link to the main pages */}
 
-          <div className="awesome-button-wrapper " onClick={callconfettiandexplore}>
+          <div className="awesome-button-wrapper " data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="1000" data-aos-anchor-placement="top-bottom"   onClick={callconfettiandexplore}>
             
             <AwesomeButton className="mt-2 w-50">Explore More</AwesomeButton>
           </div>

@@ -131,7 +131,7 @@ function Aboutme() {
       projecttitle: "Weather App",
       projectlink: "https://ddcweather.netlify.app/",
       projectcontent: "A Weather Application using the OpenWeather API, which provides real-time weather updates for any location. The app displays key details like temperature, wind speed, and the current time of your selected area. To make it even more engaging, I’ve integrated real-time weather animations in the background that adapt to the current weather conditions!",
-      projecttech: ["React", "API Integration", "Bootstrap5","Vanta Js","OpenWeatherAPI"],
+      projecttech: ["React", "API Integration", "Bootstrap5", "Vanta Js", "OpenWeatherAPI"],
     },
     {
       Id: 2,
@@ -139,7 +139,7 @@ function Aboutme() {
       projecttitle: "MovieWeb",
       projectlink: "https://ddcmovies.netlify.app",
       projectcontent: "Dive into a cinematic journey where you can easily browse through a wide selection of movies. Choose your favorite films, explore their ratings, and learn about their genre to help guide your future viewing preferences. Whether you’re looking for your next movie night pick or exploring new genres, this platform makes it easier than ever to discover your next favorite film.",
-      projecttech: ["React", "BrowserRoute", "API Integration", "Bootstrap5","Animation On Scroll"],
+      projecttech: ["React", "BrowserRoute", "API Integration", "Bootstrap5", "Animation On Scroll"],
     },
     {
       Id: 3,
@@ -147,7 +147,7 @@ function Aboutme() {
       projecttitle: "EcommerceFrontend",
       projectlink: "https://deepak-05dktopg.github.io/host-ecommerce/#home",
       projectcontent: "The e-commerce frontend i developed is a responsive and visually appealing platform designed for seamless online shopping. It features intuitive navigation, detailed product displays, and secure checkout integration to enhance user experience. Built using modern web technologies, it ensures fast, interactive performance across devices. With user accounts, payment gateways, and review systems, it fosters convenience and trust for customers.",
-      projecttech: ["HTML", "CSS", "JavaScript", "Bootstrap5","FlexBox","Hover","Animation"],
+      projecttech: ["HTML", "CSS", "JavaScript", "Bootstrap5", "FlexBox", "Hover", "Animation"],
     },
     {
       Id: 4,
@@ -155,7 +155,7 @@ function Aboutme() {
       projecttitle: "Portfolio",
       projectlink: "https://deepakdigitalcraft.tech/",
       projectcontent: "The portfolio project i created is a modern, visually striking website that showcases your skills and achievements. It incorporates various external libraries to enhance functionality and design, providing an interactive user experience. The site features a clean layout, smooth animations, and responsive design, ensuring accessibility across devices. This project effectively highlights your expertise while demonstrating your ability to integrate cutting-edge web technologies.",
-      projecttech: ["React", "FramerMotion", "Magic UI", "GSAP", "Bootstrap5","SplashCurser"],
+      projecttech: ["React", "FramerMotion", "Magic UI", "GSAP", "Bootstrap5", "SplashCurser"],
     }
 
   ]
@@ -236,11 +236,11 @@ function Aboutme() {
       </Headroom>
       <div id="vanta-clouds" className="Hero d-flex flex-column justify-content-center">
         <div className="Hero_text">
-          <div>Hey, there <span className="hi">👋</span></div>
-          <div>I’m <span className="name"> Deepakkumar</span></div>
-          <div className="d-flex align-items-center" >a <span className="roles"> <Typewriter
+          <div data-aos="fade-up">Hey, there <span className="hi" data-aos="flip-left">👋</span></div>
+          <div data-aos="fade-up" data-aos-delay="200">I’m <span className="name"> Deepakkumar</span></div>
+          <div data-aos="fade-up" data-aos-delay="300" className="d-flex align-items-center" >a <span className="roles"> <Typewriter
             options={{
-              strings: ['AI Enthusiast','Freelancer', 'Web Developer', 'Designer'],
+              strings: ['AI Enthusiast', 'Freelancer', 'Web Developer', 'Designer'],
               autoStart: true,
               loop: true,
             }}
@@ -260,13 +260,13 @@ function Aboutme() {
             </AwesomeButton></a>
           </div> */}
 
-          <div className="button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+          <div data-aos="fade-up" data-aos-delay="400" className="button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
             <AwesomeButton type="secondary" className="mt-2">Resume
               <span className=""><Download size={25} strokeWidth={2} color={'black'} /></span>
             </AwesomeButton>
           </div>
 
-         
+
 
 
           <div className="offcanvas  offcanvas-end w-100 " tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
@@ -277,10 +277,10 @@ function Aboutme() {
             <div className="d-flex p-2 gap-2 bg-dark justify-content-end">
               <button className="btn btn-outline-danger text-white" type="button" data-bs-dismiss="offcanvas" >Close</button>
               <button className="btn btn-outline-success text-white ">
-              <Download size={25} strokeWidth={2} color={'white'} />
-                 <a href={myresume} download className=" text-white border border-0 " style={{ padding: '10px', textDecoration: 'none' }}> docs.x </a>
-                   <span classname='fs-2 fw-bold'>|</span> 
-                   <a href={myresumepdf} download className=" border  border-0  border-success text-white" style={{ padding: '10px', textDecoration: 'none' }}> .pdf </a></button>
+                <Download size={25} strokeWidth={2} color={'white'} />
+                <a href={myresume} download className=" text-white border border-0 " style={{ padding: '10px', textDecoration: 'none' }}> docs.x </a>
+                <span classname='fs-2 fw-bold'>|</span>
+                <a href={myresumepdf} download className=" border  border-0  border-success text-white" style={{ padding: '10px', textDecoration: 'none' }}> .pdf </a></button>
             </div>
           </div>
 
@@ -288,10 +288,10 @@ function Aboutme() {
 
 
 
-          <div className="Hero_Social_Medias">
-            <a href="#aboutme" className=""><AwesomeButton type="danger"> <span className="text-white">AboutMe ▶</span></AwesomeButton></a>
-            <a href="#skills"> <AwesomeButton type="danger"><span className="text-white">Skills ▶</span> </AwesomeButton></a>
-            <a href="#projects"> <AwesomeButton type="danger">  <span className="text-white">Projects ▶</span> </AwesomeButton></a>
+          <div className="Hero_Social_Medias m-lg-0">
+            <a data-aos="fade-up" data-aos-delay="500" href="#aboutme" className=""><AwesomeButton className="" type="danger"> <span className="text-white">AboutMe ▶</span></AwesomeButton></a>
+            <a data-aos="fade-up" data-aos-delay="600" href="#skills" className=""> <AwesomeButton className="" type="danger"><span className="text-white">Skills ▶</span> </AwesomeButton></a>
+            <a data-aos="fade-up" data-aos-delay="700" href="#projects" className=""> <AwesomeButton className="" type="danger">  <span className="text-white">Projects ▶</span> </AwesomeButton></a>
           </div>
 
         </div>
@@ -309,16 +309,16 @@ function Aboutme() {
       </ShineBorder> */}
 
 
-      <div id="aboutme" className="aboutme">
-        <h1 className="aboutme_title">About Me</h1>
+      <div data-aos="fade-up" id="aboutme" className="aboutme">
+        <h1 data-aos="fade-up" className="aboutme_title">About Me</h1>
 
         <div className="aboutme_text">
-          <div className="aboutme_image"><img src={Deepak} className="profileimg" alt="Profile" loading="lazy" /></div>
-          <p className="aboutme_description">Hello! I'm <span className="name"> Deepakkumar</span>, a freelance web developer specializing in creating modern, responsive, and user-friendly websites. Currently, I am in my pre-final year at <b className="text-secondary"> Nandha Engineering College</b> <span className="text-secondary"> (Autonomous)</span>, where I focus on
+          <div data-aos="fade-down-right" className="aboutme_image"><img src={Deepak} className="profileimg" alt="Profile" loading="lazy" /></div>
+          <p data-aos="fade-up" className="aboutme_description">Hello! I'm <span className="name"> Deepakkumar</span>, a freelance web developer specializing in creating modern, responsive, and user-friendly websites. Currently, I am in my pre-final year at <b className="text-secondary"> Nandha Engineering College</b> <span className="text-secondary"> (Autonomous)</span>, where I focus on
             <span style={{ display: 'inline-block' }} className="word-rotate ps-2 ">
               <WordRotate
 
-                words={['Freelancing.', 'Web Developement.', 'ChatBot Development.',"AI."]}
+                words={['Freelancing.', 'Web Developement.', 'ChatBot Development.', "AI."]}
               /> </span> <br /> <br /> I have a growing expertise in MERN, which equips me to deliver cutting-edge web solutions tailored to business needs. My design philosophy emphasizes clean and minimalist aesthetics, ensuring every element serves a purpose.</p>
         </div>
       </div>
@@ -329,15 +329,15 @@ function Aboutme() {
 
 
       <div id="skills" className="skills_tools" style={{ backgroundImage: `url(${skillbackground})` }}>
-        <h1 className="aboutme_title pt-5">Skills & Tools</h1>
+        <h1 data-aos="fade-up" className="aboutme_title pt-5">Skills & Tools</h1>
 
         <div className="scrollskillboxes">
 
-          <div className="skillboxes">
+          <div data-aos="fade-up" className="skillboxes">
 
             {skill.map((skill) => (
 
-              <div key={skill.Id} className="box">
+              <div  data-aos="flip-right" data-aos-delay={`${skill.Id+1}00`} key={skill.Id} className="box">
                 <div className="box_title text-white text-center">{skill.heading}</div>
                 {skill.skills.map((skills) => (
                   <div key={skills.Id} className="skillbox_content container d-flex align-items-center gap-2 ">
@@ -358,42 +358,43 @@ function Aboutme() {
 
 
       <div id="projects" className="projects mt-lg-4 mt-5">
-        <h1 className="aboutme_title text-center">Projects</h1>
+        <h1  data-aos="fade-up" className="aboutme_title text-center">Projects</h1>
 
 
         <div className="specificproject rounded d-flex mt-lg-5 justify-content-around flex-wrap">
           {projects.map((project) => (
-            <div key={project.Id} className="project_card d-flex flex-column gap-2">
+            <div  data-aos="flip-right" data-aos-delay={`${project.Id}00`} key={project.Id} className="project_card d-flex flex-column gap-2">
 
 
-              <div className="project_img_corousel  text-center">
+              <div data-aos="zoom-in" data-aos-delay={`${project.Id}00`} className="project_img_corousel  text-center">
 
                 <div key={project.Id} ref={sliderRef} className="carousel-inner keen-slider d-flex justyfy-content-center align-items-center rounded">
                   {project.projectimg1.map((images, index) => (
                     <div key={index} className=" keen-slider__slide  bg-dark rounded  text-dark text-center">
-                      <img src={images} alt="Project images" loading="lazy"/>
+                      <img src={images} alt="Project images" loading="lazy" />
                     </div>
                   ))}
                 </div>
 
 
               </div>
-              <div className="project_heading d-flex justify-content-between align-items-center">
+              <div data-aos="zoom-in" data-aos-delay={`${project.Id}00`}className="project_heading d-flex justify-content-between align-items-center">
                 <div className="project_heading_title">{project.projecttitle}</div>
                 <a href={project.projectlink}> <button className="project_heading_link">view project</button></a>
               </div>
-              <div className="project_content">
+              <div data-aos="zoom-in" data-aos-delay={`${project.Id}00`}className="project_content">
                 <ReadMoreArea lettersLimit={85} buttonStyle={buttonStyle}  > {project.projectcontent}</ReadMoreArea>
               </div>
-              <div className="project_tools d-flex flex-wrap ">
+              <div data-aos="" data-aos-delay={`${project.Id}00`}className="project_tools d-flex flex-wrap ">
                 {project.projecttech.map((tech, index) => (
-                  <span key={index} className="">{tech}</span>
+                  <span data-aos="fade-up" data-aos-delay={`${index}00`} key={index} className="">{tech}</span>
                 ))}
               </div>
             </div>
           ))}
         </div>
-
+<br /> <br />
+        <Footer />
 
       </div>
 
@@ -419,7 +420,6 @@ function Aboutme() {
         </span>
         <BorderBeam size={250} duration={12} delay={1} />
       </div> */}
-      <Footer />
     </>
 
   );

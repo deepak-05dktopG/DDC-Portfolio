@@ -577,9 +577,7 @@
   }
 
   .specificproject {
-    height: 90vh;
-    overflow: scroll;
-    scrollbar-width: none;
+    height: fit-content;
   }
 }
 
@@ -887,6 +885,7 @@
   }
   .Hero_text {
     margin-left: 15%;
+    margin-bottom: 10%;
     font-family: "Kameron", serif;
     font-optical-sizing: auto;
     font-weight: 500;

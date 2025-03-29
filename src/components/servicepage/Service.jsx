@@ -124,10 +124,10 @@ function Service() {
                   <div data-aos="zoom-in" key={categories.Id} id="accordionExample" className="accordion subservices ">
                     <div class="accordion-item ">
                       <h2 class="accordion-header w-100">
-                        <button className="h1 accordion-button subservice" type='button' data-bs-toggle="collapse" data-bs-target={`#collapseOne${categories.Id + services.Id}`} aria-expanded="true" aria-controls="collapseOne">{categories.title}</button>
+                        <button className="h1 accordion-button subservice" type='button' data-bs-toggle="collapse" data-bs-target={`#collapseOne${categories.Id}${services.Id}`} aria-expanded="true" aria-controls="collapseOne">{categories.title}</button>
                       </h2>
 
-                      <div id={`collapseOne${categories.Id +services.Id}`} class="accordion-collapse  collapse " data-bs-parent="#accordionExample">
+                      <div id={`collapseOne${categories.Id}${services.Id}`} class="accordion-collapse  collapse " data-bs-parent="#accordionExample">
                         <div className="subservicecontent accordion-body">{categories.content}</div>
                       </div>
                     </div>

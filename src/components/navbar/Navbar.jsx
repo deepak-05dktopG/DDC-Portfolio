@@ -39,7 +39,7 @@ function Navbar() {
         <NavLink style={navlink} className="navitem text-decoration-none" to="/">Portfolio</NavLink>
         <NavLink style={navlink} className="navitem text-decoration-none" to="/service">Service</NavLink>
         <NavLink style={navlink} className="navitem text-decoration-none" to="/contact">Contact</NavLink>
-        <div className="text-white   text-decoration-none " > <span style={{cursor:'pointer'}} className="fs-5 p-3" onClick={switchtheme}>{themeicon}</span> </div>
+        <div className="text-white   text-decoration-none " > <span style={{cursor:'pointer'}} className="fs-5 p-3" onClick={switchtheme}>{themeicon ? themeicon :"🔆"}</span> </div>
 
 
 

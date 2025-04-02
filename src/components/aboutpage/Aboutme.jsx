@@ -336,9 +336,8 @@ function Aboutme() {
           <div data-aos="fade-up" className="skillboxes">
 
             {skill.map((skill) => (
-
-              <div  data-aos="flip-right" data-aos-delay={`${skill.Id+1}00`} key={skill.Id} className="box">
-                <div className="box_title text-white text-center">{skill.heading}</div>
+              <div data-aos="flip-right" data-aos-delay={`${skill.Id + 1}00`} key={skill.Id} className="box">
+                <div className="box_title text-center">{skill.heading}</div>
                 {skill.skills.map((skills) => (
                   <div key={skills.Id} className="skillbox_content container d-flex align-items-center gap-2 ">
                     <img src={skills.image} className="skillimg" alt="tech" loading="lazy" />
@@ -358,12 +357,12 @@ function Aboutme() {
 
 
       <div id="projects" className="projects mt-lg-4 mt-5">
-        <h1  data-aos="fade-up" className="aboutme_title text-center">Projects</h1>
+        <h1 data-aos="fade-up" className="aboutme_title text-center">Projects</h1>
 
 
         <div className="specificproject rounded d-flex mt-lg-5 justify-content-around flex-wrap">
           {projects.map((project) => (
-            <div  data-aos="flip-right" data-aos-delay={`${project.Id}00`} key={project.Id} className="project_card d-flex flex-column gap-2">
+            <div data-aos="flip-right" data-aos-delay={`${project.Id}00`} key={project.Id} className="project_card d-flex flex-column gap-2">
 
 
               <div data-aos="zoom-in" data-aos-delay={`${project.Id}00`} className="project_img_corousel  text-center">
@@ -378,14 +377,14 @@ function Aboutme() {
 
 
               </div>
-              <div data-aos="zoom-in" data-aos-delay={`${project.Id}00`}className="project_heading d-flex justify-content-between align-items-center">
+              <div data-aos="zoom-in" data-aos-delay={`${project.Id}00`} className="project_heading d-flex justify-content-between align-items-center">
                 <div className="project_heading_title">{project.projecttitle}</div>
                 <a href={project.projectlink}> <button className="project_heading_link">view project</button></a>
               </div>
-              <div data-aos="zoom-in" data-aos-delay={`${project.Id}00`}className="project_content">
+              <div data-aos="zoom-in" data-aos-delay={`${project.Id}00`} className="project_content">
                 <ReadMoreArea lettersLimit={85} buttonStyle={buttonStyle}  > {project.projectcontent}</ReadMoreArea>
               </div>
-              <div data-aos="" data-aos-delay={`${project.Id}00`}className="project_tools d-flex flex-wrap ">
+              <div data-aos="" data-aos-delay={`${project.Id}00`} className="project_tools d-flex flex-wrap ">
                 {project.projecttech.map((tech, index) => (
                   <span data-aos="fade-up" data-aos-delay={`${index}00`} key={index} className="">{tech}</span>
                 ))}
@@ -393,7 +392,7 @@ function Aboutme() {
             </div>
           ))}
         </div>
-<br /> <br />
+        <br /> <br />
         <Footer />
 
       </div>

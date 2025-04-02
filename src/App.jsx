@@ -135,7 +135,7 @@ function App() {
 
   return (
     <div className="Body">
-      <div ref={divRef} style={{position:"absolute",bottom:"0",right:"0",opacity:"0"}} className="d-flex bg-primary rounded-5 z-2 align-items-end justify-content-end  position-fixed    ">
+      <div ref={divRef} style={{position:"absolute",bottom:"0",right:"0",opacity:"0"}} className="d-flex bg-primary rounded-2 z-2 align-items-end justify-content-end  position-fixed    ">
         <div
            onClick={scrollToTop}
           className="scrolltop  z-1 text-white text-end "

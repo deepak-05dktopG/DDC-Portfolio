@@ -169,7 +169,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
-  background-color: rgb(36, 36, 36);
+  background-color: var(--background-color);
   background-blend-mode: multiply;
 }
 .skillboxes {
@@ -216,8 +216,9 @@
   font-family: "Silkscreen", serif;
   font-weight: 400;
   font-size: 25px;
+  color: var(--primary);
   font-style: normal;
-  text-shadow: 2px 2px 4px black;
+  text-shadow: 2px 2px 4px var(--background-color);
 }
 .skillimg {
   width: 50px;
@@ -479,7 +480,6 @@
   .skills_tools {
     min-height: fit-content;
     background-repeat: no-repeat;
-    background-color: rgb(36, 36, 36);
     background-size: cover;
     object-fit: cover;
     background-position: center;
@@ -505,7 +505,7 @@
     font-weight: 400;
     font-size: 25px;
     font-style: normal;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px var(--background-color);
   }
   .skillimg {
     width: 50px;
@@ -763,7 +763,7 @@
     font-weight: 400;
     font-size: 25px;
     font-style: normal;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px var(--background-color);
   }
   .skillimg {
     width: 50px;
@@ -1015,7 +1015,7 @@
     font-weight: 400;
     font-size: 25px;
     font-style: normal;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px var(--background-color);
   }
   .skillimg {
     width: 50px;
@@ -1249,7 +1249,6 @@
   .skills_tools {
     min-height: 100vh;
     background-repeat: no-repeat;
-    background-color: rgb(36, 36, 36);
     background-size: cover;
     object-fit: cover;
     background-blend-mode: multiply;
@@ -1275,7 +1274,7 @@
     font-weight: 400;
     font-size: 25px;
     font-style: normal;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px var(--background-color);
   }
   .skillimg {
     width: 50px;

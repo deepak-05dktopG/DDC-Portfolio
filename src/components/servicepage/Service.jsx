@@ -22,6 +22,17 @@ function Service() {
   const services = [
     {
       Id: 1,
+      domain: "AI Agents",
+      categories: [
+        { Id: 1, title: "Workflow Automation", content: "🙂Soon..." },
+        { Id: 2, title: "Customer Support Agents", content: "🙂Soon... " },
+        { Id: 3, title: "Content Generation Bots", content: "🙂Soon..." },
+        { Id: 4, title: "Personal Assitant Bots", content: "🙂Soon..." },
+
+      ]
+    },
+    {
+      Id: 2,
       domain: "Web Development",
       categories: [
         { Id: 1, title: "Business Websites", content: "Designed to showcase products and services, these sites help companies attract new customers and partners by providing essential information about their offerings." },
@@ -32,7 +43,7 @@ function Service() {
       ]
     },
     {
-      Id: 2,
+      Id: 3,
       domain: "Chat bot Development",
       categories: [
         { Id: 1, title: "Website Chatbots", content: "These are integrated directly into websites to assist visitors in real-time. They can answer FAQs, guide users through the site, and help with customer service inquiries. Tools like Landbot and ChatBot allow for easy deployment without coding." },
@@ -44,7 +55,7 @@ function Service() {
       ]
     },
     {
-      Id: 3,
+      Id: 4,
       domain: "Graphic Design",
       categories: [
         { Id: 1, title: "Logo Design", content: "Create unique and memorable logos that encapsulate a brand's identity and values, helping businesses stand out." },
@@ -69,9 +80,10 @@ function Service() {
           <div data-aos="zoom-in" className="content">I offer professional web development services to individuals and businesses looking to establish or enhance their online presence. Whether you need a sleek portfolio, an engaging business website, or seamless web applications, I’m here to help bring your vision to life.
             <br />
             <div data-aos="fade-left" data-aos-delay="200" className='d-flex flex-column'>
-              <a className='z-2' href="#1">Web Development</a>
-              <a className='z-2' href="#2">ChatBot Development</a>
-              <a className='z-2' href="#3">Graphic Design</a>
+              <a className='z-2' href="#1">AI Agents</a>
+              <a className='z-2' href="#2">Web Development</a>
+              <a className='z-2' href="#3">ChatBot Development</a>
+              <a className='z-2' href="#4">Graphic Design</a>
             </div>
 
           </div>
@@ -91,7 +103,7 @@ function Service() {
 
 
 
-      <div  className="servicelist d-flex flex-column gap-5  container">
+      <div className="servicelist d-flex flex-column gap-5  container">
 
         {services.map((services) => (
           <div data-aos="fade-down-right" className='div  rounded'>

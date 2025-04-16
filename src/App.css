@@ -1,7 +1,9 @@
 /* *{
   filter:var(--filter-brightness);
 } */
-
+html{
+  scroll-behavior: smooth;
+}
 .progress-bar-top {
   position: fixed;
   top: 0;

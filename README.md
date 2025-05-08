@@ -48,8 +48,8 @@
 <h2>📬 Contact</h2>
 
 <ul>
-  <li>✉️ Email: <a href="mailto:kumardeepak59422@gmail.com ">yourname@example.com</a></li>
-  <li>👨‍💼 LinkedIn: <a href="https://www.linkedin.com/in/deepak-05dktopg/" target="_blank">linkedin.com/in/yourprofile</a></li>
+  <li>✉️ Email: <a href="mailto:kumardeepak59422@gmail.com ">kumardeepak59422@gmail.com</a></li>
+  <li>👨‍💼 LinkedIn: <a href="https://www.linkedin.com/in/deepak-05dktopg/" target="_blank">https://www.linkedin.com/in/deepak-05dktopg/</a></li>
 </ul>
 
 <hr/>

@@ -4,7 +4,6 @@
   🚀 A modern, interactive, and mobile-friendly portfolio website to showcase my projects, skills, resume, and contact info — all in one place!<br/>
   Built to reflect my personal brand and professional journey.
 </p>
-
 <p align="center">
   <a href="https://www.deepakdigitalcraft.tech/" target="_blank"><strong>🌐 Live Demo</strong></a>
 </p>

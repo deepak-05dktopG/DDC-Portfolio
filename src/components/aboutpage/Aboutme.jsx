@@ -68,6 +68,12 @@ import portfolioimg2 from "/src/images/PortfolioProject/img2.png"
 import portfolioimg3 from "/src/images/PortfolioProject/img3.png"
 import portfolioimg4 from "/src/images/PortfolioProject/img4.png"
 
+//QualityPicks images
+import qualitypicksimg1 from "/src/images/QualityPicks/homepage.png"
+import qualitypicksimg2 from "/src/images/QualityPicks/homepage2.png"
+import qualitypicksimg3 from "/src/images/QualityPicks/product.png"
+import qualitypicksimg4 from "/src/images/QualityPicks/productdetail.png"
+
 function Aboutme() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -107,16 +113,16 @@ function Aboutme() {
     {
       Id: 4,
       heading: 'Backend', skills: [
-        { Id: 1, image: `${NodeLogo}`, tooltip: "this is Nodejs", percentage: 65 },
-        { Id: 2, image: `${Expresslogo}`, tooltip: "this is Expressjs", percentage: 60 },
-        { Id: 3, image: `${Pythonlogo}`, tooltip: "this is Python", percentage: 0 },
-        { Id: 4, image: `${javalogo}`, tooltip: "this is Java", percentage: 0 }]
+        { Id: 1, image: `${NodeLogo}`, tooltip: "this is Nodejs", percentage: 85 },
+        { Id: 2, image: `${Expresslogo}`, tooltip: "this is Expressjs", percentage: 90 },
+        { Id: 3, image: `${Pythonlogo}`, tooltip: "this is Python", percentage: 50 },
+        { Id: 4, image: `${javalogo}`, tooltip: "this is Java", percentage: 50 }]
     },
     {
       Id: 5,
       heading: 'DataBase', skills: [
-        { Id: 1, image: `${sqllogo}`, tooltip: "this is SQL", percentage: 0 },
-        { Id: 2, image: `${mongodblogo}`, tooltip: "this is MongoDB", percentage: 80 },
+        { Id: 1, image: `${sqllogo}`, tooltip: "this is SQL", percentage: 50 },
+        { Id: 2, image: `${mongodblogo}`, tooltip: "this is MongoDB", percentage: 90 },
       ]
     },
 
@@ -125,6 +131,14 @@ function Aboutme() {
 
   ]
   const projects = [
+    {
+      Id: 0,
+      projectimg1: [`${qualitypicksimg1}`, `${qualitypicksimg2}`, `${qualitypicksimg3}`, `${qualitypicksimg4}`],
+      projecttitle: "QualityPicks",
+      projectlink: "https://qualitypicks.vercel.app",
+      projectcontent: "We save you time by testing and researching products so you can shop with confidence. Every item on our site has been carefully selected for its quality and value. We believe in transparency, so we provide detailed information about each product, including its features, benefits, and any potential drawbacks. Our goal is to help you make informed decisions and find the best products for your needs.",
+      projecttech: ["React", "API Integration", "Bootstrap5", "Node JS", "Express js" ,"MongoDB"],
+    },
     {
       Id: 1,
       projectimg1: [`${weatherimg1}`, `${weatherimg2}`, `${weatherimg3}`, `${weatherimg4}`],
@@ -196,29 +210,29 @@ function Aboutme() {
       },
     ]
   )
-  useEffect(() => {
-    RINGS({
-      el: "#vanta-clouds",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      backgroundColor: '',
-      color1: "blue",
-      color2: "violet",
-      colorMode: "lerp",
-      birdSize: 2.20,
-      wingSpan: 26.00,
-      speedLimit: 7.00,
-      separation: 96.00,
-      alignment: 24.00,
-      cohesion: 81.00,
-      quantity: 4.00
-    })
-  }, [])
+  // useEffect(() => {
+  //   RINGS({
+  //     el: "#vanta-clouds",
+  //     mouseControls: true,
+  //     touchControls: true,
+  //     gyroControls: false,
+  //     minHeight: 200.00,
+  //     minWidth: 200.00,
+  //     scale: 1.00,
+  //     scaleMobile: 1.00,
+  //     backgroundColor: 'rgba(0, 0, 255, 0.3)',
+  //     color1: "blue",
+  //     color2: "violet",
+  //     colorMode: "lerp",
+  //     birdSize: 2.20,
+  //     wingSpan: 26.00,
+  //     speedLimit: 7.00,
+  //     separation: 96.00,
+  //     alignment: 24.00,
+  //     cohesion: 81.00,
+  //     quantity: 4.00
+  //   })
+  // }, [])
 
 
 
@@ -229,7 +243,8 @@ function Aboutme() {
     <>
 
 
-      <motion.div className="z-2 progress-bar" style={{ scaleX }} ></motion.div>
+      {/* <motion.div className="z-2 progress-bar" style={{ scaleX }} ></motion.div> */}
+
 
       <Headroom className="" >
         <Navbar />
@@ -299,6 +314,8 @@ function Aboutme() {
 
 
       </div>
+
+      <div className="container1"></div>
       {/* <ShineBorder
         className="relative flex h-[500px] w-25 flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
         color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
@@ -314,7 +331,7 @@ function Aboutme() {
 
         <div className="aboutme_text">
           <div data-aos="fade-down-right" className="aboutme_image"><img src={Deepak} className="profileimg" alt="Profile" loading="lazy" /></div>
-          <p data-aos="fade-up" className="aboutme_description">Hello! I'm <span className="name"> Deepakkumar</span>, a freelance web developer specializing in creating modern, responsive, and user-friendly websites. Currently, I am in my pre-final year at <b className="text-secondary"> Nandha Engineering College</b> <span className="text-secondary"> (Autonomous)</span>, where I focus on
+          <p data-aos="fade-up" className="aboutme_description">Hello! I'm <span className="name"> Deepakkumar</span>, a freelance web developer specializing in creating modern, responsive, and user-friendly websites. Currently, I am in my final year at <b className="text-secondary"> Nandha Engineering College</b> <span className="text-secondary"> (Autonomous)</span>, where I focus on
             <span style={{ display: 'inline-block' }} className="word-rotate ps-2 ">
               <WordRotate
 

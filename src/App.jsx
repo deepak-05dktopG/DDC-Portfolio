@@ -174,19 +174,6 @@ function App() {
           </div>
           <div className="icon1"></div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
         : <div>
 
           <motion.div className="z-2 progress-bar-top" style={{ scaleX }} ></motion.div>

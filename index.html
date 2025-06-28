@@ -62,6 +62,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
 
     <!-- cdn for from vanta js -->
+    <!-- for chatbot -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root"></div>
@@ -80,8 +85,44 @@
       AOS.init();
     </script>
 
+    <!-- for chatbot -->
+    <script type="module">
+      import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
 
-
-    
+      createChat({
+        webhookUrl: "https://n8n-nsao.onrender.com/webhook/060d79b6-55e6-4cc6-9638-d71a36069856/chat", // 🔁 Replace this with your actual n8n webhook URL
+        webhookConfig: {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        },
+        target: "#n8n-chat",
+        mode: "window",
+        chatInputKey: "chatInput",
+        chatSessionKey: "sessionId",
+        loadPreviousSession: true,
+        metadata: {
+          context: "portfolio",
+          tone: "casual",
+        },
+        showWelcomeScreen: false,
+        defaultLanguage: "en",
+        initialMessages: [
+          "Hey! 👋",
+          "I’m Deepak. Feel free to ask me anything about my work or what I do.",
+          "Always happy to chat 😄",
+        ],
+        i18n: {
+          en: {
+            title: "Hey there! 👋",
+            subtitle: "Got questions? I’m happy to chat 🙂",
+            footer: "",
+            getStarted: "Say Hello",
+            inputPlaceholder: "Type something here...",
+          },
+        },
+      });
+    </script>
   </body>
 </html>

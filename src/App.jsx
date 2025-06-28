@@ -39,7 +39,7 @@ import { Linkedin, Mail, Github, Instagram, ChevronsUp } from 'lucide-react';
 
 
 function App() {
-  const [loader, setLoader] = useState(true)
+  const [loader, setLoader] = useState(false)
   const divRef = useRef(null);
 
 //   const toggleVisibility = () => {
@@ -87,11 +87,11 @@ function App() {
 
 
   //intro welcome loading
-  useEffect(() => {
-    setInterval(() => {
-      setLoader(false)
-    }, 5500);
-  }, [])
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setLoader(false)
+  //   }, 5500);
+  // }, [])
 
   // useEffect(() => {
   //   const handleLoad = () => {
@@ -142,7 +142,7 @@ function App() {
 
           style={{ cursor: 'pointer', height: "fit-Content" }}
         >
-          <ChevronsUp size={40} />
+          {/* <ChevronsUp size={40} /> */}
         </div>
       </div>
 

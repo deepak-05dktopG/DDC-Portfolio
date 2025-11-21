@@ -38,7 +38,7 @@
     @apply bg-background text-foreground font-sans antialiased selection:bg-primary selection:text-black;
     overflow-x: hidden;
     /* cursor: none; */
-    /* Disabled to ensure usability */
+    /* Disabled to nsure usability */
   }
 
   h1,

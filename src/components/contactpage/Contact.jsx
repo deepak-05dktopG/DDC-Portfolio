@@ -1,139 +1,166 @@
-import { React, useEffect } from 'react'
-import Navbar from '../navbar/Navbar'
-import Footer from '../footer/Footer'
-import './Contact.css'
-import Headroom from "react-headroom";
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import { MagicCard } from "../magicui/magic-card";
+import ShineBorder from "../magicui/shine-border";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle } from "lucide-react";
+import confetti from "canvas-confetti";
 
-import WordRotate from "@/components/magicui/word-rotate";
-import AnimateEmail from "/src/images/Animatedemail.gif"
-import AnimateWhatsapp from "/src/images/Animatedwhatsapp.gif"
-import Animatelocation from "/src/images/Animatelocation.gif"
-import locationimage from "/src/images/locationimage.avif"
-import confetti from "canvas-confetti"
-import { H1 } from 'tabler-icons-react';
-
-function Contact() {
-
-  const confettibtn1 = () => {
-    confetti({
-      particleCount: 3,
-      spread: 1000,
-      scalar: 1
-    })
-  }
-
+const Contact = () => {
   useEffect(() => {
-    // Set the redirect value to the current URL
-    document.getElementById('redirect-url').value = window.location.href;
+    const redirectUrlInput = document.getElementById('redirect-url');
+    if (redirectUrlInput) {
+      redirectUrlInput.value = window.location.href;
+    }
   }, []);
 
-
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-
-    // You can add your form submission logic here (e.g., API call)
-    // For this example, we'll just simulate a successful submission
-
-    alert('Form submitted successfully!'); // Show alert message
-
-
+    // The form submits to Web3Forms, so we don't need to prevent default unless we want to handle it via AJAX.
+    // For now, let's just trigger confetti on submit button click (which is handled by the button's onClick if we add it, or just let the form submit).
+    // We'll add a simple confetti effect on the button click.
   };
 
-
+  const triggerConfetti = () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  };
 
   return (
-    <div>
+    <div className="min-h-screen pt-24 pb-12 px-4 md:px-8 max-w-7xl mx-auto flex flex-col items-center justify-center">
 
-      <Headroom>
-        <Navbar />
-      </Headroom>
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center mb-16 space-y-4"
+      >
+        <h1 className="text-4xl md:text-6xl font-heading font-bold text-white">
+          Get in <span className="text-primary">Touch</span>
+        </h1>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          Have a project in mind or just want to say hi? I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+        </p>
+      </motion.div>
 
-      <div className='bg-white'>
-        <div data-aos="zoom-out" className="contactintro">
-          "Let's build something incredible together." <br />
+      <div className="grid md:grid-cols-2 gap-12 w-full">
 
-          "Looking for a Freelancer for your project? Let's talk!" <br />
+        {/* Contact Info */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="space-y-8"
+        >
+          <MagicCard className="p-8 border border-white/10 bg-card/30 backdrop-blur-xl flex flex-col gap-6">
+            <h3 className="text-2xl font-bold text-white mb-4">Contact Information</h3>
 
-          "Need help with         <div style={{ display: 'inline-block' }} className="lookingfor px-3 ">
-            <WordRotate
-              words={['Freelancer', 'Web Developer', 'ChatBot Developer', 'Designer',]}
-            /> </div>? I'm your guy." <br />
+            <div className="space-y-6">
+              <a href="mailto:forwebdeepak@gmail.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
+                <div className="p-3 bg-white/5 rounded-full group-hover:bg-primary/20 transition-colors">
+                  <Mail size={24} />
+                </div>
+                <span className="text-lg">forwebdeepak@gmail.com</span>
+              </a>
 
-          "I'm open to freelance projects for startups and growing businesses."
-        </div>
+              <a href="https://wa.me/+919025454148" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
+                <div className="p-3 bg-white/5 rounded-full group-hover:bg-primary/20 transition-colors">
+                  <MessageCircle size={24} />
+                </div>
+                <span className="text-lg">+91 9025454148</span>
+              </a>
+
+              <div className="flex items-center gap-4 text-muted-foreground group">
+                <div className="p-3 bg-white/5 rounded-full">
+                  <MapPin size={24} />
+                </div>
+                <span className="text-lg">Erode, Tamil Nadu, India</span>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-8 border-t border-white/10">
+              <h4 className="text-white font-bold mb-4">Follow Me</h4>
+              <div className="flex gap-4">
+                <a href="https://github.com/deepak-05dktopG" target="_blank" rel="noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-primary/20 transition-colors text-white hover:text-primary">
+                  <Github size={24} />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-primary/20 transition-colors text-white hover:text-primary">
+                  <Linkedin size={24} />
+                </a>
+              </div>
+            </div>
+          </MagicCard>
+        </motion.div>
+
+        {/* Contact Form */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        >
+          <ShineBorder
+            className="w-full p-1 bg-card/30 rounded-2xl border-white/5"
+            color={["#00f3ff", "#bc13fe", "#ff0055"]}
+          >
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              className="bg-card/80 backdrop-blur-xl rounded-xl p-8 space-y-6 w-full"
+            >
+              <input type="hidden" name="access_key" value="bf09f79e-4888-4ddb-af54-5b31e0dc1fe4" />
+              <input type="hidden" name="redirect" id="redirect-url" />
+
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-muted-foreground">Full Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                  placeholder="John Doe"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-muted-foreground">Email Address</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                  placeholder="john@example.com"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-muted-foreground">Message</label>
+                <textarea
+                  name="message"
+                  required
+                  rows="4"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-none"
+                  placeholder="Tell me about your project..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                onClick={triggerConfetti}
+                className="w-full py-4 bg-gradient-to-r from-primary to-secondary rounded-lg text-black font-bold text-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+              >
+                <Send size={20} />
+                Send Message
+              </button>
+
+            </form>
+          </ShineBorder>
+        </motion.div>
+
       </div>
+    </div>
+  );
+};
 
-      <form id='formm' className='needs-validation' action="https://api.web3forms.com/submit" method="POST" novalidate>
-        <input type="hidden" name="access_key" value="bf09f79e-4888-4ddb-af54-5b31e0dc1fe4" />
-        <h1 data-aos="fade-right" className='Enquirytitle'>Enquiry</h1>
+export default Contact;
 
-        <div data-aos="fade-right" data-aos-delay="100" className="input">
-          <input type="text" name='FullName:' className="form-control" placeholder="Full name" required />
-        </div>
-        <div data-aos="fade-right" data-aos-delay="100" className="input">
-          <input type="number" name='Phone: ' className="form-control " placeholder="Mobile number with country code" />
-        </div>
-        <div data-aos="fade-right" data-aos-delay="100" className="input">
-          <input type="email" name='Email:' className="form-control" placeholder="Email" aria-label="First name" required />
-        </div>
-        <div data-aos="fade-right" data-aos-delay="100" className="input">
-          <input className="form-control" name='Country:' list="countrylist" id="exampleDataList" placeholder="Country" required />
-          <datalist id="countrylist">
-            <option value="India" />
-            <option value="United States" />
-            <option value="United Kingdom" />
-            <option value="Brazil" />
-            <option value="Pakistan" />
-            <option value="Ukraine" />
-            <option value="Philippines" />
-            <option value="India" />
-            <option value="Bangladesh" />
-            <option value="Russia" />
-            <option value="Serbia" />
-            <option value="Canada" />
-            <option value="Australia" />
-            <option value="Germany" />
-            <option value="France" />
-            <option value="Vietnam" />
-            <option value="Poland" />
-            <option value="South Africa" />
-            <option value="Mexico" />
-            <option value="Italy" />
-            <option value="Spain" />
-            <option value="Netherlands" />
-          </datalist>
-
-        </div>
-        <div data-aos="fade-right" data-aos-delay="100" class="form-floating">
-          <textarea className="form-control" name='Message:' placeholder="Leave a comment here" id="floatingTextarea2" style={{ minHeight: '100px', maxHeight: 'fit-content' }} required></textarea>
-          <label for="floatingTextarea2">Message</label>
-        </div>
-
-        <input type="hidden" name="" value="#" id='redirect-url' />
-
-        <div data-aos="zoom-in" data-aos-delay="300"  className='submit d-flex justify-content-center'>
-          <button type="submit" className='btn btn-outline-success'>Submit Form</button>
-        </div>
-
-      </form>
-
-
-      <div  className="linksforcontact d-flex  flex-wrap-reverse align-items-center">
-        <div data-aos="fade-right" className="address m-2">   <span> Erode <br /> Tamilnadu <br />India <br />638 314</span></div>
-        <div className="message">
-          <div data-aos="zoom-in" className="email m-2"> <a href="mailto:forwebdeepak@gmail.com?subject=From Portfolio&body=Hi Deepakkumar,"> <img src={AnimateEmail} data-aos="flip-right" width={50} alt="" /> forwebdeepak@gmail.com </a></div>
-          <div data-aos="zoom-in" className="call m-2"> <a href="https://wa.me/+919025454148?text=Hello Deepak i got this number from your portfolio" target="_blank"> <img src={AnimateWhatsapp} data-aos="flip-right" data-aos-delay="200" width={50} alt="" /> +91 9025454148   </a></div>
-        </div>
-      </div>
-
-
-
-
-
-
-      <Footer />
-    </div >
-  )
-}
-
-export default Contact

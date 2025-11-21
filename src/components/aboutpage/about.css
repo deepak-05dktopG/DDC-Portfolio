@@ -81,6 +81,7 @@
   background-size: cover;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
     1px 1px 0 white; /* Creates the border effect */
+  scroll-behavior: smooth;
 }
 .hi {
   font-size: 80px;
@@ -187,6 +188,12 @@
   --button-danger-color-active: #0a0151;
   --button-danger-border: 1px solid #0c1155;
 }
+
+.aws-btn:focus-visible,
+.project_heading_link:focus-visible {
+  outline: 3px solid #ffa500;
+  outline-offset: 2px;
+}
 .aboutme {
   width: 100%;
   min-height: fit-content;
@@ -203,12 +210,29 @@
   font-style: normal;
   color: #c65c16;
   text-shadow: 3px 3px 2px orange;
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.aboutme_title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #c65c16, #ff6500, #ffa500);
+  border-radius: 2px;
 }
 .aboutme_text {
   margin: 50px 150px;
 }
 .aboutme_description {
   text-align: justify;
+  line-height: 1.8;
+  text-rendering: optimizeLegibility;
 }
 .aboutme_description > .name {
   font-size: 40px;
@@ -222,6 +246,12 @@
   box-shadow: -6px 6px 12px -1px var(--primary);
   -webkit-box-shadow: -6px 6px 12px -1px var(--primary);
   -moz-box-shadow: -6px 6px 12px -1px var(--primary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profileimg:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: -8px 8px 20px 2px var(--primary);
 }
 .aboutme_image {
   float: left;
@@ -247,8 +277,29 @@
   margin-top: 80px;
 }
 .scrollskillboxes {
-  overflow: scroll;
-  
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #ff6500 rgba(0, 0, 0, 0.3);
+}
+
+.scrollskillboxes::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrollskillboxes::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.scrollskillboxes::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #c65c16, #ff6500);
+  border-radius: 10px;
+}
+
+.scrollskillboxes::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #ff6500, #ffa500);
 }
 @keyframes gradientAnimation {
   0% {
@@ -276,6 +327,13 @@
   border: 1px solid;
   border-image-slice: 1;
   animation: gradientAnimation 1s linear infinite;
+  transition: transform 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-3px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .box_title {
@@ -290,6 +348,13 @@
 .skillimg {
   width: 50px;
   background-color: white;
+  border-radius: 8px;
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.skillimg:hover {
+  transform: scale(1.1) rotate(5deg);
 }
 .skillbox_content {
   padding: 10px;
@@ -312,6 +377,12 @@
   backdrop-filter: blur(1px);
   background-color: rgba(0, 0, 255, 0.2);
   height: fit-content;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
 }
 .project_img_corousel {
   border-radius: 10px;
@@ -336,6 +407,12 @@
   font-style: normal;
   color: #ff6500;
   font-size: 20px;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.project_card:hover .project_heading_title {
+  color: #ffa500;
 }
 .project_heading_link {
   background-color: #c65c16;
@@ -346,6 +423,18 @@
   font-weight: 400;
   font-size: medium;
   color: white;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.project_heading_link:hover {
+  background-color: #ff6500;
+  transform: scale(1.05);
+}
+
+.project_heading_link:active {
+  transform: scale(0.98);
 }
 .project_content {
   text-align: justify;
@@ -371,6 +460,13 @@
   padding: 0px 10px;
   margin: 5px;
   height: fit-content;
+  transition: all 0.3s ease;
+}
+
+.project_tools > span:hover {
+  background: rgba(255, 101, 0, 0.5);
+  transform: translateY(-2px);
+  border-color: #ff6500;
 }
 
 

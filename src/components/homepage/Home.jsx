@@ -1,113 +1,103 @@
-import React, { useEffect } from "react";
-import confetti from "canvas-confetti"
-import { Link, useNavigate } from "react-router-dom";
-import './homepage.css';
-import WAVES from 'vanta/dist/vanta.waves.min';
-// 3d btn
-import {AwesomeButton} from 'react-awesome-button';
-// import 'react-awesome-button/dist/styles.css';
-// import AwesomeButtonStyles from 'react-awesome-button/src/styles/styles.scss';
-
-
+import React from "react";
+import { motion } from "framer-motion";
+import WordRotate from "../magicui/word-rotate";
+import ShineBorder from "../magicui/shine-border";
+import Hero3D from "./Hero3D";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import confetti from "canvas-confetti";
 
 const Home = () => {
-  const navigate = useNavigate()
-
-  const handleexploremore = () => {
-    setTimeout(() => {
-      navigate('/')
-    }, 1500)
-  }
-  // useeffect for vanta.js wave effect
-  useEffect(() => {
-    WAVES({
-      el: "#vanta-clouds",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: true,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x80821,
-      shininess: 45.00,
-      waveHeight: 11.00,
-      waveSpeed: 0.50,
-      zoom: 0.79
-    })
-  }, [])
-
-
-  // npm install --save canvas-confetti & import that confetti 
-  const confettibtn = () => {
+  const handleConfetti = () => {
     confetti({
-      particleCount: 1000,
-      spread: 250,
-      scalar: 2
-    })
-  }
-  const confettibtn1 = () => {
-    confetti({
-      particleCount: 3,
-      spread: 1000,
-      scalar: 1
-    })
-  }
-  const callconfettiandexplore=()=>{
-    confettibtn();
-    handleexploremore();
-  }
-
-
-
-
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ["#00f3ff", "#bc13fe", "#ff0055"],
+    });
+  };
 
   return (
-    <div id="vanta-clouds" className="homepage1">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* 3D Background */}
+      <Hero3D />
 
-      {/* content for background start anumation*/}
+      {/* Content */}
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto space-y-8">
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-xl md:text-5xl font-mono text-primary tracking-widest mb-4">
+            SYSTEM ONLINE // WELCOME USER
+          </h2>
 
+          <h1 className="text-4xl md:text-8xl lg:text-5xl font-heading font-bold text-white tracking-tighter mb-6 relative inline-block group">
+            <span className="relative z-10">DEEPAKKUMAR</span>
+            <span className="absolute top-0 left-0 -z-10 w-full h-full text-primary opacity-0 group-hover:opacity-100 animate-glitch-1">DEEPAKKUMAR</span>
+            <span className="absolute top-0 left-0 -z-10 w-full h-full text-secondary opacity-0 group-hover:opacity-100 animate-glitch-2">DEEPAKKUMAR</span>
+            <span className="absolute top-0 left-0 -z-10 w-full h-full text-accent opacity-0 group-hover:opacity-100 animate-pulse">DEEPAKKUMAR</span>
+          </h1>
 
-
-
-
-      <div style={{ height: '100vh' }} className="homepage d-flex flex-column justify-content-around container">
-
-        {/* Brandname and position */}
-        <div className="brandname text-white text-center ">
-          <div data-aos="zoom-out" data-aos-duration="3000" className="name m-0">  <span data-aos="">D</span>eepak <span>D</span>igital <span>C</span>raft</div>
-          <div className="position" data-aos="fade-right" data-aos-duration="2000">Freelancer</div>
-        </div>
-        {/* welcome and content */}
-        <div className="welcomecontent text-center text-white ">
-          <div className="welcome pb-2" data-aos="zoom-in" data-aos-duration="2000">Welcome!</div>
-          <div className="content " data-aos="fade-up" data-aos-duration="2000">I help businesses and individuals bring their ideas to life with design, development, writing, etc. Whether you need a sleek website, captivating content, or innovative solutions, you've come to the right place.</div>
-        </div>
-
-        {/* vision and expertise */}
-
-        <div className="visionintro text-center ">
-          <div className="slogan " data-aos="zoom-in" data-aos-duration="2000">Your Vision, My Expertise</div>
-          <div className="slogancontent " data-aos="zoom-in" data-aos-duration="3000">Together, we can create something extraordinary.</div>
-        </div>
-
-        {/* next step */}
-
-        <div onMouseMove={confettibtn1} className="nextstep text-center ">
-          <div className="content" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="3000">Ready to take the next step? Explore more and see how I can help.</div>
-          {/* link to the main pages */}
-
-          <div className="awesome-button-wrapper " data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="1000" data-aos-anchor-placement="top-bottom"   onClick={callconfettiandexplore}>
-            
-            <AwesomeButton className="mt-2 w-50">Explore More</AwesomeButton>
+          <div className=" overflow-hidden mb-8">
+            <WordRotate
+              className="text-3xl md:text-5xl font-bold text-secondary"
+              words={[
+                "Full-Stack Developer",
+                "AI Enthusiast",
+                "Agentic Workflow Architect",
+                "MERN Stack Expert",
+              ]}
+            />
           </div>
-        </div>
 
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+            Building the future with <span className="text-white font-bold">Intelligent Systems</span> and <span className="text-white font-bold">Scalable Web Applications</span>.
+            Turning complex problems into elegant, automated solutions.
+          </p>
+
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <Link to="/about">
+              <button
+                onClick={handleConfetti}
+                className="px-8 py-4 border border-white/10 rounded-lg text-white hover:bg-white/5 transition-colors font-bold text-xl flex items-center gap-2"
+              >
+                About Me
+              </button>
+            </Link>
+
+            <Link to="/contact">
+              <button
+                onClick={handleConfetti}
+                className="px-8 py-4 border border-white/10 rounded-lg text-white hover:bg-white/5 transition-colors font-bold text-xl flex items-center gap-2"
+              >
+                Contact Me
+              </button>
+            </Link>
+          </div>
+        </motion.div>
 
       </div>
 
-
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+      >
+        <Link to="/about">
+        <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1">
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+            className="w-1 h-2 bg-primary rounded-full"
+          />
+        </div>
+        </Link>
+      </motion.div>
     </div>
   );
 };

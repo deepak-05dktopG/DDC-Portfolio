@@ -2,65 +2,133 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MagicCard } from "../magicui/magic-card";
 import ShineBorder from "../magicui/shine-border";
-import { Github, Linkedin, Mail, ExternalLink, Code, Server, Bot, Wrench } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Database, Code, Server, Bot, Wrench } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Aboutme = () => {
     const skills = [
         {
             category: "Frontend Development",
             icon: <Code className="text-primary" />,
-            items: ["React", "Vite", "JavaScript (ES6+)", "HTML5", "CSS3", "Bootstrap", "State Management", "API Integration"]
+            items: [
+                "React.js",
+                "Vite",
+                "JavaScript (ES6+)",
+                "HTML5",
+                "CSS3",
+                "Bootstrap",
+                "Responsive UI",
+                "State Management",
+                "API-driven UI"
+            ]
         },
         {
             category: "Backend Development",
             icon: <Server className="text-secondary" />,
-            items: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "MongoDB", "Mongoose", "File Uploads", "Cron Jobs"]
+            items: [
+                "Node.js",
+                "Express.js",
+                "REST API Development",
+                "JWT Authentication",
+                "MongoDB",
+                "Mongoose",
+                "MongoDB Aggregation",
+                "Middleware & Error Handling"
+            ]
         },
         {
             category: "AI & Automation",
             icon: <Bot className="text-accent" />,
-            items: ["OpenAI API", "LangChain", "RAG Chatbots", "n8n Automation", "Python Basics", "Prompt Engineering", "AI Agents"]
+            items: [
+                "LLM APIs",
+                "LangChain",
+                "RAG Pipelines",
+                "AI Agents",
+                "n8n Automation",
+                "Prompt Engineering",
+                "Webhooks",
+                "Model Context Protocol (MCP)",
+            ]
         },
         {
-            category: "Tools & Workflow",
+            category: "Databases & Storage",
+            icon: <Database className="text-blue-400" />,
+            items: [
+                "MongoDB",
+                "Mongoose ODM",
+                "NoSQL Design",
+                "Indexing & Query Optimization",
+                "Vector Databases (Pinecone)",
+            ]
+        },
+        {
+            category: "DevOps & Deployment",
             icon: <Wrench className="text-green-400" />,
-            items: ["Git", "GitHub", "VS Code", "Postman", "Cloud Hosting", "Deployment"]
+            items: [
+                "Git & GitHub",
+                "GitHub Actions (CI/CD)",
+                "Vercel",
+                "Netlify",
+                "Render",
+                "Cloud Hosting",
+            ]
+        },
+        {
+            category: "Tools & Productivity",
+            icon: <Wrench className="text-yellow-400" />,
+            items: [
+                "Postman",
+                "VS Code",
+                "Cursor AI",
+                "GitHub Copilot",
+                "Antigravity AI",
+                "Figma",
+                "Canva"
+            ]
         }
     ];
 
+
     const projects = [
         {
-            title: "Affiliate E-commerce Website",
-            desc: "A complete MERN stack application where users can register, browse products, and receive email updates on new additions.",
-            tags: ["MERN", "Redux", "Email Notifications"]
+            title: "Blufins Aquatic Solutions",
+            desc: "A freelance MERN-based business website created for an aquatic solutions company, featuring product showcases, service listings, lead-capture forms, and a clean modern UI.",
+            tags: ["MERN", "Business Website", "Full-Stack", "Responsive UI"],
+            link: "https://blufinsaquatics.netlify.app/"
         },
         {
-            title: "AI Chatbots + RAG Systems",
-            desc: "Intelligent chatbots trained on PDFs or custom data using OpenAI & LangChain for precise information retrieval.",
-            tags: ["OpenAI", "LangChain", "RAG", "Vector DB"]
+            title: "QualityPicks – Product Discovery Platform",
+            desc: "A full-stack product discovery platform that allows users to browse, search, and filter products across categories with secure access and fast performance.",
+            tags: ["MERN", "Filtering", "Search", "JWT", "Full-Stack"],
+            link: "https://qualitypicks.vercel.app/"
         },
         {
-            title: "Cloud Collaboration Tool",
-            desc: "Real-time collaboration platform featuring file sharing and productivity tools for seamless teamwork.",
-            tags: ["MERN", "Socket.io", "Real-time"]
+            title: "Weather App – Live Forecasting",
+            desc: "A real-time weather forecasting application displaying temperature, humidity, wind data, and location-based conditions with an optimized, responsive UI.",
+            tags: ["React", "API Integration", "OpenWeather API", "Responsive UI"],
+            link: "https://ddcweather.netlify.app/"
         },
         {
-            title: "React Frontend E-Commerce",
-            desc: "A visually stunning and responsive e-commerce interface with clean UI, smooth navigation, and reusable components.",
-            tags: ["React", "UI/UX", "Responsive"]
+            title: "AI Automation Workflows",
+            desc: "Automated workflows using AI triggers, webhooks, and LLMs to AI Agents , AI Chatbots,  generate emails, summarize content, process text, and perform real-time automated tasks.",
+            tags: ["API", "LangChain", "n8n", "Automation", "LLM"],
+            link: "https://qualitypicks.vercel.app/"
         },
         {
-            title: "Weather App",
-            desc: "A modern weather application providing live updates using weather APIs, built with a focus on UI/UX.",
-            tags: ["React", "API Integration", "Modern UI"]
+            title: "SkillMatch AI – Smart Job Role Predictor",
+            desc: "An AI-powered system that analyzes user skills and automatically suggests suitable job roles using prompt engineering, automation flows, and LLM-based logic.",
+            tags: ["AI", "LLM", "Automation", "Skill Analysis", "Prompt Engineering", "Python Fast-API"],
+            link: "https://skill-match-ai.netlify.app/"
         }
+
     ];
+
 
     return (
         <div className="min-h-screen pt-24 pb-12 px-4 md:px-8 max-w-7xl mx-auto space-y-20">
 
             {/* About Section */}
-            <section className="grid md:grid-cols-2 gap-12 items-center">
+            <section className="pt-2 grid md:grid-cols-2 gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -70,12 +138,12 @@ const Aboutme = () => {
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-white">
                         About <span className="text-primary">Me</span>
                     </h2>
-                    <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+                    <div className="space-y-4 text-muted-foreground text-lg leading-relaxed ">
                         <p>
                             I’m someone who believes in <strong className="text-white">learning by doing</strong>. My journey started with frontend development using HTML, CSS, and JavaScript. Over time, I expanded into <strong className="text-white">React.js, Node.js, Express.js, and MongoDB</strong>, which led me into building complete full-stack applications.
                         </p>
                         <p>
-                            Along the way, my interest in <strong className="text-secondary">Artificial Intelligence</strong> grew rapidly. Today, I’m focused on developing <span className="text-secondary">AI Agents</span>, <span className="text-secondary">Autonomous Workflows</span>, and <span className="text-secondary">RAG Pipelines</span>. My curiosity pushes me to try new tools, tackle challenging problems, and keep upgrading my skills every day.
+                            Along the way, my interest in <strong className="text-white">Artificial Intelligence</strong> grew rapidly. Today, I’m focused on developing <span className="text-white">AI Agents</span>, <span className="text-white">Autonomous Workflows</span>, and <span className="text-white">RAG Pipelines</span>. My curiosity pushes me to try new tools, tackle challenging problems, and keep upgrading my skills every day.
                         </p>
                     </div>
 
@@ -83,7 +151,7 @@ const Aboutme = () => {
                         <a href="https://github.com/deepak-05dktopG" target="_blank" rel="noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-primary/20 transition-colors text-white hover:text-primary">
                             <Github size={24} />
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-primary/20 transition-colors text-white hover:text-primary">
+                        <a href="https://www.linkedin.com/in/deepak-05dktopg/" target="_blank" rel="noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-primary/20 transition-colors text-white hover:text-primary">
                             <Linkedin size={24} />
                         </a>
                         <a href="mailto:forwebdeepak@gmail.com" className="p-3 bg-white/5 rounded-full hover:bg-primary/20 transition-colors text-white hover:text-primary">
@@ -104,9 +172,9 @@ const Aboutme = () => {
                         <p className="text-muted-foreground">
                             I want to build <span className="text-white">intelligent systems</span> that make life simpler. My long-term vision is to become a <span className="text-primary font-bold">Full-Stack + AI Engineer</span> who can create smart automation tools, intelligent agents, and scalable full-stack products.
                         </p>
-                        <div className="space-y-2">
+                        <div className="space-y-2 pt-2">
                             <h4 className="font-bold text-white">What Defines Me:</h4>
-                            <ul className="space-y-1 text-sm text-muted-foreground">
+                            <ul className="space-y-1  text-muted-foreground">
                                 <li className="flex items-center gap-2">🚀 Fast learner with a growth mindset</li>
                                 <li className="flex items-center gap-2">💡 Problem solver who breaks down complex ideas</li>
                                 <li className="flex items-center gap-2">🔥 Passionate about clean code & user-focused design</li>
@@ -184,7 +252,7 @@ const Aboutme = () => {
                                 <div className="h-full bg-card/80 backdrop-blur-xl rounded-xl p-6 flex flex-col">
                                     <div className="flex justify-between items-start mb-4">
                                         <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors">{project.title}</h3>
-                                        <ExternalLink className="text-muted-foreground group-hover:text-white transition-colors" size={20} />
+                                        <a href={project.link}><ExternalLink className="text-muted-foreground group-hover:text-white transition-colors" size={20} /></a>
                                     </div>
                                     <p className="text-muted-foreground mb-6 flex-grow">{project.desc}</p>
                                     <div className="flex flex-wrap gap-2 mt-auto">
@@ -198,6 +266,22 @@ const Aboutme = () => {
                             </ShineBorder>
                         </motion.div>
                     ))}
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="text-center pb-12">
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-8">
+                    Ready to <span className="text-primary">Collaborate?</span>
+                </h2>
+                <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <Link to="/service" className="px-8 py-4 border border-white/10 rounded-lg text-white hover:bg-white/5 transition-colors font-bold text-xl">
+                        View Services
+                    </Link>
+                    <Link to="/contact" className="px-8 py-4 border border-white/10 rounded-lg text-white hover:bg-white/5 transition-colors font-bold text-xl">
+                        Contact
+                    </Link>
+
                 </div>
             </section>
 

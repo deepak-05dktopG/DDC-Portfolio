@@ -7,12 +7,23 @@ import Home from './components/homepage/Home';
 import Aboutme from './components/aboutpage/Aboutme';
 import Service from './components/servicepage/Service';
 import Contact from './components/contactpage/Contact';
-import Cursor from './components/common/Cursor';
 import './App.css';
 
 function App() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
+
+  function ScrollToTop() {
+    const location = useLocation();
+    React.useEffect(() => {
+      window.scrollTo(0, 0);
+      setTimeout(() => {
+        AOS.refresh();
+      }, 100);
+    }, [location]);
+    return null;
+  }
+
 
   useEffect(() => {
     // Simulate loading time
@@ -40,7 +51,7 @@ function App() {
 
   return (
     <>
-      <Cursor />
+      <ScrollToTop />
       <Layout>
         <Navbar />
         <AnimatePresence mode="wait">

@@ -34,7 +34,7 @@ const Contact = () => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-16 space-y-4"
+        className="pt-2 text-center mb-16 space-y-4"
       >
         <h1 className="text-4xl md:text-6xl font-heading font-bold text-white">
           Get in <span className="text-primary">Touch</span>
@@ -118,7 +118,7 @@ const Contact = () => {
                   name="name"
                   required
                   className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
-                  placeholder="John Doe"
+                  placeholder="eg., Deepakkumar"
                 />
               </div>
 
@@ -129,7 +129,7 @@ const Contact = () => {
                   name="email"
                   required
                   className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
-                  placeholder="john@example.com"
+                  placeholder="eg., forwebdeepak@gmail.com"
                 />
               </div>
 

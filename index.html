@@ -1,68 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/src/images/Profile pHoto.jpg"
-      sizes="32x32"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>DDC Tech | AI & Full-Stack Developer</title>
-    <meta
-      name="description"
-      content="Portfolio of Deepak Kumar - AI & Full-Stack Developer specializing in MERN stack, AI Agents, and Chatbot Engineering."
-    />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/src/images/Profile pHoto.jpg" sizes="32x32" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- n8n Chat Styles -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <title>DDC Tech | AI & Full-Stack Developer</title>
+  <meta name="description"
+    content="Portfolio of Deepak Kumar - AI & Full-Stack Developer specializing in MERN stack, AI Agents, and Chatbot Engineering." />
 
-    <!-- n8n Chat Script -->
-    <script type="module">
-      import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+  <!-- n8n Chat Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+</head>
+<style>
+  :root {
+    --chat--color--primary: #00ffff84; /* Electric Cyan */
+    --chat--color--primary-shade-50: #00E6E6;
+    --chat--color--primary--shade-100: #00CDCD;
+    --chat--color--secondary: #00BFFF; /* Deep Sky Blue */
+    --chat--color-secondary-shade-50: #00AADD;
+    --chat--color-white: #FFFFFF;
+    --chat--color-light: #E0FFFF; /* Light Cyan */
+    --chat--color-light-shade-50: #C0E0E0;
+    --chat--color-light-shade-100: #A0C0C0;
+    --chat--color-medium: #33334D; /* Darker grey-purple */
+    --chat--color-dark: #1A1A2E; /* Very dark blue-purple */
+    --chat--color-disabled: #555566;
+    --chat--color-typing: #AAAAAA;
 
-      createChat({
-        webhookUrl:
-          "https://n8n-ddc.onrender.com/webhook/99c9b23b-08af-4f63-81c0-640b394bb4cb/chat",
-        webhookConfig: {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+    --chat--spacing: 1rem;
+    --chat--border-radius: 0.3rem; /* Sharper, more angular corners */
+    --chat--transition-duration: 0.2s;
+
+    --chat--window--width: 400px;
+    --chat--window--height: 600px;
+    --chat--background: var(--chat--color-dark); /* Futuristic dark background for the chat window */
+
+    --chat--header-height: auto;
+    --chat--header--padding: var(--chat--spacing);
+    --chat--header--background: var(--chat--color-dark);
+    --chat--header--color: var(--chat--color--primary); /* Primary color for header text */
+    --chat--header--border-top: none;
+    --chat--header--border-bottom: 2px solid var(--chat--color--primary); /* Electric border */
+    --chat--heading--font-size: 1.8em;
+    --chat--subtitle--font-size: 1.1em;
+    --chat--subtitle--line-height: 1.6;
+
+    --chat--textarea--height: 55px;
+
+    --chat--message--font-size: 1rem;
+    --chat--message--padding: 0.8rem 1rem;
+    --chat--message--border-radius: 0.5rem; /* Slightly rounded for messages */
+    --chat--message-line-height: 1.6;
+    --chat--message--bot--background: var(--chat--color-medium); /* Darker background for bot */
+    --chat--message--bot--color: var(--chat--color-light); /* Light text for bot */
+    --chat--message--bot--border: 1px solid var(--chat--color--secondary); /* Secondary color border */
+    --chat--message--user--background: var(--chat--color--primary); /* Primary color for user */
+    --chat--message--user--color: var(--chat--color-dark); /* Dark text for user */
+    --chat--message--user--border: none;
+    --chat--message--pre--background: rgba(0, 255, 255, 0.1); /* Light cyan transparent background for code */
+
+    --chat--toggle--background: var(--chat--color--primary);
+    --chat--toggle--hover--background: var(--chat--color--primary-shade-50);
+    --chat--toggle--active--background: var(--chat--color--primary--shade-100);
+    --chat--toggle--color: var(--chat--color-dark); /* Dark text on toggle */
+    --chat--toggle--size: 65px; /* Slightly larger for impact */
+  }
+</style>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- n8n Chat Script -->
+  <script type="module">
+    import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+    createChat({
+      webhookUrl:
+        "https://n8n-ddc.onrender.com/webhook/99c9b23b-08af-4f63-81c0-640b394bb4cb/chat",
+      webhookConfig: {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        target: "#n8n-chat",
-        mode: "window",
-        chatInputKey: "chatInput",
-        chatSessionKey: "sessionId",
-        loadPreviousSession: true,
-        metadata: {
-          context: "portfolio",
-          tone: "casual",
+      },
+      target: "#n8n-chat",
+      mode: "window",
+      chatInputKey: "chatInput",
+      chatSessionKey: "sessionId",
+      loadPreviousSession: true,
+      metadata: {
+        context: "portfolio",
+        tone: "casual",
+      },
+      showWelcomeScreen: false,
+      defaultLanguage: "en",
+      initialMessages: [
+        "Hey! 👋",
+      ],
+      i18n: {
+        en: {
+          title: "Hey there! 👋",
+          subtitle: "Got questions? I’m happy to chat 🙂",
+          footer: "",
+          getStarted: "Say Hello",
+          inputPlaceholder: "Type something here...",
         },
-        showWelcomeScreen: false,
-        defaultLanguage: "en",
-        initialMessages: [
-          "Hey! 👋",
-        ],
-        i18n: {
-          en: {
-            title: "Hey there! 👋",
-            subtitle: "Got questions? I’m happy to chat 🙂",
-            footer: "",
-            getStarted: "Say Hello",
-            inputPlaceholder: "Type something here...",
-          },
-        },
-      });
-    </script>
-  </body>
+      },
+    });
+  </script>
+</body>
+
 </html>

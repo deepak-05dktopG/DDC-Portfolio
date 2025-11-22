@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MagicCard } from "../magicui/magic-card";
 import { Bot, Code, MessageSquare, PenTool, Cpu, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Service = () => {
   const services = [
@@ -57,7 +58,7 @@ const Service = () => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="pt-2 text-center mb-16"
       >
         <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-4">
           What I <span className="text-primary">Do</span>
@@ -95,6 +96,16 @@ const Service = () => {
             </MagicCard>
           </motion.div>
         ))}
+      </div>
+
+      {/* CTA Section */}
+      <div className="mt-20 text-center">
+        <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-8">
+          Have a Project in <span className="text-secondary">Mind?</span>
+        </h2>
+            <Link to="/contact" className="block px-10 py-4 bg-background rounded-lg text-white font-bold text-xl hover:bg-white/5 transition-colors">
+              Start a Project
+            </Link>
       </div>
     </div>
   );

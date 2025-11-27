@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MagicCard } from "../magicui/magic-card";
-import { Bot, Code, MessageSquare, PenTool, Cpu, Globe,Sparkles } from "lucide-react";
+import { Bot, Code, MessageSquare, PenTool, Cpu, Globe, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Service = () => {
@@ -65,6 +65,13 @@ const Service = () => {
     }
   ];
 
+  const scrollToService = (id) => {
+    const element = document.getElementById(`service-${id}`);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
   return (
     <div className="min-h-screen pt-24 pb-12 px-4 md:px-8 max-w-7xl mx-auto">
       <motion.div
@@ -76,15 +83,31 @@ const Service = () => {
         <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-4">
           What I <span className="text-primary">Do</span>
         </h1>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
           I offer professional services to help you establish a strong online presence and automate your business processes.
         </p>
+
+        {/* Service Navigation */}
+        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+          {services.map((service) => (
+            <button
+              key={service.id}
+              onClick={() => scrollToService(service.id)}
+              className="px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-primary/20 hover:border-primary/50 transition-all text-sm md:text-base text-white/80 hover:text-white"
+            >
+              {service.domain}
+            </button>
+          ))}
+        </div>
       </motion.div>
+
+
 
       <div className="grid md:grid-cols-2 gap-8">
         {services.map((service, index) => (
           <motion.div
             key={service.id}
+            id={`service-${service.id}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

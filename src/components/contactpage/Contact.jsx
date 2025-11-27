@@ -159,7 +159,11 @@ const Contact = () => {
         </motion.div>
 
       </div>
-      <VisitorCounter />
+      <div className="d-flex justify-content-center align-items-center">
+        <span>
+          <VisitorCounter />
+        </span>
+      </div>
     </div>
   );
 };

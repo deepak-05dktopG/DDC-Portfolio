@@ -15,14 +15,18 @@ const VisitorCounter = () => {
 
             try {
                 let response;
+                // Use allorigins.win to proxy the request and avoid CORS issues on localhost
+                const proxyUrl = 'https://api.allorigins.win/raw?url=';
+
                 if (!hasVisited) {
                     // New visitor: hit the API to increment
-                    // counterapi.dev endpoint for incrementing
-                    response = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`);
+                    const targetUrl = `https://api.counterapi.dev/v1/${namespace}/${key}/up`;
+                    response = await fetch(`${proxyUrl}${encodeURIComponent(targetUrl)}`);
                     localStorage.setItem('visited_ddc_portfolio', 'true');
                 } else {
                     // Returning visitor: just get the current count
-                    response = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}`);
+                    const targetUrl = `https://api.counterapi.dev/v1/${namespace}/${key}`;
+                    response = await fetch(`${proxyUrl}${encodeURIComponent(targetUrl)}`);
                 }
 
                 if (!response.ok) {
@@ -30,7 +34,6 @@ const VisitorCounter = () => {
                 }
 
                 const data = await response.json();
-                // counterapi.dev returns { count: number }
                 setCount(data.count);
             } catch (error) {
                 console.error('Error fetching visitor count:', error);

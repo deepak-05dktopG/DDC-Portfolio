@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MagicCard } from "../magicui/magic-card";
-import { Bot, Code, MessageSquare, PenTool, Cpu, Globe } from "lucide-react";
+import { Bot, Code, MessageSquare, PenTool, Cpu, Globe,Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Service = () => {
@@ -30,6 +30,19 @@ const Service = () => {
     },
     {
       id: 3,
+      domain: "AI Tools & Creative Automation",
+      icon: <Sparkles size={40} className="text-primary" />,
+      categories: [
+        { title: "AI Advertisement Creation", content: "Designing high-converting ads using AI for social media and digital marketing campaigns." },
+        { title: "AI Image Generation", content: "Creating stunning visuals, posters, and brand assets using AI image generators." },
+        { title: "AI Video Editing & Reels", content: "Automating video editing, captions, and transitions for reels, ads, and promotional videos." },
+        { title: "AI Copywriting", content: "Writing persuasive ad copies, captions, and product descriptions powered by AI tools." },
+        { title: "AI Logo & Branding", content: "Generating creative logo designs, color palettes, and brand identities using AI." },
+        { title: "AI Voice & Speech Tools", content: "Producing voiceovers, podcasts, and ad narrations with natural-sounding AI voices." }
+      ]
+    },
+    {
+      id: 4,
       domain: "Chatbot Development",
       icon: <MessageSquare size={40} className="text-accent" />,
       categories: [
@@ -40,7 +53,7 @@ const Service = () => {
       ]
     },
     {
-      id: 4,
+      id: 5,
       domain: "Graphic Design",
       icon: <PenTool size={40} className="text-purple-400" />,
       categories: [
@@ -103,9 +116,9 @@ const Service = () => {
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-8">
           Have a Project in <span className="text-secondary">Mind?</span>
         </h2>
-            <Link to="/contact" className="block px-10 py-4 bg-background rounded-lg text-white font-bold text-xl hover:bg-white/5 transition-colors">
-              Start a Project
-            </Link>
+        <Link to="/contact" className="block px-10 py-4 bg-background rounded-lg text-white font-bold text-xl hover:bg-white/5 transition-colors">
+          Start a Project
+        </Link>
       </div>
     </div>
   );

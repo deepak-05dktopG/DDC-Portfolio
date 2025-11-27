@@ -4,6 +4,7 @@ import { MagicCard } from "../magicui/magic-card";
 import ShineBorder from "../magicui/shine-border";
 import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle } from "lucide-react";
 import confetti from "canvas-confetti";
+import VisitorCounter from "./VisitorCounter";
 
 const Contact = () => {
   useEffect(() => {
@@ -158,6 +159,7 @@ const Contact = () => {
         </motion.div>
 
       </div>
+      <VisitorCounter />
     </div>
   );
 };

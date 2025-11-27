@@ -8,6 +8,8 @@ import Aboutme from './components/aboutpage/Aboutme';
 import Service from './components/servicepage/Service';
 import Contact from './components/contactpage/Contact';
 import './App.css';
+import AOS from 'aos';
+
 
 function App() {
   const [loading, setLoading] = useState(true);

@@ -15,57 +15,161 @@
 </head>
 <style>
   :root {
-    --chat--color--primary: #00ffff84; /* Electric Cyan */
-    --chat--color--primary-shade-50: #00E6E6;
-    --chat--color--primary--shade-100: #00CDCD;
-    --chat--color--secondary: #00BFFF; /* Deep Sky Blue */
-    --chat--color-secondary-shade-50: #00AADD;
-    --chat--color-white: #FFFFFF;
-    --chat--color-light: #E0FFFF; /* Light Cyan */
-    --chat--color-light-shade-50: #C0E0E0;
-    --chat--color-light-shade-100: #A0C0C0;
-    --chat--color-medium: #33334D; /* Darker grey-purple */
-    --chat--color-dark: #1A1A2E; /* Very dark blue-purple */
-    --chat--color-disabled: #555566;
-    --chat--color-typing: #AAAAAA;
+    --chat--color-primary: #00ffff;
+    /* Electric Cyan */
+    --chat--color-primary-shade-50: #00cccc;
+    --chat--color-primary-shade-100: #009999;
+    --chat--color-secondary: #d946ef;
+    /* Neon Purple */
+    --chat--color-secondary-shade-50: #c026d3;
+    --chat--color-white: #e2e8f0;
+    --chat--color-light: #f1f5f9;
+    --chat--color-light-shade-50: #cbd5e1;
+    --chat--color-light-shade-100: #94a3b8;
+    --chat--color-medium: #0f172a;
+    /* Dark Slate */
+    --chat--color-dark: #020617;
+    /* Deepest Void */
+    --chat--color-disabled: #475569;
+    --chat--color-typing: #94a3b8;
 
     --chat--spacing: 1rem;
-    --chat--border-radius: 0.3rem; /* Sharper, more angular corners */
+    --chat--border-radius: 0px;
+    /* Angular cyberpunk look */
     --chat--transition-duration: 0.2s;
 
-    --chat--window--width: 400px;
+    --chat--window--width: 380px;
     --chat--window--height: 600px;
-    --chat--background: var(--chat--color-dark); /* Futuristic dark background for the chat window */
 
-    --chat--header-height: auto;
+    /* Cyberpunk Background */
+    --chat--window--background: #020617;
+    --chat--header--background: #0f172a;
+
+    --chat--header-height: 70px;
     --chat--header--padding: var(--chat--spacing);
-    --chat--header--background: var(--chat--color-dark);
-    --chat--header--color: var(--chat--color--primary); /* Primary color for header text */
-    --chat--header--border-top: none;
-    --chat--header--border-bottom: 2px solid var(--chat--color--primary); /* Electric border */
-    --chat--heading--font-size: 1.8em;
-    --chat--subtitle--font-size: 1.1em;
-    --chat--subtitle--line-height: 1.6;
+    --chat--header--color: var(--chat--color-primary);
+    --chat--header--border-top: 2px solid var(--chat--color-primary);
+    --chat--header--border-bottom: 2px solid var(--chat--color-primary);
+    --chat--heading--font-size: 1.6rem;
+    --chat--subtitle--font-size: 0.9rem;
+    --chat--subtitle--line-height: 1.4;
 
-    --chat--textarea--height: 55px;
+    --chat--textarea--height: 60px;
 
-    --chat--message--font-size: 1rem;
+    --chat--message--font-size: 0.95rem;
     --chat--message--padding: 0.8rem 1rem;
-    --chat--message--border-radius: 0.5rem; /* Slightly rounded for messages */
-    --chat--message-line-height: 1.6;
-    --chat--message--bot--background: var(--chat--color-medium); /* Darker background for bot */
-    --chat--message--bot--color: var(--chat--color-light); /* Light text for bot */
-    --chat--message--bot--border: 1px solid var(--chat--color--secondary); /* Secondary color border */
-    --chat--message--user--background: var(--chat--color--primary); /* Primary color for user */
-    --chat--message--user--color: var(--chat--color-dark); /* Dark text for user */
-    --chat--message--user--border: none;
-    --chat--message--pre--background: rgba(0, 255, 255, 0.1); /* Light cyan transparent background for code */
+    --chat--message--border-radius: 0px 12px 12px 12px;
+    /* Tech-like corners */
+    --chat--message-line-height: 1.5;
 
-    --chat--toggle--background: var(--chat--color--primary);
-    --chat--toggle--hover--background: var(--chat--color--primary-shade-50);
-    --chat--toggle--active--background: var(--chat--color--primary--shade-100);
-    --chat--toggle--color: var(--chat--color-dark); /* Dark text on toggle */
-    --chat--toggle--size: 65px; /* Slightly larger for impact */
+    --chat--message--bot--background: rgba(15, 23, 42, 0.9);
+    --chat--message--bot--color: #00ffff;
+    --chat--message--bot--border: 1px solid rgba(0, 255, 255, 0.3);
+
+    --chat--message--user--background: rgba(217, 70, 239, 0.2);
+    --chat--message--user--color: #d946ef;
+    --chat--message--user--border: 1px solid #d946ef;
+    --chat--message--pre--background: rgba(0, 0, 0, 0.3);
+
+    --chat--toggle--background: rgba(2, 6, 23, 0.9);
+    --chat--toggle--hover--background: #0f172a;
+    --chat--toggle--active--background: #1e293b;
+    --chat--toggle--color: #00ffff;
+    --chat--toggle--size: 64px;
+  }
+
+  /* --- Advanced Cyberpunk Overrides --- */
+
+  /* 1. Fonts & Global Tech Feel */
+  .n8n-chat-widget {
+    font-family: 'Inter', sans-serif !important;
+    letter-spacing: 0.5px;
+  }
+
+  /* 2. Chat Window: Scanlines & Holographic Glow */
+  .n8n-chat-window {
+    border: 1px solid var(--chat--color-primary);
+    box-shadow:
+      0 0 15px rgba(0, 255, 255, 0.2),
+      inset 0 0 20px rgba(0, 255, 255, 0.05) !important;
+    background-image:
+      linear-gradient(rgba(2, 6, 23, 0.95), rgba(2, 6, 23, 0.95)),
+      repeating-linear-gradient(0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 255, 0.03) 3px) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 4px !important;
+    /* Slight rounding only */
+  }
+
+  /* 3. Header: The command center look */
+  .n8n-chat-header {
+    font-family: 'Orbitron', sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background:
+      linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%),
+      var(--chat--color-medium) !important;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    clip-path: polygon(0 0,
+        100% 0,
+        100% 85%,
+        95% 100%,
+        5% 100%,
+        0 85%);
+    /* Angular bottom cut */
+    margin-bottom: 10px;
+  }
+
+  /* 4. Messages: Data logs */
+  .n8n-chat-message-bot {
+    font-family: 'Share Tech Mono', 'Courier New', monospace !important;
+    border-left: 3px solid var(--chat--color-primary) !important;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .n8n-chat-message-user {
+    font-family: 'Inter', sans-serif !important;
+    border-right: 3px solid var(--chat--color-secondary) !important;
+    border-radius: 12px 12px 0px 12px !important;
+    text-align: right;
+  }
+
+  /* 5. Input Area: Terminal input */
+  .n8n-chat-input {
+    border: 1px solid var(--chat--color-disabled) !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    font-family: 'Orbitron', sans-serif !important;
+    color: var(--chat--color-primary) !important;
+  }
+
+  .n8n-chat-input:focus {
+    border-color: var(--chat--color-primary) !important;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2) !important;
+  }
+
+  /* 6. Toggle Button: The Reactor Core */
+  .n8n-chat-toggle {
+    border: 2px solid var(--chat--color-primary) !important;
+    box-shadow: 0 0 15px var(--chat--color-primary), inset 0 0 10px var(--chat--color-primary);
+    animation: pulse-glow 3s infinite ease-in-out;
+    border-radius: 50% !important;
+    /* Keep it round for the reactor core look */
+  }
+
+  @keyframes pulse-glow {
+    0% {
+      box-shadow: 0 0 10px var(--chat--color-primary);
+    }
+
+    50% {
+      box-shadow: 0 0 25px var(--chat--color-primary), 0 0 40px var(--chat--color-primary-shade-50);
+    }
+
+    100% {
+      box-shadow: 0 0 10px var(--chat--color-primary);
+    }
   }
 </style>
 

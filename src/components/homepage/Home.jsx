@@ -89,13 +89,13 @@ const Home = () => {
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
       >
         <Link to="/about">
-        <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-            className="w-1 h-2 bg-primary rounded-full"
-          />
-        </div>
+          <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1">
+            <motion.div
+              animate={{ y: [0, 12, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+              className="w-1 h-2 bg-primary rounded-full"
+            />
+          </div>
         </Link>
       </motion.div>
     </div>

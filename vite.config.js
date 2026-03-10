@@ -3,13 +3,15 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/', // Replace with your GitHub repository name
-  assetsInclude: ['**/*.docx','**/*.pdf'],
-})
+  // GitHub Pages serves this repo under /DDC-Portfolio/
+  // Keep dev at / to avoid breaking local `vite`.
+  base: command === 'build' ? '/DDC-Portfolio/' : '/',
+  assetsInclude: ['**/*.docx', '**/*.pdf'],
+}))

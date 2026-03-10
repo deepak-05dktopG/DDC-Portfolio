@@ -1,10 +1,175 @@
+/* ── Circular Gallery Container ─────────────────────────── */
 .circular-gallery {
   width: 100%;
   height: 100%;
+  position: relative;
   overflow: hidden;
   cursor: grab;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
 }
 
 .circular-gallery:active {
   cursor: grabbing;
+}
+
+/* Track: full width, cards positioned absolutely inside */
+.cg-track {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Cards ─────────────────────────────────────────────── */
+.cg-card {
+  position: absolute;
+  left: 50%;
+  width: 270px;
+  transform-origin: center center;
+  will-change: transform, opacity;
+  pointer-events: auto;
+}
+
+/* Card content */
+.cg-card-inner {
+  width: 100%;
+  background: rgba(8, 8, 18, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  backdrop-filter: blur(20px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  min-height: 280px;
+}
+
+.cg-card-inner.active {
+  border-color: rgba(0, 243, 255, 0.5);
+  box-shadow:
+    0 0 24px rgba(0, 243, 255, 0.12),
+    0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Card number */
+.cg-card-index {
+  font-family: 'Courier New', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 243, 255, 0.5);
+}
+
+/* Title row */
+.cg-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cg-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  flex: 1;
+}
+
+/* External link */
+.cg-card-link {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.cg-card-link:hover {
+  background: rgba(0, 243, 255, 0.15);
+  border-color: rgba(0, 243, 255, 0.4);
+  color: #00f3ff;
+}
+
+/* Description */
+.cg-card-desc {
+  font-size: 0.73rem;
+  color: rgba(180, 185, 210, 0.82);
+  line-height: 1.6;
+  flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+/* Tags */
+.cg-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.cg-card-tag {
+  font-family: 'Courier New', monospace;
+  font-size: 0.6rem;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(188, 19, 254, 0.12);
+  border: 1px solid rgba(188, 19, 254, 0.28);
+  color: rgba(188, 19, 254, 0.9);
+  letter-spacing: 0.04em;
+}
+
+/* Hint */
+.cg-hint {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.65rem;
+  font-family: monospace;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.3;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Fade edges */
+.circular-gallery::before,
+.circular-gallery::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 200;
+  pointer-events: none;
+}
+
+.circular-gallery::before {
+  left: 0;
+  background: linear-gradient(to right, var(--background, #050510), transparent);
+}
+
+.circular-gallery::after {
+  right: 0;
+  background: linear-gradient(to left, var(--background, #050510), transparent);
 }

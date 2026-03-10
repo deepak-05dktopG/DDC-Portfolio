@@ -2,9 +2,19 @@ import React, { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { MagicCard } from "../magicui/magic-card";
 import ShineBorder from "../magicui/shine-border";
+import LightRays from "../magicui/light-rays";
+import LetterGlitch from "../magicui/letter-glitch";
 import { Github, Linkedin, Mail, ExternalLink, Database, Code, Server, Bot, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollStack, { ScrollStackItem } from "../ui/ScrollStack";
+import CircularGallery from "../ui/CircularGallery";
+
+// Project images
+import blufinsImg from "../../images/project-blufins.png";
+import qualitypicksImg from "../../images/project-qualitypicks.png";
+import weatherImg from "../../images/project-weather.png";
+import automationImg from "../../images/project-automation.png";
+import skillmatchImg from "../../images/project-skillmatch.png";
 
 const Aboutme = () => {
     const containerRef = useRef(null);
@@ -107,34 +117,41 @@ const Aboutme = () => {
             title: "Blufins Aquatic Solutions",
             desc: "A freelance MERN-based business website created for an aquatic solutions company, featuring product showcases, service listings, lead-capture forms, and a clean modern UI.",
             tags: ["MERN", "Business Website", "Full-Stack", "Responsive UI"],
-            link: "https://blufinsaquatics.netlify.app/"
+            link: "https://blufinsaquatics.netlify.app/",
+            image: blufinsImg
         },
         {
             title: "QualityPicks – Product Discovery Platform",
             desc: "A full-stack product discovery platform that allows users to browse, search, and filter products across categories with secure access and fast performance.",
             tags: ["MERN", "Filtering", "Search", "JWT", "Full-Stack"],
-            link: "https://qualitypicks.vercel.app/"
+            link: "https://qualitypicks.vercel.app/",
+            image: qualitypicksImg
         },
         {
             title: "Weather App – Live Forecasting",
             desc: "A real-time weather forecasting application displaying temperature, humidity, wind data, and location-based conditions with an optimized, responsive UI.",
             tags: ["React", "API Integration", "OpenWeather API", "Responsive UI"],
-            link: "https://ddcweather.netlify.app/"
+            link: "https://ddcweather.netlify.app/",
+            image: weatherImg
         },
         {
             title: "AI Automation Workflows",
             desc: "Automated workflows using AI triggers, webhooks, and LLMs to AI Agents , AI Chatbots,  generate emails, summarize content, process text, and perform real-time automated tasks.",
             tags: ["API", "LangChain", "n8n", "Automation", "LLM"],
-            link: "https://qualitypicks.vercel.app/"
+            link: "https://qualitypicks.vercel.app/",
+            image: automationImg
         },
         {
             title: "SkillMatch AI – Smart Job Role Predictor",
             desc: "An AI-powered system that analyzes user skills and automatically suggests suitable job roles using prompt engineering, automation flows, and LLM-based logic.",
             tags: ["AI", "LLM", "Automation", "Skill Analysis", "Prompt Engineering", "Python Fast-API"],
-            link: "https://skill-match-ai.netlify.app/"
+            link: "https://skill-match-ai.netlify.app/",
+            image: skillmatchImg
         }
-
     ];
+
+    // Format for CircularGallery: { image, text }
+    const galleryItems = projects.map(p => ({ image: p.image, text: p.title }));
 
 
     return (
@@ -392,90 +409,92 @@ const Aboutme = () => {
                             }}
                             style={{ perspective: 1000, transformStyle: "preserve-3d" }}
                         >
-                            <MagicCard className="p-8 border border-white/10 bg-card/50 backdrop-blur-xl flex flex-col gap-6">
-                                <motion.h3
-                                    className="text-2xl font-bold text-white"
-                                    initial={{ x: -50, opacity: 0 }}
-                                    whileInView={{ x: 0, opacity: 1 }}
-                                    transition={{ delay: 0.3, duration: 0.6 }}
-                                >
-                                    My Vision
-                                </motion.h3>
-                                <motion.p
-                                    className="text-muted-foreground"
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    transition={{ delay: 0.5, duration: 0.8 }}
-                                >
-                                    I want to build <motion.span
-                                        className="text-white"
-                                        whileHover={{
-                                            scale: 1.1,
-                                            color: "hsl(var(--primary))",
-                                            transition: { duration: 0.2 }
-                                        }}
-                                        style={{ display: "inline-block" }}
-                                    >intelligent systems</motion.span> that make life simpler. My long-term vision is to become a <motion.span
-                                        className="text-primary font-bold"
-                                        animate={{
-                                            textShadow: [
-                                                "0 0 4px hsl(var(--primary))",
-                                                "0 0 8px hsl(var(--primary))",
-                                                "0 0 4px hsl(var(--primary))"
-                                            ]
-                                        }}
-                                        transition={{
-                                            duration: 2,
-                                            repeat: Infinity,
-                                            ease: "easeInOut"
-                                        }}
-                                        style={{ display: "inline-block" }}
-                                    >Full-Stack + AI Engineer</motion.span> who can create smart automation tools, intelligent agents, and scalable full-stack products.
-                                </motion.p>
-                                <motion.div
-                                    className="space-y-2 pt-2"
-                                    initial={{ y: 30, opacity: 0 }}
-                                    whileInView={{ y: 0, opacity: 1 }}
-                                    transition={{ delay: 0.7, duration: 0.6 }}
-                                >
-                                    <h4 className="font-bold text-white">What Defines Me:</h4>
-                                    <ul className="space-y-2 text-muted-foreground">
-                                        {[
-                                            { emoji: "🚀", text: "Fast learner with a growth mindset" },
-                                            { emoji: "💡", text: "Problem solver who breaks down complex ideas" },
-                                            { emoji: "🔥", text: "Passionate about clean code & user-focused design" }
-                                        ].map((item, i) => (
-                                            <motion.li
-                                                key={i}
-                                                className="flex items-center gap-2"
-                                                initial={{ x: -30, opacity: 0 }}
-                                                whileInView={{ x: 0, opacity: 1 }}
-                                                transition={{
-                                                    delay: 0.9 + i * 0.1,
-                                                    type: "spring",
-                                                    stiffness: 100
-                                                }}
-                                                whileHover={{
-                                                    x: 10,
-                                                    color: "hsl(var(--primary))",
-                                                    transition: { duration: 0.2 }
-                                                }}
-                                            >
-                                                <motion.span
-                                                    whileHover={{
-                                                        scale: 1.3,
-                                                        rotate: 360,
-                                                        transition: { duration: 0.5 }
+                            <MagicCard
+                                className="overflow-hidden p-8 border border-white/10 bg-card/50 backdrop-blur-xl flex flex-col gap-6"
+                                background={(
+                                    <LightRays
+                                        className="opacity-100"
+                                        rayColor="hsl(var(--primary))"
+                                        rayOpacity={0.55}
+                                        rayCount={12}
+                                        raySpeed={2.4}
+                                        rayLength={1.4}
+                                        noiseAmount={0.18}
+                                        respectReducedMotion={false}
+                                    />
+                                )}
+                            >
+                                    <motion.h3
+                                        className="text-2xl font-bold text-white"
+                                        initial={{ x: -50, opacity: 0 }}
+                                        whileInView={{ x: 0, opacity: 1 }}
+                                        transition={{ delay: 0.3, duration: 0.6 }}
+                                    >
+                                        My Vision
+                                    </motion.h3>
+                                    <motion.p
+                                        className="text-muted-foreground"
+                                        initial={{ opacity: 0 }}
+                                        whileInView={{ opacity: 1 }}
+                                        transition={{ delay: 0.5, duration: 0.8 }}
+                                    >
+                                        I want to build <motion.span
+                                            className="text-white"
+                                            whileHover={{
+                                                scale: 1.1,
+                                                color: "hsl(var(--primary))",
+                                                transition: { duration: 0.2 }
+                                            }}
+                                            style={{ display: "inline-block" }}
+                                        >intelligent systems</motion.span> that make life simpler. My long-term vision is to become a <motion.span
+                                            className="text-primary font-bold"
+                                            style={{ display: "inline-block" }}
+                                        >Full-Stack + AI Engineer</motion.span> who can create smart automation tools, intelligent agents, and scalable full-stack products.
+                                    </motion.p>
+                                    <motion.div
+                                        className="space-y-2 pt-2"
+                                        initial={{ y: 30, opacity: 0 }}
+                                        whileInView={{ y: 0, opacity: 1 }}
+                                        transition={{ delay: 0.7, duration: 0.6 }}
+                                    >
+                                        <h4 className="font-bold text-white">What Defines Me:</h4>
+                                        <ul className="space-y-2 text-muted-foreground">
+                                            {[
+                                                { emoji: "🚀", text: "Fast learner with a growth mindset" },
+                                                { emoji: "💡", text: "Problem solver who breaks down complex ideas" },
+                                                { emoji: "🔥", text: "Passionate about clean code & user-focused design" }
+                                            ].map((item, i) => (
+                                                <motion.li
+                                                    key={i}
+                                                    className="flex items-center gap-2"
+                                                    initial={{ x: -30, opacity: 0 }}
+                                                    whileInView={{ x: 0, opacity: 1 }}
+                                                    transition={{
+                                                        delay: 0.9 + i * 0.1,
+                                                        type: "spring",
+                                                        stiffness: 100
                                                     }}
-                                                    style={{ display: "inline-block" }}
+                                                    whileHover={{
+                                                        x: 10,
+                                                        color: "hsl(var(--primary))",
+                                                        transition: { duration: 0.2 }
+                                                    }}
                                                 >
-                                                    {item.emoji}
-                                                </motion.span>
-                                                {item.text}
-                                            </motion.li>
-                                        ))}
-                                    </ul>
-                                </motion.div>
+                                                    <motion.span
+                                                        whileHover={{
+                                                            scale: 1.3,
+                                                            rotate: 360,
+                                                            transition: { duration: 0.5 }
+                                                        }}
+                                                        style={{ display: "inline-block" }}
+                                                    >
+                                                        {item.emoji}
+                                                    </motion.span>
+                                                    {item.text}
+                                                </motion.li>
+                                            ))}
+                                        </ul>
+                                    </motion.div>
                             </MagicCard>
                         </motion.div>
                     </motion.div>
@@ -488,12 +507,12 @@ const Aboutme = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.8 }}
                         transition={{ duration: 0.5 }}
-                        className="text-3xl md:text-4xl font-heading font-bold text-center mb-12 text-white"
+                        className="text-3xl md:text-4xl font-heading font-bold text-center mb- text-white"
                     >
                         Technical <span className="text-secondary">Strengths</span>
                     </motion.h2>
 
-                    <div className="relative w-full py-12">
+                    <div className="relative w-full ">
                         <ScrollStack 
                             itemDistance={80} 
                             itemScale={0.05} 
@@ -510,7 +529,15 @@ const Aboutme = () => {
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.8 }}
                                     >
-                                        <MagicCard className="p-8 border border-white/10 bg-card/40 backdrop-blur-xl flex flex-col gap-6 min-h-[300px] max-w-3xl mx-auto shadow-2xl">
+                                        <MagicCard
+                                            className="p-8 border border-white/10 bg-card/20 backdrop-blur-xl flex flex-col gap-6 min-h-[300px] max-w-3xl mx-auto shadow-2xl overflow-hidden"
+                                            background={(
+                                                <>
+                                                    <LetterGlitch glitchSpeed={0.9} density={10.95} smooth={true} fontSize={13} />
+                                                    <div className="absolute inset-0 bg-black/35" />
+                                                </>
+                                            )}
+                                        >
                                             <div className="flex items-center gap-4 mb-4">
                                                 <div className="p-3 bg-white/5 rounded-xl border border-white/10 shadow-inner">
                                                     {skillGroup.icon}
@@ -538,74 +565,34 @@ const Aboutme = () => {
                 </section>
 
                 {/* Projects Section */}
-                <section>
+                <section className="overflow-hidden">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.8 }}
                         transition={{ duration: 0.5 }}
-                        className="text-3xl md:text-4xl font-heading font-bold text-center mb-12 text-white"
+                        className="text-3xl md:text-4xl font-heading font-bold text-center mb-4 text-white"
                     >
                         Featured <span className="text-primary">Projects</span>
                     </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                        className="text-center text-muted-foreground text-sm tracking-widest font-mono uppercase"
+                    >
+                        Scroll or drag to explore
+                    </motion.p>
 
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {projects.map((project, index) => (
-                            <motion.div
-                                key={index}
-                                initial="offscreen"
-                                whileInView="onscreen"
-                                viewport={{ once: true, amount: 0.3 }}
-                                className="group"
-                            >
-                                <motion.div
-                                    variants={{
-                                        offscreen: {
-                                            y: 100,
-                                            opacity: 0,
-                                            scale: 0.8
-                                        },
-                                        onscreen: {
-                                            y: 0,
-                                            opacity: 1,
-                                            scale: 1,
-                                            rotate: index % 2 === 0 ? -2 : 2,
-                                            transition: {
-                                                type: "spring",
-                                                bounce: 0.4,
-                                                duration: 0.8,
-                                                delay: index * 0.1
-                                            }
-                                        }
-                                    }}
-                                    whileHover={{
-                                        scale: 1.05,
-                                        rotate: 0,
-                                        transition: { duration: 0.3 }
-                                    }}
-                                >
-                                    <ShineBorder
-                                        className="h-full w-full p-1 bg-card/30 rounded-2xl border-white/5"
-                                        color={["#00f3ff", "#bc13fe", "#ff0055"]}
-                                    >
-                                        <div className="h-full bg-card/80 backdrop-blur-xl rounded-xl p-6 flex flex-col">
-                                            <div className="flex justify-between items-start mb-4">
-                                                <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors">{project.title}</h3>
-                                                <a href={project.link} target="_blank" rel="noreferrer"><ExternalLink className="text-muted-foreground group-hover:text-white transition-colors" size={20} /></a>
-                                            </div>
-                                            <p className="text-muted-foreground mb-6 flex-grow">{project.desc}</p>
-                                            <div className="flex flex-wrap gap-2 mt-auto">
-                                                {project.tags.map((tag, i) => (
-                                                    <span key={i} className="text-xs font-mono text-secondary bg-secondary/10 px-2 py-1 rounded">
-                                                        #{tag}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </ShineBorder>
-                                </motion.div>
-                            </motion.div>
-                        ))}
+                    {/* CSS 3D Circular Gallery with project cards */}
+                    <div style={{ height: '400px', position: 'relative' }}>
+                        <CircularGallery
+                            items={projects}
+                            bend={3}
+                            textColor="#ffffff"
+                            scrollSpeed={4}
+                            scrollEase={0.05}
+                        />
                     </div>
                 </section>
 

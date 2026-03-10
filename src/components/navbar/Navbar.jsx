@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import BubbleMenu from "./BubbleMenu";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,30 +63,7 @@ function Navbar() {
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-20 left-6 right-6 md:hidden"
-          >
-            <div className="bg-card/90 backdrop-blur-xl border border-white/10 rounded-2xl p-4 flex flex-col space-y-4 shadow-2xl">
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.name}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={({ isActive }) =>
-                    `text-lg font-medium px-4 py-2 rounded-lg transition-colors ${isActive
-                      ? "bg-primary/10 text-primary"
-                      : "text-muted-foreground hover:text-white hover:bg-white/5"
-                    }`
-                  }
-                >
-                  {link.name}
-                </NavLink>
-              ))}
-            </div>
-          </motion.div>
+          <BubbleMenu items={navLinks} onClose={() => setIsOpen(false)} />
         )}
       </AnimatePresence>
     </nav>

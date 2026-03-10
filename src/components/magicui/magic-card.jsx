@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 
 export function MagicCard({
   children,
+  background,
   className,
   gradientSize = 200,
   gradientColor = "#262626",
@@ -63,6 +64,11 @@ export function MagicCard({
       ref={cardRef}
       className={cn("group relative flex size-full rounded-xl", className)}>
       <div className="absolute inset-px z-10 rounded-xl bg-background" />
+      {background ? (
+        <div className="pointer-events-none absolute inset-px z-20 overflow-hidden rounded-xl">
+          {background}
+        </div>
+      ) : null}
       <div className="relative z-30">{children}</div>
       <motion.div
         className="pointer-events-none absolute inset-px z-10 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"

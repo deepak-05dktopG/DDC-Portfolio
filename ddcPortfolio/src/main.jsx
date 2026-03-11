@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@n8n/chat/style.css';
 import { BrowserRouter } from 'react-router-dom';
 
 import ReactDOM from 'react-dom/client';
